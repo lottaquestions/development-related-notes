@@ -1,0 +1,174 @@
+C-c C-k - Compile and load the current buffer's file.
+
+
+C-u C-c C-k - compile and load current buffer with maximum debug options
+
+C-c C-c - Compile the top-level form at point. This is slime-compile-defun.
+          To do it with max debug settings, do C-u C-c C-c.
+C-c C-r	- slime-eval-region
+
+M-n - slime-next-note
+M-p - slime-previous note
+
+M-. - Edit the definition of the function called at point.
+M-, - Pop the definition stack to go back from a definition.
+
+C-c C-d C-d - Describe symbol.
+
+C-c C-d h - Get hyperspec help on symbol
+
+C-c C-] - slime-close-all-parens-in-sexp
+
+C-c TAB - slime-complete-symbol
+
+C-c C-t - slime-toggle-fancy-trace
+
+C-c C-w C-c - slime-who-calls
+
+C-c Return - slime-expand-1 ie macroexpand interactively. For this to work, place the cursor
+             at the beginning of the form ie at the opening parenthesis of the form. To undo
+	     a sub-expansion, use undo, C-x u, and to quit the slime-macroexpansion window,
+	     use q. If the macro changes, use d to refresh the slime-macroexpansion window.
+
+C-c M-d - Disassemlbe a function.
+
+C-c I - slime-inspect
+
+C-h m - help for keybindings in all the minor modes, including SLIME!
+
+C-c C-d h - M-x slime-hyperspec-lookup . Lookup the symbol at point in the Common Lisp Hyperspec.
+
+C-h e - Go to the messages buffer. Useful for when a hint disappears to quickly in the mini-buffer
+
+M-x find-file-at-point  - Opens the file path underneath the cursor
+
+M-/  -  M-x dabbrev-expand is to cycle through text completions based on code in the current buffer
+
+M-x show-paren-mode - Gives highlighting of opening and closing parens. Useful for reading code
+
+M-s h .  - Hightlighting all occurences of selected text
+
+M-s h u  - Unhighlight all occurences of selected text
+
+M-s h C-h - Help for highlighting commands
+
+C-x z  - Redo previous command
+
+Lisp REPL variables:
+The * -variables contain the results of
+evaluating the last three expressions, the + -variables contain the expressions themselves,
+the / -variables contain lists of all values returned by the three expressions, and - contains
+the expression that is being evaluated right now
+
+---------------------------------------
+To change the contents of a list from slime-inspect:
+
+<phoe> I think this can be worked around by using M-RET to perform slime-inspector-copy-down, then returning to the REPL, and then mutating the value of *
+<phoe> so (setf (car *) 'lsdvkhlsdg)
+
+Other commands:
+
+To show symbols in a package eg symbols in the package trading-core:
+
+(loop for x being the symbols in :trading-core collect x)
+
+To show symbols that have been exported from a package:
+
+(loop for x being the external-symbols in :trading-core collect x)
+
+----------------------------------------
+Basic Graphical tracing in slime
+
+Move your cursor to the definition of the function and press
+C-c M-t (for slime-trace-dialog-toggle-trace) on the function name.
+Then evaluate the functions and afterward press C-c T (for
+slime-trace-dialog) to display the "graphical" trace.
+
+To view a rendered web page that was saved to disk:
+
+M-x eww-open-file
+
+-----------------------------------
+How to run supertrace on the functions in this file:
+ (ql:quickload :supertrace)
+ (supertrace:supertrace (package rl-based))
+ (supertrace:supertrace mappend rule-lhs rule-rhs rewrites generate)
+
+If emacs starts having disappearing letters syndrome,
+ run M-x eval-region on the below
+(modify-frame-parameters nil '((inhibit-double-buffering . t)))
+
+----------------------------------
+To remove all (break) lines in a directory tree of lisp code:
+
+~/quicklisp/local-projects/trading-core$ for i in `grep -R "(break)" * | cut -f1 -d":" | uniq`; do sed -i 's/(break)/;(break)/g' $i; done
+
+--------------------------------------
+Showing all bound symbols and in effect global variables:
+Bike
+22:37:52
+Sort of. You can do (let (c) (do-all-symbols (s c) (when (boundp s) (push s c))))
+On my system there are 5493, so be careful
+technically there could also be variables named by inaccessible symbols, but that doesn't happen much
+
+lottaquestions
+22:39:12
+thanks. Worth a try
+no-defun-allowed
+22:39:41
+(do-symbols (s) (when (and (boundp s) (eql (symbol-package s) package)) (print s))) will print all the symbols that are bound in the current package, which isn't all of them, but might be what you want.
+
+-------------------------------------------
+Quicklisp notes
+
+ ql:quickload for downloading, installing and loading a system and all its dependencies. Example: (ql:quickload "vecto")
+
+ ql:system-apropos for searching the list of installable systems. Example: (ql:system-apropos "blas")
+
+ ql:update-all-dists (without argument) for updating all the systems currently installed 
+
+(ql:update-dist "quicklisp") Make sure to run this before ql:quickload to ensure you get the latest quicklisp version of libraries. A new Quicklisp dist is typically released (very) approximately once a month, at which point it's a good idea to run the ql:update-dist. In the unlikely event that the dist upgrade causes problems for you, it's always possible to go back in dist time. See http://blog.quicklisp.org/2011/08/going-back-in-dist-time.html
+
+ (ql:update-client) update the the "core" of Quicklisp that downloads dists and releases
+
+Once a system has been installed through Quicklisp, it can be loaded with require, as documented in the previous section (provided that Quicklisp has been loaded before). 
+
+-----------------------------------------------
+Interesting usage of loop that is very advanced:
+
+(loop with m = (/ value 2)
+      for i below (/ degrees-of-freedom 2)
+      for prob = (exp (- m)) then (* prob (/ m i))
+      summing prob
+      collecting (list :value value :i i :m m :prob prob) into iteration-values-of-locals 
+      finally (return (list iteration-values-of-locals)))
+
+-----------------------------------------------
+How to resize windows in Emacs:
+
+
+C-x - (shrink-window-if-larger-than-buffer) to shrink a window to fit its content.
+
+C-x + (balance-windows) to make windows the same heights and widths.
+
+C-x ^ (enlarge-window) to increase height by 1 line, or the prefix arg value. A negative arg shrinks the window. Example: C-u - 3 C-x ^
+
+C-x { (shrink-window-horizontally)
+
+C-x } (enlarge-window-horizontally)
+
+-------------------------------------------
+How to replace a string with a new line in EMACS:
+
+M-x replace-string RET ; RET C-q C-j.
+
+    C-q for quoted-insert,
+
+    C-j is a newline.
+
+------------------------------------
+A useful git log command that shows branches and all the files involved in each commit:
+
+git log --oneline --graph --name-status
+
+
