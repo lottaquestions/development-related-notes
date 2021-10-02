@@ -1,0 +1,34 @@
+Since git changed master to main, when one tries to push to their "master", they get
+errors claiming master and main have entirely different histories. To fix this
+problem do the following:
+
+git checkout master  
+git branch main master -f    
+git checkout main  
+git push origin main -f
+
+Ref: https://stackoverflow.com/questions/23344320/there-isnt-anything-to-compare-nothing-to-compare-branches-are-entirely-diffe
+
+
+
+
+1.    In the command line, navigate to the root directory of your project.
+
+2.    Initialize the local directory as a Git repository.
+
+    git init -b main
+
+3.    To create a repository for your project on GitHub, use the gh repo create subcommand. Replace project-name with the desired name for your repository. If you want your project to belong to an organization instead of to your user account, specify the organization name and project name with organization-name/project-name.
+
+    gh repo create project-name
+
+    Follow the interactive prompts. Alternatively, you can specify arguments to skip these prompts. For more information about possible arguments, see the GitHub CLI manual.
+
+4.    Pull changes from the new repository that you created. (If you created a .gitignore or LICENSE file in the previous step, this will pull those changes to your local directory.)
+
+    git pull --set-upstream origin main
+
+5.    Stage, commit, and push all of the files in your project.
+
+    git add . && git commit -m "initial commit" && git push
+
