@@ -23,6 +23,9 @@ Ref: https://stackoverflow.com/questions/23344320/there-isnt-anything-to-compare
     gh repo create project-name
 
     Follow the interactive prompts. Alternatively, you can specify arguments to skip these prompts. For more information about possible arguments, see the GitHub CLI manual.
+    
+    If gh is not present, set the remote using the git remote command like this:
+    git remote add origin git@github.com:lottaquestions/regex-hs.git
 
 4.    Pull changes from the new repository that you created. (If you created a .gitignore or LICENSE file in the previous step, this will pull those changes to your local directory.)
 
