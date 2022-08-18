@@ -1,3 +1,8 @@
+Generating a new SSH key and adding it to the ssh-agent in order to add a new machine to Github:
+
+Refer to the link https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+Note that in the ssh-add stage, you need to omit the ".pub" extension of the file you provide.
+
 Since git changed master to main, when one tries to push to their "master", they get
 errors claiming master and main have entirely different histories. To fix this
 problem do the following:
