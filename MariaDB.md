@@ -37,19 +37,18 @@
 `sudo apt install libbz2-dev libbz2-1.0 -y				`<br />
 `sudo apt install libzstd-dev zstd -y					`<br />
 `sudo apt install flex									`<br />
-
+`sudo apt-get install -y libjudy-dev`<br />
 
 ## Compiling
-`
-mkdir build-mariadb
-cd build-mariadb
-cmake ../server -DCMAKE_BUILD_TYPE=Debug
-cmake --build .
-`
+
+`mkdir build-mariadb` <br />
+`cd build-mariadb` <br />
+`cmake ../server -DCMAKE_BUILD_TYPE=Debug` <br />
+`cmake --build .` <br />
+
 ## Installing
-`
-sudo cmake --install .
-`
+
+`sudo cmake --install .`
 
 ## Resources
 Good video tutorial: <br />
