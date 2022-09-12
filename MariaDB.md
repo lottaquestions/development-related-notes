@@ -38,6 +38,7 @@
 `sudo apt install libzstd-dev zstd -y					`<br />
 `sudo apt install flex									`<br />
 `sudo apt-get install -y libjudy-dev`<br />
+`sudo apt install libpthread-stubs0-dev`<br />
 
 ## Compiling
 
