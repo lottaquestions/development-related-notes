@@ -1,0 +1,223 @@
+Memory profiling
+----------------
+
+To start valgrind with the massif memory profiler
+
+valgrind --tool=massif ./testmalloc.bin n 100000 8
+
+To graph (in the terminal) the output after running massif on a program:
+
+ms_print massif.out.3018
+
+To graph (in GUI) the output after running massif on a program:
+
+massif-visualizer massif.out.3018 
+
+To start valgrind with a memory leak checker:
+
+valgrind --tool=memcheck --leak-check=yes ./main1.bin 
+
+To start valgrind with the ability to attach with gdb at a point where a memory leak has occured:
+
+valgrind --tool=memcheck --leak-check=yes --db-attach=yes ./main1.bin
+
+
+valgrind --tool=massif ./genindex text1.txt text1.txt text1.txt text1.txt > log_genindex.txt
+
+Execution time profiling
+------------------------
+
+Compile with gprof instrumentation:
+
+gcc -o isort -pg isort.c
+
+Run an instance of the program for suffiecient time to collect the statistics ie at least 2 orders of magnitude of the 
+sampling interval of gprof of 0.00195312:
+
+time ./isort i 100 100000
+
+Generate a gprof report:
+
+gprof isort gmon.out > report.txt
+
+To do execution profiling with callgrind. Compile the program
+
+gcc -o isort_callgrind.bin -DISORT_FAST -O isort.c 
+
+Run valgrind with callgrind as the tool:
+
+valgrind --tool=callgrind ./isort_callgrind.bin i 100 10000
+
+Generate a profile report by running:
+
+callgrind_annotate callgrind.out.<PID>
+
+Multithreaded profiling using Valgrind
+---------------------------------------
+Use the helgrind tool to detect race conditions or deadlocks:
+
+valgrind --tool=helgrind ./beancounter 
+
+Multithreaded debugging on GDB
+------------------------------
+
+
+	
+
+By default, GDB stops all threads when any breakpoint is hit, and resumes all threads when you issue any command (such as continue, next, step, finish, etc.) which requires that the inferior process (the one you are debugging) start to execute.
+
+However, you can tell GDB not to do that:
+
+(gdb) help set scheduler-locking 
+Set mode for locking scheduler during execution.
+off  == no locking (threads may preempt at any time)
+on   == full locking (no thread except the current thread may run)
+step == scheduler locked during every single-step operation.
+    In this mode, no other thread may run during a step command.
+    Other threads may run while stepping over a function call ('next').
+
+So you'll want to set breakpoints, then set scheduler-locking on, then continue or finish in thread 1 (thread 2 is still stopped), then Ctrl-C to regain control of GDB, switch to thread 2, continue (thread 1 is still stopped), etc.
+
+To view symbols in object files
+-------------------------------
+Use nm:
+
+ nm -o *.o
+ 
+If g++ was used to create the object files, pass the output of nm to c++filt to demangle the symbols:
+
+nm main.o | c++filt
+
+or use the demangle flag
+
+nm -C main.o
+
+To view printable strings in an object files
+--------------------------------------------
+
+strings -a factorial.o
+
+This is especially useful to determine with compiler was used to compile a program
+
+strings -a factorial.o  | grep GCC
+
+Dynamic link libraries
+----------------------
+
+To find out which dynamic link libraries are used by a program, use ldd:
+
+ldd myprog
+
+To find out which paths a program searches for dynamic link libraries use the environment
+variable LD_DEBUG set to libs:
+
+LD_DEBUG=libs ./myprog 
+
+To view all the analysis capabilities of the DLL loader on your system set the LD_DEBUG 
+env var to help:
+
+LD_DEBUG=help ./myprog
+
+
+GDB Object Oriented debugging
+-----------------------------
+
+To view the contents of a class
+
+ptype <class name>
+
+To find all functions that match a certain name ie all overloaded functions:
+
+info functions <function signature>
+
+Eg:
+info functions C::foo
+
+We can set commands to a breakpoint that execute certain GDB commds when a breakpoint is hit eg
+to give a set of commands to breakpoint 7:
+
+(gdb) break break_str.cc:12
+Breakpoint 7 at 0x400f01: file break_str.cc, line 12.
+(gdb) commands 7
+Type commands for breakpoint(s) 7, one per line.
+End with a line saying just "end".
+>silent
+>printf "STR CTOR with a=0x%x \"%s\"\n",a,a
+>continue
+>end
+(gdb) run
+
+We can also set conditional breakpoints that break only when a certain condition is met eg
+to set a condition for breakpoint 7:
+
+condition 7 a[0]=='d' && a[1]=='e' && a[2]=='f' && a[3]==0
+
+GDB handling signals
+--------------------
+
+To make a signal visible to a GDB inferior and to have the user alerted when the signal occurs:
+
+handle <signal name> print nostop pass
+
+Eg:
+
+handle SIGUSR1 print nostop pass
+
+To disable SIGUSR1 so that it will no longer reach the program:
+
+handle SIGUSR1 noprint nostop nopass
+
+To raise a signal in GDB:
+
+signal SIGUSR1
+
+GDB C++ Catching Exceptions
+----------------------------
+To catch a throw, start the program with "start" so that the C++ runtime library is loaded.
+Then type:
+
+catch throw
+
+To catch a catch, type:
+
+catch catch
+
+GDB calling functions manually
+
+call <funcname with arguments>
+
+To make sure that GDB stops where an error has occured with a manual func call:
+
+set unwindonsignal off
+
+Otherwise set
+
+set unwindonsignal on 
+
+and GDB will print that a signal was received and it will return from the function call automatically
+
+
+GDB Memory Mapping
+------------------
+To view the memory map of the program currently being debugged in gdb:
+
+info proc mappings
+
+GDB: Overwriting a function call with NOPs
+------------------------------------------
+Set a breakpoint in the assembly instruction of the function call and run the program
+until the breakpoint is hit. Function calls on Intel are 5 byte instructions. So we add
+5 (single byte) NOPs (mnemonic 0x90) at the program counter location:
+
+(gdb) set write
+(gdb) set {unsigned int}$pc = 0x90909090
+(gdb) set {unsigned char}($pc+4) = 0x90
+(gdb) set write off
+
+We can now view the next 10 instructions that the PC will execute, to determin if the function call was overwritten:
+
+(gdb) x/10i $pc
+
+GDB set the number of elements to print:
+
+set print elements 1000
