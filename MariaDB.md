@@ -59,7 +59,7 @@ https://www.youtube.com/watch?v=7WGcOTQWAco
 
 ### Running mariadb from the build directory
 
-To run mariadb from the build directory, use the instructions at this link (I have added my own notes here of changes I made to make thins work):
+To run mariadb from the build directory, use the instructions at this link (I have added my own notes here of changes I made to make things work):
 
 https://mariadb.com/kb/en/running-mariadb-from-the-build-directory/
 
@@ -83,6 +83,7 @@ You should see the below output:
 Installing MariaDB/MySQL system tables in '/home/lottaquestions/work/MariaDBServer/data' ...
 OK
 ```
+
 
 Even though I was able to launch the server in ddd using the below command (see the database being launched is the `test` database), it did not seem to work right, it went into some kind of continuation loop and ddd became unresponsive:
 
@@ -197,4 +198,43 @@ Thread 6 "mariadbd" hit Breakpoint 1, mysql_parse (thd=0x7fffe0000dc8, rawbuf=0x
 (gdb) 
 
 ```
+
+### Running mariadb in valgrind using the callgrind tool
+
+Running mariadb in valgrind using the callgrind tool, especially when targeting execution of certain paths:
+1. Launch valgrind with the callgrind tool, but with stats collection set to be off:
+
+```
+cd ~/work/MariaDBServer/build-mariadb/sql
+valgrind --tool=callgrind --instr-atstart=no ./mariadbd
+```
+
+2. Turn on stats collection when ready to profile a specific section of the server:
+
+```
+callgrind_control -i on
+```
+
+3. Run the operation that you need to profile.
+
+4. After running the operation, stop the profiling:
+
+```
+callgrind_control -i off
+```
+
+5. Dump the collected profiling statistics:
+
+```
+callgrind_control -d
+```
+
+6. Copy out the generated statistics files to a different directory.
+
+7. Zero out the collected statistics, and then go back to step 2 to profile the next operation:
+
+```
+callgrind_control -z
+```
+
 

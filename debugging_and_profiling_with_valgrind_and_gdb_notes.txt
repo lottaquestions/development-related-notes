@@ -52,6 +52,18 @@ Generate a profile report by running:
 
 callgrind_annotate callgrind.out.<PID>
 
+Profiling only specific section of a program:
+
+1.    Launch your app : valgrind --tool=callgrind --instr-atstart=no your_server.x
+2.    Start collect profile data: callgrind_control -i on
+3.    End collect profile data: callgrind_control -i off
+5.    Dump the collected profile data:  callgrind_control -d
+6.    Copy the callgrind data into a seperate directory for analysis.
+7.    Zero out the collected profile data: callgrind_control -z
+8.    Change to the analysis directory.
+9.    Analyze data with kcachegrind or callgrind_annotate/cg_annotate
+
+
 Multithreaded profiling using Valgrind
 ---------------------------------------
 Use the helgrind tool to detect race conditions or deadlocks:
