@@ -116,36 +116,43 @@ MariaDB [test]> insert into t1 values(345);
 Query OK, 1 row affected (32.936 sec)
 
 ```
+### Running mariadb from the build directory with rocksdb enabled
 
-And below is the gdb stack trace during the insert:
+Source https://mariadb.com/kb/en/building-myrocks-in-mariadb/
+Additional source https://mysqlnlinux.blogspot.com/2017/05/how-to-install-myrocks-into-mariadb-as.html
 
-```
-(gdb) b mysql_parse
-Breakpoint 1 at 0xa01477: file /home/lottaquestions/work/MariaDBServer/server/sql/sql_parse.cc, line 7962.
-(gdb) run
-Starting program: /home/lottaquestions/work/MariaDBServer/build-mariadb/sql/mariadbd 
-....
-(gdb) b mysql_insert
-Breakpoint 2 at 0x555555eefe10: file /home/lottaquestions/work/MariaDBServer/server/sql/sql_insert.cc, line 696.
-
-Thread 14 "mariadbd" hit Breakpoint 2, mysql_insert (thd=0x7fffb4000dc8, table_list=0x7fffb4014300, fields=..., values_list=..., update_fields=..., update_values=..., duplic=DUP_ERROR, ignore=false, result=0x0) at /home/lottaquestions/work/MariaDBServer/server/sql/sql_insert.cc:696
-696	{
-(gdb) bt
-#0  mysql_insert (thd=0x7fffb4000dc8, table_list=0x7fffb4014300, fields=..., values_list=..., update_fields=..., update_values=..., duplic=DUP_ERROR, ignore=false, result=0x0)
-    at /home/lottaquestions/work/MariaDBServer/server/sql/sql_insert.cc:696
-#1  0x0000555555f49726 in mysql_execute_command (thd=0x7fffb4000dc8, is_called_from_prepared_stmt=false) at /home/lottaquestions/work/MariaDBServer/server/sql/sql_parse.cc:4563
-#2  0x0000555555f55710 in mysql_parse (thd=0x7fffb4000dc8, rawbuf=0x7fffb4014220 "insert into t1 values(345)", length=26, parser_state=0x7ffff41512e0)
-    at /home/lottaquestions/work/MariaDBServer/server/sql/sql_parse.cc:8037
-#3  0x0000555555f41317 in dispatch_command (command=COM_QUERY, thd=0x7fffb4000dc8, packet=0x7fffb400ba09 "insert into t1 values(345)", packet_length=26, blocking=true)
-    at /home/lottaquestions/work/MariaDBServer/server/sql/sql_parse.cc:1894
-#4  0x0000555555f3fc6b in do_command (thd=0x7fffb4000dc8, blocking=true) at /home/lottaquestions/work/MariaDBServer/server/sql/sql_parse.cc:1407
-#5  0x000055555612a209 in do_handle_one_connection (connect=0x5555588aced8, put_in_cache=true) at /home/lottaquestions/work/MariaDBServer/server/sql/sql_connect.cc:1418
-#6  0x0000555556129e96 in handle_one_connection (arg=0x555558b697e8) at /home/lottaquestions/work/MariaDBServer/server/sql/sql_connect.cc:1312
-#7  0x00005555566a52ce in pfs_spawn_thread (arg=0x555558a82958) at /home/lottaquestions/work/MariaDBServer/server/storage/perfschema/pfs.cc:2201
-#8  0x00007ffff753db43 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:442
-#9  0x00007ffff75cfa00 in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:81
+In the directory `~/work/MariaDBServer`, I created the file `my_rocksdb.cnf`, which had the following contents:
 
 ```
+[mysqld]
+
+datadir=../mysql-test/var/install.db
+plugin-dir=../storage/rocksdb
+language=./share/english
+socket=/tmp/mysql.sock
+port=3307
+
+plugin-load=ha_rocksdb
+default-storage-engine=rocksdb
+
+```
+
+Once the `my_rocksdb.cnf` files was created, I ran the following commands to start up the server with rocksdb:
+
+```
+~/work/MariaDBServer/build-mariadb
+(cd mysql-test; ./mtr alias)
+cp -r mysql-test/var/install.db ../data4rocksdb/ # Lottaquestions: I do not think this step is necessary
+cd ../sql
+./mysqld --defaults-file=~/work/MariaDBServer/my_rocksdb.cnf
+```
+
+I then had to connect to the database as root as follows:
+
+```
+sudo /home/lottaquestions/work/MariaDBServer/build-mariadb/client/mysql test
+```
+
 
 
 ## Testing Code Discovery and Debugging
@@ -237,4 +244,34 @@ callgrind_control -d
 callgrind_control -z
 ```
 
+
+And below is the gdb stack trace during an insert:
+
+```
+(gdb) b mysql_parse
+Breakpoint 1 at 0xa01477: file /home/lottaquestions/work/MariaDBServer/server/sql/sql_parse.cc, line 7962.
+(gdb) run
+Starting program: /home/lottaquestions/work/MariaDBServer/build-mariadb/sql/mariadbd 
+....
+(gdb) b mysql_insert
+Breakpoint 2 at 0x555555eefe10: file /home/lottaquestions/work/MariaDBServer/server/sql/sql_insert.cc, line 696.
+
+Thread 14 "mariadbd" hit Breakpoint 2, mysql_insert (thd=0x7fffb4000dc8, table_list=0x7fffb4014300, fields=..., values_list=..., update_fields=..., update_values=..., duplic=DUP_ERROR, ignore=false, result=0x0) at /home/lottaquestions/work/MariaDBServer/server/sql/sql_insert.cc:696
+696	{
+(gdb) bt
+#0  mysql_insert (thd=0x7fffb4000dc8, table_list=0x7fffb4014300, fields=..., values_list=..., update_fields=..., update_values=..., duplic=DUP_ERROR, ignore=false, result=0x0)
+    at /home/lottaquestions/work/MariaDBServer/server/sql/sql_insert.cc:696
+#1  0x0000555555f49726 in mysql_execute_command (thd=0x7fffb4000dc8, is_called_from_prepared_stmt=false) at /home/lottaquestions/work/MariaDBServer/server/sql/sql_parse.cc:4563
+#2  0x0000555555f55710 in mysql_parse (thd=0x7fffb4000dc8, rawbuf=0x7fffb4014220 "insert into t1 values(345)", length=26, parser_state=0x7ffff41512e0)
+    at /home/lottaquestions/work/MariaDBServer/server/sql/sql_parse.cc:8037
+#3  0x0000555555f41317 in dispatch_command (command=COM_QUERY, thd=0x7fffb4000dc8, packet=0x7fffb400ba09 "insert into t1 values(345)", packet_length=26, blocking=true)
+    at /home/lottaquestions/work/MariaDBServer/server/sql/sql_parse.cc:1894
+#4  0x0000555555f3fc6b in do_command (thd=0x7fffb4000dc8, blocking=true) at /home/lottaquestions/work/MariaDBServer/server/sql/sql_parse.cc:1407
+#5  0x000055555612a209 in do_handle_one_connection (connect=0x5555588aced8, put_in_cache=true) at /home/lottaquestions/work/MariaDBServer/server/sql/sql_connect.cc:1418
+#6  0x0000555556129e96 in handle_one_connection (arg=0x555558b697e8) at /home/lottaquestions/work/MariaDBServer/server/sql/sql_connect.cc:1312
+#7  0x00005555566a52ce in pfs_spawn_thread (arg=0x555558a82958) at /home/lottaquestions/work/MariaDBServer/server/storage/perfschema/pfs.cc:2201
+#8  0x00007ffff753db43 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:442
+#9  0x00007ffff75cfa00 in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:81
+
+```
 
