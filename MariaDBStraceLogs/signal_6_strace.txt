@@ -1,0 +1,1146 @@
+[pid 317626] futex(0x5593f71ae348, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 317626] futex(0x5593f71ae40c, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 0, {tv_sec=1666011836, tv_nsec=967612000}, FUTEX_BITSET_MATCH_ANY <unfinished ...>
+[pid 317625] <... restart_syscall resumed>) = ? ERESTART_RESTARTBLOCK (Interrupted by signal)
+[pid 317625] --- SIGABRT {si_signo=SIGABRT, si_code=SI_USER, si_pid=387445, si_uid=1002} ---
+[pid 317625] write(2, "221017  9:03:56 ", 16) = 16
+[pid 317625] write(2, "[ERROR] mysqld got signal 6 ;\n", 30) = 30
+[pid 317625] write(2, "This could be because you hit a "..., 227) = 227
+[pid 317625] write(2, "To report this bug, see https://"..., 66) = 66
+[pid 317625] write(2, "We will try our best to scrape u"..., 177) = 177
+[pid 317625] write(2, "Server version: 10.11.0-MariaDB-"..., 38) = 38
+[pid 317625] write(2, "key_buffer_size=134217728\n", 26) = 26
+[pid 317625] write(2, "read_buffer_size=131072\n", 24) = 24
+[pid 317625] write(2, "max_used_connections=1\n", 23) = 23
+[pid 317625] write(2, "max_threads=153\n", 16) = 16
+[pid 317625] write(2, "thread_count=0\n", 15) = 15
+[pid 317625] write(2, "It is possible that mysqld could"..., 140) = 140
+[pid 317625] write(2, "Hope that's ok; if not, decrease"..., 66) = 66
+[pid 317625] write(2, "Thread pointer: 0x0\n", 20) = 20
+[pid 317625] write(2, "Attempting backtrace. You can us"..., 159) = 159
+[pid 317625] write(2, "stack_bottom = 0x0 thread_stack "..., 40) = 40
+[pid 317625] pipe2([49, 50], 0)         = 0
+[pid 317625] pipe2([51, 52], 0)         = 0
+[pid 317625] clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLDstrace: Process 387449 attached
+, child_tidptr=0x7f2fefda6bd0) = 387449
+[pid 387449] set_robust_list(0x7f2fefda6be0, 24) = 0
+[pid 317625] close(49)                  = 0
+[pid 317625] close(52)                  = 0
+[pid 317625] write(50, "0x5593f5aaf4f9\n", 15) = 15
+[pid 317625] poll([{fd=51, events=POLLIN|POLLRDBAND}], 1, 500 <unfinished ...>
+[pid 387449] dup2(49, 0)                = 0
+[pid 387449] dup2(52, 1)                = 1
+[pid 387449] close(49)                  = 0
+[pid 387449] close(50)                  = 0
+[pid 387449] close(51)                  = 0
+[pid 387449] close(52)                  = 0
+[pid 387449] execve("/usr/local/sbin/addr2line", ["addr2line", "-C", "-f", "-e", "./mysqld"], 0x7ffce77f88c0 /* 46 vars */) = -1 ENOENT (No such file or directory)
+[pid 387449] execve("/usr/local/bin/addr2line", ["addr2line", "-C", "-f", "-e", "./mysqld"], 0x7ffce77f88c0 /* 46 vars */) = -1 ENOENT (No such file or directory)
+[pid 387449] execve("/usr/sbin/addr2line", ["addr2line", "-C", "-f", "-e", "./mysqld"], 0x7ffce77f88c0 /* 46 vars */) = -1 ENOENT (No such file or directory)
+[pid 387449] execve("/usr/bin/addr2line", ["addr2line", "-C", "-f", "-e", "./mysqld"], 0x7ffce77f88c0 /* 46 vars */) = 0
+[pid 387449] brk(NULL)                  = 0x558417f95000
+[pid 387449] arch_prctl(0x3001 /* ARCH_??? */, 0x7fff718b8d90) = -1 EINVAL (Invalid argument)
+[pid 387449] mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f54a9cab000
+[pid 387449] access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+[pid 387449] openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+[pid 387449] newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=95335, ...}, AT_EMPTY_PATH) = 0
+[pid 387449] mmap(NULL, 95335, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f54a9c93000
+[pid 387449] close(3)                   = 0
+[pid 387449] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libbfd-2.38-system.so", O_RDONLY|O_CLOEXEC) = 3
+[pid 387449] read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+[pid 387449] newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=1535032, ...}, AT_EMPTY_PATH) = 0
+[pid 387449] mmap(NULL, 1537608, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f54a9b1b000
+[pid 387449] mprotect(0x7f54a9b5b000, 1179648, PROT_NONE) = 0
+[pid 387449] mmap(0x7f54a9b5b000, 942080, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x40000) = 0x7f54a9b5b000
+[pid 387449] mmap(0x7f54a9c41000, 233472, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x126000) = 0x7f54a9c41000
+[pid 387449] mmap(0x7f54a9c7b000, 98304, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x15f000) = 0x7f54a9c7b000
+[pid 387449] close(3)                   = 0
+[pid 387449] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+[pid 387449] read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 832) = 832
+[pid 387449] pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+[pid 387449] pread64(3, "\4\0\0\0 \0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 48, 848) = 48
+[pid 387449] pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0i8\235HZ\227\223\333\350s\360\352,\223\340."..., 68, 896) = 68
+[pid 387449] newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=2216304, ...}, AT_EMPTY_PATH) = 0
+[pid 387449] pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+[pid 387449] mmap(NULL, 2260560, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f54a98f3000
+[pid 387449] mmap(0x7f54a991b000, 1658880, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7f54a991b000
+[pid 387449] mmap(0x7f54a9ab0000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1bd000) = 0x7f54a9ab0000
+[pid 387449] mmap(0x7f54a9b08000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x214000) = 0x7f54a9b08000
+[pid 387449] mmap(0x7f54a9b0e000, 52816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f54a9b0e000
+[pid 387449] close(3)                   = 0
+[pid 387449] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libz.so.1", O_RDONLY|O_CLOEXEC) = 3
+[pid 387449] read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+[pid 387449] newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=108936, ...}, AT_EMPTY_PATH) = 0
+[pid 387449] mmap(NULL, 110776, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f54a98d7000
+[pid 387449] mprotect(0x7f54a98d9000, 98304, PROT_NONE) = 0
+[pid 387449] mmap(0x7f54a98d9000, 69632, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f54a98d9000
+[pid 387449] mmap(0x7f54a98ea000, 24576, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x13000) = 0x7f54a98ea000
+[pid 387449] mmap(0x7f54a98f1000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19000) = 0x7f54a98f1000
+[pid 387449] close(3)                   = 0
+[pid 387449] mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f54a98d4000
+[pid 387449] arch_prctl(ARCH_SET_FS, 0x7f54a98d4740) = 0
+[pid 387449] set_tid_address(0x7f54a98d4a10) = 387449
+[pid 387449] set_robust_list(0x7f54a98d4a20, 24) = 0
+[pid 387449] rseq(0x7f54a98d50e0, 0x20, 0, 0x53053053) = 0
+[pid 387449] mprotect(0x7f54a9b08000, 16384, PROT_READ) = 0
+[pid 387449] mprotect(0x7f54a98f1000, 4096, PROT_READ) = 0
+[pid 387449] mprotect(0x7f54a9c7b000, 86016, PROT_READ) = 0
+[pid 387449] mprotect(0x558417be6000, 4096, PROT_READ) = 0
+[pid 387449] mprotect(0x7f54a9ce5000, 8192, PROT_READ) = 0
+[pid 387449] prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+[pid 387449] munmap(0x7f54a9c93000, 95335) = 0
+[pid 387449] getrandom("\x8a\x3b\x27\x64\x0b\x52\x0f\x40", 8, GRND_NONBLOCK) = 8
+[pid 387449] brk(NULL)                  = 0x558417f95000
+[pid 387449] brk(0x558417fb6000)        = 0x558417fb6000
+[pid 387449] openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3
+[pid 387449] newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=5712208, ...}, AT_EMPTY_PATH) = 0
+[pid 387449] mmap(NULL, 5712208, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f54a9361000
+[pid 387449] close(3)                   = 0
+[pid 387449] openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY) = 3
+[pid 387449] newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=27002, ...}, AT_EMPTY_PATH) = 0
+[pid 387449] mmap(NULL, 27002, PROT_READ, MAP_SHARED, 3, 0) = 0x7f54a9ca4000
+[pid 387449] close(3)                   = 0
+[pid 387449] futex(0x7f54a9b0da6c, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+[pid 387449] newfstatat(AT_FDCWD, "./mysqld", 0x7fff718b8d70, 0) = -1 ENOENT (No such file or directory)
+[pid 387449] openat(AT_FDCWD, "/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC) = 3
+[pid 387449] newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=2996, ...}, AT_EMPTY_PATH) = 0
+[pid 387449] read(3, "# Locale name alias data base.\n#"..., 4096) = 2996
+[pid 387449] read(3, "", 4096)          = 0
+[pid 387449] close(3)                   = 0
+[pid 387449] openat(AT_FDCWD, "/usr/share/locale/en_CA/LC_MESSAGES/binutils.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 387449] openat(AT_FDCWD, "/usr/share/locale/en/LC_MESSAGES/binutils.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 387449] openat(AT_FDCWD, "/usr/share/locale-langpack/en_CA/LC_MESSAGES/binutils.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 387449] openat(AT_FDCWD, "/usr/share/locale-langpack/en/LC_MESSAGES/binutils.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 387449] write(2, "addr2line: ", 11) = 11
+[pid 387449] write(2, "'./mysqld': No such file", 24) = 24
+[pid 387449] write(2, "\n", 1)          = 1
+[pid 387449] exit_group(1)              = ?
+[pid 387449] +++ exited with 1 +++
+[pid 317625] <... poll resumed>)        = 1 ([{fd=51, revents=POLLHUP}])
+[pid 317626] <... futex resumed>)       = ? ERESTART_RESTARTBLOCK (Interrupted by signal)
+[pid 317625] --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=387449, si_uid=1002, si_status=1, si_utime=0, si_stime=0} ---
+[pid 317626] restart_syscall(<... resuming interrupted futex ...> <unfinished ...>
+[pid 317625] read(51, "", 1024)         = 0
+[pid 317625] write(50, "0x171b4d0\n", 10) = -1 EPIPE (Broken pipe)
+[pid 317625] write(2, "Printing to addr2line failed\n", 29) = 29
+[pid 317625] writev(2, [{iov_base="./mysqld", iov_len=8}, {iov_base="(", iov_len=1}, {iov_base="my_print_stacktrace", iov_len=19}, {iov_base="+0x", iov_len=3}, {iov_base="44", iov_len=2}, {iov_base=")", iov_len=1}, {iov_base="[0x", iov_len=3}, {iov_base="5593f5a854d0", iov_len=12}, {iov_base="]\n", iov_len=2}], 9) = 51
+[pid 317625] write(50, "0xdd7c39\n", 9) = -1 EPIPE (Broken pipe)
+[pid 317625] writev(2, [{iov_base="./mysqld", iov_len=8}, {iov_base="(", iov_len=1}, {iov_base="handle_fatal_signal", iov_len=19}, {iov_base="+0x", iov_len=3}, {iov_base="42b", iov_len=3}, {iov_base=")", iov_len=1}, {iov_base="[0x", iov_len=3}, {iov_base="5593f5141c39", iov_len=12}, {iov_base="]\n", iov_len=2}], 9) = 52
+[pid 317625] close(50)                  = 0
+[pid 317625] close(51)                  = 0
+[pid 317625] wait4(387449, NULL, 0, NULL) = 387449
+[pid 317625] pipe2([49, 50], 0)         = 0
+[pid 317625] pipe2([51, 52], 0)         = 0
+[pid 317625] clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f2fefda6bd0) = 387451
+strace: Process 387451 attached
+[pid 387451] set_robust_list(0x7f2fefda6be0, 24) = 0
+[pid 317625] close(49)                  = 0
+[pid 317625] close(52)                  = 0
+[pid 317625] write(50, "0x42520\n", 8)  = 8
+[pid 387451] dup2(49, 0 <unfinished ...>
+[pid 317625] poll([{fd=51, events=POLLIN|POLLRDBAND}], 1, 500 <unfinished ...>
+[pid 387451] <... dup2 resumed>)        = 0
+[pid 387451] dup2(52, 1)                = 1
+[pid 387451] close(49)                  = 0
+[pid 387451] close(50)                  = 0
+[pid 387451] close(51)                  = 0
+[pid 387451] close(52)                  = 0
+[pid 387451] execve("/usr/local/sbin/addr2line", ["addr2line", "-C", "-f", "-e", "/lib/x86_64-linux-gnu/libc.so.6"], 0x7ffce77f88c0 /* 46 vars */) = -1 ENOENT (No such file or directory)
+[pid 387451] execve("/usr/local/bin/addr2line", ["addr2line", "-C", "-f", "-e", "/lib/x86_64-linux-gnu/libc.so.6"], 0x7ffce77f88c0 /* 46 vars */) = -1 ENOENT (No such file or directory)
+[pid 387451] execve("/usr/sbin/addr2line", ["addr2line", "-C", "-f", "-e", "/lib/x86_64-linux-gnu/libc.so.6"], 0x7ffce77f88c0 /* 46 vars */) = -1 ENOENT (No such file or directory)
+[pid 387451] execve("/usr/bin/addr2line", ["addr2line", "-C", "-f", "-e", "/lib/x86_64-linux-gnu/libc.so.6"], 0x7ffce77f88c0 /* 46 vars */) = 0
+[pid 387451] brk(NULL)                  = 0x563b119e4000
+[pid 387451] arch_prctl(0x3001 /* ARCH_??? */, 0x7ffe32ea9ac0) = -1 EINVAL (Invalid argument)
+[pid 387451] mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f109bb77000
+[pid 387451] access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+[pid 387451] openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+[pid 387451] newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=95335, ...}, AT_EMPTY_PATH) = 0
+[pid 387451] mmap(NULL, 95335, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f109bb5f000
+[pid 387451] close(3)                   = 0
+[pid 387451] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libbfd-2.38-system.so", O_RDONLY|O_CLOEXEC) = 3
+[pid 387451] read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+[pid 387451] newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=1535032, ...}, AT_EMPTY_PATH) = 0
+[pid 387451] mmap(NULL, 1537608, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f109b9e7000
+[pid 387451] mprotect(0x7f109ba27000, 1179648, PROT_NONE) = 0
+[pid 387451] mmap(0x7f109ba27000, 942080, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x40000) = 0x7f109ba27000
+[pid 387451] mmap(0x7f109bb0d000, 233472, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x126000) = 0x7f109bb0d000
+[pid 387451] mmap(0x7f109bb47000, 98304, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x15f000) = 0x7f109bb47000
+[pid 387451] close(3)                   = 0
+[pid 387451] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+[pid 387451] read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 832) = 832
+[pid 387451] pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+[pid 387451] pread64(3, "\4\0\0\0 \0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 48, 848) = 48
+[pid 387451] pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0i8\235HZ\227\223\333\350s\360\352,\223\340."..., 68, 896) = 68
+[pid 387451] newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=2216304, ...}, AT_EMPTY_PATH) = 0
+[pid 387451] pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+[pid 387451] mmap(NULL, 2260560, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f109b7bf000
+[pid 387451] mmap(0x7f109b7e7000, 1658880, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7f109b7e7000
+[pid 387451] mmap(0x7f109b97c000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1bd000) = 0x7f109b97c000
+[pid 387451] mmap(0x7f109b9d4000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x214000) = 0x7f109b9d4000
+[pid 387451] mmap(0x7f109b9da000, 52816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f109b9da000
+[pid 387451] close(3)                   = 0
+[pid 387451] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libz.so.1", O_RDONLY|O_CLOEXEC) = 3
+[pid 387451] read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+[pid 387451] newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=108936, ...}, AT_EMPTY_PATH) = 0
+[pid 387451] mmap(NULL, 110776, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f109b7a3000
+[pid 387451] mprotect(0x7f109b7a5000, 98304, PROT_NONE) = 0
+[pid 387451] mmap(0x7f109b7a5000, 69632, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f109b7a5000
+[pid 387451] mmap(0x7f109b7b6000, 24576, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x13000) = 0x7f109b7b6000
+[pid 387451] mmap(0x7f109b7bd000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19000) = 0x7f109b7bd000
+[pid 387451] close(3)                   = 0
+[pid 387451] mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f109b7a0000
+[pid 387451] arch_prctl(ARCH_SET_FS, 0x7f109b7a0740) = 0
+[pid 387451] set_tid_address(0x7f109b7a0a10) = 387451
+[pid 387451] set_robust_list(0x7f109b7a0a20, 24) = 0
+[pid 387451] rseq(0x7f109b7a10e0, 0x20, 0, 0x53053053) = 0
+[pid 387451] mprotect(0x7f109b9d4000, 16384, PROT_READ) = 0
+[pid 387451] mprotect(0x7f109b7bd000, 4096, PROT_READ) = 0
+[pid 387451] mprotect(0x7f109bb47000, 86016, PROT_READ) = 0
+[pid 387451] mprotect(0x563b10802000, 4096, PROT_READ) = 0
+[pid 387451] mprotect(0x7f109bbb1000, 8192, PROT_READ) = 0
+[pid 387451] prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+[pid 387451] munmap(0x7f109bb5f000, 95335) = 0
+[pid 387451] getrandom("\x75\x93\x40\x3d\x49\x83\xb9\x8d", 8, GRND_NONBLOCK) = 8
+[pid 387451] brk(NULL)                  = 0x563b119e4000
+[pid 387451] brk(0x563b11a05000)        = 0x563b11a05000
+[pid 387451] openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3
+[pid 387451] newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=5712208, ...}, AT_EMPTY_PATH) = 0
+[pid 387451] mmap(NULL, 5712208, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f109b22d000
+[pid 387451] close(3)                   = 0
+[pid 387451] openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY) = 3
+[pid 387451] newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=27002, ...}, AT_EMPTY_PATH) = 0
+[pid 387451] mmap(NULL, 27002, PROT_READ, MAP_SHARED, 3, 0) = 0x7f109bb70000
+[pid 387451] close(3)                   = 0
+[pid 387451] futex(0x7f109b9d9a6c, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+[pid 387451] newfstatat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", {st_mode=S_IFREG|0644, st_size=2216304, ...}, 0) = 0
+[pid 387451] newfstatat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", {st_mode=S_IFREG|0644, st_size=2216304, ...}, 0) = 0
+[pid 387451] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY) = 3
+[pid 387451] fcntl(3, F_GETFD)          = 0
+[pid 387451] fcntl(3, F_SETFD, FD_CLOEXEC) = 0
+[pid 387451] prlimit64(0, RLIMIT_NOFILE, NULL, {rlim_cur=32186, rlim_max=32186}) = 0
+[pid 387451] newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=2216304, ...}, AT_EMPTY_PATH) = 0
+[pid 387451] read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 4096) = 4096
+[pid 387451] lseek(3, 0, SEEK_SET)      = 0
+[pid 387451] read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 4096) = 4096
+[pid 387451] lseek(3, 4096, SEEK_SET)   = 4096
+[pid 387451] lseek(3, 4096, SEEK_SET)   = 4096
+[pid 387451] lseek(3, 4096, SEEK_SET)   = 4096
+[pid 387451] lseek(3, 4096, SEEK_SET)   = 4096
+[pid 387451] lseek(3, 4096, SEEK_SET)   = 4096
+[pid 387451] lseek(3, 4096, SEEK_SET)   = 4096
+[pid 387451] lseek(3, 4096, SEEK_SET)   = 4096
+[pid 387451] lseek(3, 4096, SEEK_SET)   = 4096
+[pid 387451] lseek(3, 4096, SEEK_SET)   = 4096
+[pid 387451] lseek(3, 4096, SEEK_SET)   = 4096
+[pid 387451] lseek(3, 4096, SEEK_SET)   = 4096
+[pid 387451] lseek(3, 4096, SEEK_SET)   = 4096
+[pid 387451] lseek(3, 4096, SEEK_SET)   = 4096
+[pid 387451] lseek(3, 4096, SEEK_SET)   = 4096
+[pid 387451] lseek(3, 4096, SEEK_SET)   = 4096
+[pid 387451] lseek(3, 2211840, SEEK_SET) = 2211840
+[pid 387451] read(3, "gets_chk\0.gnu.warning.inet6_opti"..., 4096) = 4096
+[pid 387451] newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=2216304, ...}, AT_EMPTY_PATH) = 0
+[pid 387451] lseek(3, 2215936, SEEK_SET) = 2215936
+[pid 387451] read(3, "\0\0\0\0\0\0\0\0\200\273!\0\0\0\0\0<\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096) = 368
+[pid 387451] lseek(3, 2211840, SEEK_SET) = 2211840
+[pid 387451] read(3, "gets_chk\0.gnu.warning.inet6_opti"..., 4096) = 4096
+[pid 387451] read(3, "\0\0\0\0\0\0\0\0\200\273!\0\0\0\0\0<\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096) = 368
+[pid 387451] lseek(3, 0, SEEK_SET)      = 0
+[pid 387451] read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 4096) = 4096
+[pid 387451] lseek(3, 2207744, SEEK_SET) = 2207744
+[pid 387451] read(3, "stapsdt\0Xg\n\0\0\0\0\0(>\36\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096) = 4096
+[pid 387451] read(3, "gets_chk\0.gnu.warning.inet6_opti"..., 4096) = 4096
+[pid 387451] lseek(3, 0, SEEK_SET)      = 0
+[pid 387451] read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 4096) = 4096
+[pid 387451] lseek(3, 2199552, SEEK_SET) = 2199552
+[pid 387451] read(3, "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096) = 4096
+[pid 387451] read(3, "\0\0\0\0libc\0mutex_entry\08@%rdi\0\10\0\0\0"..., 4096) = 4096
+[pid 387451] read(3, "stapsdt\0Xg\n\0\0\0\0\0(>\36\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096) = 4096
+[pid 387451] brk(0x563b11a28000)        = 0x563b11a28000
+[pid 387451] lseek(3, 131072, SEEK_SET) = 131072
+[pid 387451] read(3, "b~\0\0\10\0\0\0W~\0\0\0\0\0\0\1\0\0\0\27\0\2\0\202\221\226\6\24\0\0\0"..., 4096) = 4096
+[pid 387451] lseek(3, 90112, SEEK_SET)  = 90112
+[pid 387451] read(3, "%\0\0\0\0\0\0\0\273\r\0\0\22\0\17\0\200@\27\0\0\0\0\0,\0\0\0\0\0\0\0"..., 4096) = 4096
+[pid 387451] read(3, "dl_fatal_printf\0xdr_bool\0wcscat\0"..., 28672) = 28672
+[pid 387451] read(3, "\0__strftime_l\0_IO_wfile_underflo"..., 4096) = 4096
+[pid 387451] lseek(3, 126976, SEEK_SET) = 126976
+[pid 387451] read(3, "\2\0\v\0\7\0\2\0\2\200\2\0%\0\2\200\2\0\34\0\2\0\2\0\2\0\2\0\2\0\2\0"..., 4096) = 4096
+[pid 387451] read(3, "b~\0\0\10\0\0\0W~\0\0\0\0\0\0\1\0\0\0\27\0\2\0\202\221\226\6\24\0\0\0"..., 4096) = 4096
+[pid 387451] lseek(3, 16384, SEEK_SET)  = 16384
+[pid 387451] read(3, "z\350V\216T\252\211\345\321_9\17\233,v\17\\\10\262\343\344C]\27697W\241X\322\353\234"..., 4096) = 4096
+[pid 387451] read(3, "P\256\25\0\0\0\0\0\16\0\0\0\0\0\0\0007l\0\0\22\0\17\0\240E\27\0\0\0\0\0"..., 69632) = 69632
+[pid 387451] read(3, "%\0\0\0\0\0\0\0\273\r\0\0\22\0\17\0\200@\27\0\0\0\0\0,\0\0\0\0\0\0\0"..., 4096) = 4096
+[pid 387451] brk(0x563b11a59000)        = 0x563b11a59000
+[pid 387451] mmap(NULL, 290816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f109b1e6000
+[pid 387451] lseek(3, 122880, SEEK_SET) = 122880
+[pid 387451] read(3, "\0__strftime_l\0_IO_wfile_underflo"..., 4096) = 4096
+[pid 387451] read(3, "\2\0\v\0\7\0\2\0\2\200\2\0%\0\2\200\2\0\34\0\2\0\2\0\2\0\2\0\2\0\2\0"..., 4096) = 4096
+[pid 387451] brk(0x563b11a30000)        = 0x563b11a30000
+[pid 387451] newfstatat(0, "", {st_mode=S_IFIFO|0600, st_size=0, ...}, AT_EMPTY_PATH) = 0
+[pid 387451] read(0, "0x42520\n", 4096) = 8
+[pid 387451] readlink("/lib", "usr/lib", 1023) = 7
+[pid 387451] readlink("/usr", 0x7ffe32ea7f00, 1023) = -1 EINVAL (Invalid argument)
+[pid 387451] readlink("/usr/lib", 0x7ffe32ea7f00, 1023) = -1 EINVAL (Invalid argument)
+[pid 387451] readlink("/usr/lib/x86_64-linux-gnu", 0x7ffe32ea7f00, 1023) = -1 EINVAL (Invalid argument)
+[pid 387451] readlink("/usr/lib/x86_64-linux-gnu/libc.so.6", 0x7ffe32ea7f00, 1023) = -1 EINVAL (Invalid argument)
+[pid 387451] newfstatat(AT_FDCWD, ".build-id/69/389d485a9793dbe873f0ea2c93e02efaa9aa3d.debug", 0x7ffe32ea9680, 0) = -1 ENOENT (No such file or directory)
+[pid 387451] openat(AT_FDCWD, ".build-id/69/389d485a9793dbe873f0ea2c93e02efaa9aa3d.debug", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 387451] newfstatat(AT_FDCWD, ".debug/.build-id/69/389d485a9793dbe873f0ea2c93e02efaa9aa3d.debug", 0x7ffe32ea9680, 0) = -1 ENOENT (No such file or directory)
+[pid 387451] openat(AT_FDCWD, ".debug/.build-id/69/389d485a9793dbe873f0ea2c93e02efaa9aa3d.debug", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 387451] newfstatat(AT_FDCWD, "/usr/lib/debug/.build-id/69/389d485a9793dbe873f0ea2c93e02efaa9aa3d.debug", {st_mode=S_IFREG|0644, st_size=4415848, ...}, 0) = 0
+[pid 387451] openat(AT_FDCWD, "/usr/lib/debug/.build-id/69/389d485a9793dbe873f0ea2c93e02efaa9aa3d.debug", O_RDONLY) = 4
+[pid 387451] fcntl(4, F_GETFD)          = 0
+[pid 387451] fcntl(4, F_SETFD, FD_CLOEXEC) = 0
+[pid 387451] newfstatat(4, "", {st_mode=S_IFREG|0644, st_size=4415848, ...}, AT_EMPTY_PATH) = 0
+[pid 387451] read(4, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 4096) = 4096
+[pid 387451] lseek(4, 4407296, SEEK_SET) = 4407296
+[pid 387451] read(4, "py_chk\0getprotobyname_r@@GLIBC_2"..., 4096) = 4096
+[pid 387451] newfstatat(4, "", {st_mode=S_IFREG|0644, st_size=4415848, ...}, AT_EMPTY_PATH) = 0
+[pid 387451] lseek(4, 4415488, SEEK_SET) = 4415488
+[pid 387451] read(4, "x\2171\0\0\0\0\0\225*\0\0\0\0\0\0\0\0\0\0\0\0\0\0\10\0\0\0\0\0\0\0"..., 4096) = 360
+[pid 387451] lseek(4, 4407296, SEEK_SET) = 4407296
+[pid 387451] read(4, "py_chk\0getprotobyname_r@@GLIBC_2"..., 4096) = 4096
+[pid 387451] read(4, "\304\3\0\0\0\0\0\0\25\177\0\0\0\0\0\0\0\0\0\0\0\0\0\0\1\0\0\0\0\0\0\0"..., 4096) = 4096
+[pid 387451] read(4, "x\2171\0\0\0\0\0\225*\0\0\0\0\0\0\0\0\0\0\0\0\0\0\10\0\0\0\0\0\0\0"..., 4096) = 360
+[pid 387451] lseek(4, 0, SEEK_SET)      = 0
+[pid 387451] read(4, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 4096) = 4096
+[pid 387451] lseek(4, 4407296, SEEK_SET) = 4407296
+[pid 387451] read(4, "py_chk\0getprotobyname_r@@GLIBC_2"..., 4096) = 4096
+[pid 387451] lseek(4, 0, SEEK_SET)      = 0
+[pid 387451] read(4, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 4096) = 4096
+[pid 387451] lseek(4, 4096, SEEK_SET)   = 4096
+[pid 387451] read(4, "%rdi\0\0\0\0\10\0\0\09\0\0\0\3\0\0\0stapsdt\0\27\262\t\0"..., 4096) = 4096
+[pid 387451] read(4, "\10\0\0\0B\0\0\0\3\0\0\0stapsdt\0\215f\23\0\0\0\0\0(>\36\0"..., 4096) = 4096
+[pid 387451] lseek(4, 12288, SEEK_SET)  = 12288
+[pid 387451] lseek(4, 28672, SEEK_SET)  = 28672
+[pid 387451] read(4, "\\\342\5\233P<\374{\32\265\26\213\2677\345\337\363\201\363\237\7\"\342\3\255M\276O\31\27\273\215"..., 4096) = 4096
+[pid 387451] lseek(4, 2506752, SEEK_SET) = 2506752
+[pid 387451] read(4, "\10\327Q%\302uT\211p\35U\"\340\256\312\366\274\375\303\220\353\250\22\1wU\"\340\256J\4\334"..., 4096) = 4096
+[pid 387451] lseek(4, 2654208, SEEK_SET) = 2654208
+[pid 387451] read(4, "\361-\246\245C\263\327\30f6\307%{M \26&\25\215My\23a\342\273\\\263v7\376\r\246"..., 4096) = 4096
+[pid 387451] lseek(4, 3182592, SEEK_SET) = 3182592
+[pid 387451] read(4, "\315\366\232L\335\242\323\23\340\327M\317Cg\250\3469\314\251h[\255N[\253\223e\276\372\367\365W"..., 4096) = 4096
+[pid 387451] lseek(4, 3244032, SEEK_SET) = 3244032
+[pid 387451] read(4, "\254\216\251\366\240\312\351RmB\335\347\203\226YH\321\222\224\25\26(\260\333\3058\0.\255\301\232\315"..., 4096) = 4096
+[pid 387451] lseek(4, 3256320, SEEK_SET) = 3256320
+[pid 387451] read(4, "\33\327\377\305\306Q(\256n\321t\20\327id\220\262\343-ZN9\304+\316\321\306\34\233\t\343>"..., 4096) = 4096
+[pid 387451] lseek(4, 3940352, SEEK_SET) = 3940352
+[pid 387451] read(4, "\300\34m\276\252Z\217\210\303\200E,c1\271\214\245\311E\222N\320\313\35{\201<\\\342\344\212\361"..., 4096) = 4096
+[pid 387451] close(4)                   = 0
+[pid 387451] newfstatat(AT_FDCWD, "/usr/lib/debug/.build-id/69/389d485a9793dbe873f0ea2c93e02efaa9aa3d.debug", {st_mode=S_IFREG|0644, st_size=4415848, ...}, 0) = 0
+[pid 387451] openat(AT_FDCWD, "/usr/lib/debug/.build-id/69/389d485a9793dbe873f0ea2c93e02efaa9aa3d.debug", O_RDONLY) = 4
+[pid 387451] fcntl(4, F_GETFD)          = 0
+[pid 387451] fcntl(4, F_SETFD, FD_CLOEXEC) = 0
+[pid 387451] newfstatat(4, "", {st_mode=S_IFREG|0644, st_size=4415848, ...}, AT_EMPTY_PATH) = 0
+[pid 387451] read(4, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 4096) = 4096
+[pid 387451] lseek(4, 4407296, SEEK_SET) = 4407296
+[pid 387451] read(4, "py_chk\0getprotobyname_r@@GLIBC_2"..., 4096) = 4096
+[pid 387451] newfstatat(4, "", {st_mode=S_IFREG|0644, st_size=4415848, ...}, AT_EMPTY_PATH) = 0
+[pid 387451] lseek(4, 4415488, SEEK_SET) = 4415488
+[pid 387451] read(4, "x\2171\0\0\0\0\0\225*\0\0\0\0\0\0\0\0\0\0\0\0\0\0\10\0\0\0\0\0\0\0"..., 4096) = 360
+[pid 387451] lseek(4, 4407296, SEEK_SET) = 4407296
+[pid 387451] read(4, "py_chk\0getprotobyname_r@@GLIBC_2"..., 4096) = 4096
+[pid 387451] read(4, "\304\3\0\0\0\0\0\0\25\177\0\0\0\0\0\0\0\0\0\0\0\0\0\0\1\0\0\0\0\0\0\0"..., 4096) = 4096
+[pid 387451] read(4, "x\2171\0\0\0\0\0\225*\0\0\0\0\0\0\0\0\0\0\0\0\0\0\10\0\0\0\0\0\0\0"..., 4096) = 360
+[pid 387451] lseek(4, 0, SEEK_SET)      = 0
+[pid 387451] read(4, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 4096) = 4096
+[pid 387451] lseek(4, 4407296, SEEK_SET) = 4407296
+[pid 387451] read(4, "py_chk\0getprotobyname_r@@GLIBC_2"..., 4096) = 4096
+[pid 387451] lseek(4, 0, SEEK_SET)      = 0
+[pid 387451] read(4, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 4096) = 4096
+[pid 387451] lseek(4, 4096, SEEK_SET)   = 4096
+[pid 387451] read(4, "%rdi\0\0\0\0\10\0\0\09\0\0\0\3\0\0\0stapsdt\0\27\262\t\0"..., 4096) = 4096
+[pid 387451] read(4, "\10\0\0\0B\0\0\0\3\0\0\0stapsdt\0\215f\23\0\0\0\0\0(>\36\0"..., 4096) = 4096
+[pid 387451] lseek(4, 12288, SEEK_SET)  = 12288
+[pid 387451] lseek(4, 12288, SEEK_SET)  = 12288
+[pid 387451] lseek(4, 28672, SEEK_SET)  = 28672
+[pid 387451] read(4, "\\\342\5\233P<\374{\32\265\26\213\2677\345\337\363\201\363\237\7\"\342\3\255M\276O\31\27\273\215"..., 4096) = 4096
+[pid 387451] lseek(4, 32768, SEEK_SET)  = 32768
+[pid 387451] lseek(4, 2506752, SEEK_SET) = 2506752
+[pid 387451] read(4, "\10\327Q%\302uT\211p\35U\"\340\256\312\366\274\375\303\220\353\250\22\1wU\"\340\256J\4\334"..., 4096) = 4096
+[pid 387451] lseek(4, 2510848, SEEK_SET) = 2510848
+[pid 387451] lseek(4, 2654208, SEEK_SET) = 2654208
+[pid 387451] read(4, "\361-\246\245C\263\327\30f6\307%{M \26&\25\215My\23a\342\273\\\263v7\376\r\246"..., 4096) = 4096
+[pid 387451] lseek(4, 2658304, SEEK_SET) = 2658304
+[pid 387451] lseek(4, 3182592, SEEK_SET) = 3182592
+[pid 387451] read(4, "\315\366\232L\335\242\323\23\340\327M\317Cg\250\3469\314\251h[\255N[\253\223e\276\372\367\365W"..., 4096) = 4096
+[pid 387451] lseek(4, 3186688, SEEK_SET) = 3186688
+[pid 387451] lseek(4, 3244032, SEEK_SET) = 3244032
+[pid 387451] read(4, "\254\216\251\366\240\312\351RmB\335\347\203\226YH\321\222\224\25\26(\260\333\3058\0.\255\301\232\315"..., 4096) = 4096
+[pid 387451] lseek(4, 3248128, SEEK_SET) = 3248128
+[pid 387451] lseek(4, 3256320, SEEK_SET) = 3256320
+[pid 387451] read(4, "\33\327\377\305\306Q(\256n\321t\20\327id\220\262\343-ZN9\304+\316\321\306\34\233\t\343>"..., 4096) = 4096
+[pid 387451] lseek(4, 3260416, SEEK_SET) = 3260416
+[pid 387451] lseek(4, 3940352, SEEK_SET) = 3940352
+[pid 387451] read(4, "\300\34m\276\252Z\217\210\303\200E,c1\271\214\245\311E\222N\320\313\35{\201<\\\342\344\212\361"..., 4096) = 4096
+[pid 387451] lseek(4, 3944448, SEEK_SET) = 3944448
+[pid 387451] brk(0x563b11a60000)        = 0x563b11a60000
+[pid 387451] mmap(NULL, 237568, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f109b1ac000
+[pid 387451] lseek(4, 4038656, SEEK_SET) = 4038656
+[pid 387451] read(4, "M\2130U{\235*\314\16R\3D\25\263\237\363v\261\214\252P\367\260\6I\2039\240\31\207aq"..., 4096) = 4096
+[pid 387451] read(4, "\220\23\36\0\0\0\0\0\25\0\0\0\0\0\0\0K\1\0\0\2\0\20\0\200\253\33\0\0\0\0\0"..., 233472) = 233472
+[pid 387451] read(4, "\360\375\t\0\0\0\0\0\16\0\0\0\0\0\0\0\373\256\0\0\22\0\17\0\260\200\n\0\0\0\0\0"..., 4096) = 4096
+[pid 387451] mmap(NULL, 319488, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f109b15e000
+[pid 387451] munmap(0x7f109b1ac000, 237568) = 0
+[pid 387451] mmap(NULL, 950272, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f109b076000
+[pid 387451] read(4, "ype_LC_MONETARY\0_nl_value_type_L"..., 126976) = 126976
+[pid 387451] read(4, "py_chk\0getprotobyname_r@@GLIBC_2"..., 4096) = 4096
+[pid 387451] munmap(0x7f109b15e000, 319488) = 0
+[pid 387451] mmap(NULL, 6115328, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f109aaa1000
+[pid 387451] mmap(NULL, 2482176, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f109a843000
+[pid 387451] lseek(4, 28672, SEEK_SET)  = 28672
+[pid 387451] read(4, "\\\342\5\233P<\374{\32\265\26\213\2677\345\337\363\201\363\237\7\"\342\3\255M\276O\31\27\273\215"..., 4096) = 4096
+[pid 387451] read(4, "\227\320G\223c\23\220:\322\301RmXp\304\"\243\322\f\367K\350\336\225\26#\216\272\233Db\245"..., 2473984) = 2473984
+[pid 387451] read(4, "\10\327Q%\302uT\211p\35U\"\340\256\312\366\274\375\303\220\353\250\22\1wU\"\340\256J\4\334"..., 4096) = 4096
+[pid 387451] brk(0x563b11a82000)        = 0x563b11a82000
+[pid 387451] munmap(0x7f109a843000, 2482176) = 0
+[pid 387451] brk(0x563b11b75000)        = 0x563b11b75000
+[pid 387451] brk(0x563b11b99000)        = 0x563b11b99000
+[pid 387451] lseek(4, 2510848, SEEK_SET) = 2510848
+[pid 387451] read(4, "\271\271\0017\10\271hz_\2103w\371\27%o\272'2\0\205W\321@\323y\2538\257\371\271\363"..., 143360) = 143360
+[pid 387451] read(4, "\361-\246\245C\263\327\30f6\307%{M \26&\25\215My\23a\342\273\\\263v7\376\r\246"..., 4096) = 4096
+[pid 387451] lseek(4, 3182592, SEEK_SET) = 3182592
+[pid 387451] read(4, "\315\366\232L\335\242\323\23\340\327M\317Cg\250\3469\314\251h[\255N[\253\223e\276\372\367\365W"..., 4096) = 4096
+[pid 387451] read(4, "\"|\230\177]\3350Q&\354\314i\225g\272\270S\254\301\20\\/\23\216'H\300+\210\201\23\244"..., 57344) = 57344
+[pid 387451] read(4, "\254\216\251\366\240\312\351RmB\335\347\203\226YH\321\222\224\25\26(\260\333\3058\0.\255\301\232\315"..., 4096) = 4096
+[pid 387451] lseek(4, 3248128, SEEK_SET) = 3248128
+[pid 387451] read(4, "\300\336\364zz\207?\374E\274\260\363\345}\266\6\2\212v.5\263_\354T6\375\224\301_\377V"..., 8192) = 8192
+[pid 387451] read(4, "\33\327\377\305\306Q(\256n\321t\20\327id\220\262\343-ZN9\304+\316\321\306\34\233\t\343>"..., 4096) = 4096
+[pid 387451] brk(0x563b11d0c000)        = 0x563b11d0c000
+[pid 387451] brk(0x563b11d8d000)        = 0x563b11d8d000
+[pid 387451] lseek(4, 2654208, SEEK_SET) = 2654208
+[pid 387451] read(4, "\361-\246\245C\263\327\30f6\307%{M \26&\25\215My\23a\342\273\\\263v7\376\r\246"..., 4096) = 4096
+[pid 387451] read(4, "l\340'\257\334\317\206\264\310j%\2660\316G\23\254\216\233&\370\341TM\320\3427\301#\272\334\f"..., 524288) = 524288
+[pid 387451] read(4, "\315\366\232L\335\242\323\23\340\327M\317Cg\250\3469\314\251h[\255N[\253\223e\276\372\367\365W"..., 4096) = 4096
+[pid 387451] lseek(4, 3940352, SEEK_SET) = 3940352
+[pid 387451] read(4, "\300\34m\276\252Z\217\210\303\200E,c1\271\214\245\311E\222N\320\313\35{\201<\\\342\344\212\361"..., 4096) = 4096
+[pid 387451] read(4, "\25Q\24\261\200`A\354\250\250\377\347\3140w\6\343\276\277\367\367\371\377\374 \367\234\247\236\376<\317"..., 94208) = 94208
+[pid 387451] read(4, "M\2130U{\235*\314\16R\3D\25\263\237\363v\261\214\252P\367\260\6I\2039\240\31\207aq"..., 4096) = 4096
+[pid 387451] brk(0x563b11dae000)        = 0x563b11dae000
+[pid 387451] brk(0x563b11dcf000)        = 0x563b11dcf000
+[pid 387451] brk(0x563b11df0000)        = 0x563b11df0000
+[pid 387451] brk(0x563b11e11000)        = 0x563b11e11000
+[pid 387451] brk(0x563b11e32000)        = 0x563b11e32000
+[pid 387451] brk(0x563b11e53000)        = 0x563b11e53000
+[pid 387451] brk(0x563b11e74000)        = 0x563b11e74000
+[pid 387451] brk(0x563b11e95000)        = 0x563b11e95000
+[pid 387451] brk(0x563b11eb6000)        = 0x563b11eb6000
+[pid 387451] brk(0x563b11ed7000)        = 0x563b11ed7000
+[pid 387451] brk(0x563b11ef8000)        = 0x563b11ef8000
+[pid 387451] brk(0x563b11f19000)        = 0x563b11f19000
+[pid 387451] brk(0x563b11f3a000)        = 0x563b11f3a000
+[pid 387451] brk(0x563b11f5b000)        = 0x563b11f5b000
+[pid 387451] brk(0x563b11f7c000)        = 0x563b11f7c000
+[pid 387451] brk(0x563b11f9d000)        = 0x563b11f9d000
+[pid 387451] brk(0x563b11fbe000)        = 0x563b11fbe000
+[pid 387451] brk(0x563b11fdf000)        = 0x563b11fdf000
+[pid 387451] brk(0x563b12000000)        = 0x563b12000000
+[pid 387451] brk(0x563b12021000)        = 0x563b12021000
+[pid 387451] brk(0x563b12042000)        = 0x563b12042000
+[pid 387451] brk(0x563b12063000)        = 0x563b12063000
+[pid 387451] brk(0x563b12084000)        = 0x563b12084000
+[pid 387451] brk(0x563b120a5000)        = 0x563b120a5000
+[pid 387451] brk(0x563b120c6000)        = 0x563b120c6000
+[pid 387451] brk(0x563b120e7000)        = 0x563b120e7000
+[pid 387451] brk(0x563b12108000)        = 0x563b12108000
+[pid 387451] brk(0x563b12129000)        = 0x563b12129000
+[pid 387451] brk(0x563b1214a000)        = 0x563b1214a000
+[pid 387451] brk(0x563b1216b000)        = 0x563b1216b000
+[pid 387451] brk(0x563b1218c000)        = 0x563b1218c000
+[pid 387451] brk(0x563b121ad000)        = 0x563b121ad000
+[pid 387451] brk(0x563b121ce000)        = 0x563b121ce000
+[pid 387451] brk(0x563b121ef000)        = 0x563b121ef000
+[pid 387451] brk(0x563b12210000)        = 0x563b12210000
+[pid 387451] brk(0x563b12231000)        = 0x563b12231000
+[pid 387451] brk(0x563b12252000)        = 0x563b12252000
+[pid 387451] brk(0x563b12273000)        = 0x563b12273000
+[pid 387451] brk(0x563b12294000)        = 0x563b12294000
+[pid 387451] brk(0x563b122b5000)        = 0x563b122b5000
+[pid 387451] brk(0x563b122d6000)        = 0x563b122d6000
+[pid 387451] brk(0x563b122f7000)        = 0x563b122f7000
+[pid 387451] brk(0x563b12318000)        = 0x563b12318000
+[pid 387451] brk(0x563b12339000)        = 0x563b12339000
+[pid 387451] brk(0x563b1235a000)        = 0x563b1235a000
+[pid 387451] brk(0x563b1237b000)        = 0x563b1237b000
+[pid 387451] brk(0x563b1239c000)        = 0x563b1239c000
+[pid 387451] brk(0x563b123bd000)        = 0x563b123bd000
+[pid 387451] brk(0x563b123de000)        = 0x563b123de000
+[pid 387451] brk(0x563b123ff000)        = 0x563b123ff000
+[pid 387451] brk(0x563b12420000)        = 0x563b12420000
+[pid 387451] brk(0x563b12441000)        = 0x563b12441000
+[pid 387451] brk(0x563b12462000)        = 0x563b12462000
+[pid 387451] brk(0x563b12483000)        = 0x563b12483000
+[pid 387451] brk(0x563b124a4000)        = 0x563b124a4000
+[pid 387451] brk(0x563b124c5000)        = 0x563b124c5000
+[pid 387451] brk(0x563b124e6000)        = 0x563b124e6000
+[pid 387451] brk(0x563b12507000)        = 0x563b12507000
+[pid 387451] brk(0x563b12528000)        = 0x563b12528000
+[pid 387451] brk(0x563b12549000)        = 0x563b12549000
+[pid 387451] brk(0x563b1256a000)        = 0x563b1256a000
+[pid 387451] brk(0x563b1258b000)        = 0x563b1258b000
+[pid 387451] brk(0x563b125ac000)        = 0x563b125ac000
+[pid 387451] brk(0x563b125cd000)        = 0x563b125cd000
+[pid 387451] brk(0x563b125ee000)        = 0x563b125ee000
+[pid 387451] brk(0x563b1260f000)        = 0x563b1260f000
+[pid 387451] brk(0x563b12630000)        = 0x563b12630000
+[pid 387451] brk(0x563b12651000)        = 0x563b12651000
+[pid 387451] brk(0x563b12672000)        = 0x563b12672000
+[pid 387451] brk(0x563b12693000)        = 0x563b12693000
+[pid 387451] brk(0x563b126b4000)        = 0x563b126b4000
+[pid 387451] brk(0x563b126d5000)        = 0x563b126d5000
+[pid 387451] brk(0x563b126f6000)        = 0x563b126f6000
+[pid 387451] brk(0x563b12717000)        = 0x563b12717000
+[pid 387451] brk(0x563b12738000)        = 0x563b12738000
+[pid 387451] brk(0x563b12759000)        = 0x563b12759000
+[pid 387451] brk(0x563b1277a000)        = 0x563b1277a000
+[pid 387451] brk(0x563b1279b000)        = 0x563b1279b000
+[pid 387451] brk(0x563b127bc000)        = 0x563b127bc000
+[pid 387451] brk(0x563b127dd000)        = 0x563b127dd000
+[pid 387451] brk(0x563b127fe000)        = 0x563b127fe000
+[pid 387451] brk(0x563b1281f000)        = 0x563b1281f000
+[pid 387451] brk(0x563b12840000)        = 0x563b12840000
+[pid 387451] brk(0x563b12861000)        = 0x563b12861000
+[pid 387451] brk(0x563b12882000)        = 0x563b12882000
+[pid 387451] brk(0x563b128a3000)        = 0x563b128a3000
+[pid 387451] brk(0x563b128c4000)        = 0x563b128c4000
+[pid 387451] brk(0x563b128e5000)        = 0x563b128e5000
+[pid 387451] brk(0x563b12906000)        = 0x563b12906000
+[pid 387451] brk(0x563b12927000)        = 0x563b12927000
+[pid 387451] brk(0x563b12948000)        = 0x563b12948000
+[pid 387451] brk(0x563b12969000)        = 0x563b12969000
+[pid 387451] brk(0x563b1298a000)        = 0x563b1298a000
+[pid 387451] brk(0x563b129ab000)        = 0x563b129ab000
+[pid 387451] brk(0x563b129cc000)        = 0x563b129cc000
+[pid 387451] newfstatat(1, "", {st_mode=S_IFIFO|0600, st_size=0, ...}, AT_EMPTY_PATH) = 0
+[pid 387451] write(1, "__restore_rt\nlibc_sigaction.c:?\n", 32) = 32
+[pid 317625] <... poll resumed>)        = 1 ([{fd=51, revents=POLLIN}])
+[pid 387451] read(0,  <unfinished ...>
+[pid 317625] read(51, "__restore_rt\nlibc_sigaction.c:?\n", 1024) = 32
+[pid 317625] write(2, "libc_sigaction.c:0(__restore_rt)"..., 49) = 49
+[pid 317625] write(50, "0x118d7f\n", 9 <unfinished ...>
+[pid 387451] <... read resumed>"0x118d7f\n", 4096) = 9
+[pid 317625] <... write resumed>)       = 9
+[pid 317625] poll([{fd=51, events=POLLIN|POLLRDBAND}], 1, 500 <unfinished ...>
+[pid 387451] write(1, "__GI___poll\n./io/../sysdeps/unix"..., 72) = 72
+[pid 317625] <... poll resumed>)        = 1 ([{fd=51, revents=POLLIN}])
+[pid 317625] read(51,  <unfinished ...>
+[pid 387451] read(0,  <unfinished ...>
+[pid 317625] <... read resumed>"__GI___poll\n./io/../sysdeps/unix"..., 1024) = 72
+[pid 317625] write(2, "linux/poll.c:29(__GI___poll)[0x7"..., 45) = 45
+[pid 317625] close(50 <unfinished ...>
+[pid 387451] <... read resumed>"", 4096) = 0
+[pid 317625] <... close resumed>)       = 0
+[pid 317625] close(51)                  = 0
+[pid 317625] wait4(387451,  <unfinished ...>
+[pid 387451] munmap(0x7f109aaa1000, 6115328) = 0
+[pid 387451] close(4)                   = 0
+[pid 387451] munmap(0x7f109b076000, 950272) = 0
+[pid 387451] close(3)                   = 0
+[pid 387451] munmap(0x7f109b1e6000, 290816) = 0
+[pid 387451] exit_group(0)              = ?
+[pid 387451] +++ exited with 0 +++
+[pid 317625] <... wait4 resumed>NULL, 0, NULL) = 387451
+[pid 317625] --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=387451, si_uid=1002, si_status=0, si_utime=6, si_stime=0} ---
+[pid 317625] pipe2([49, 50], 0)         = 0
+[pid 317625] pipe2([51, 52], 0)         = 0
+[pid 317625] clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLDstrace: Process 387452 attached
+ <unfinished ...>
+[pid 387452] set_robust_list(0x7f2fefda6be0, 24 <unfinished ...>
+[pid 317625] <... clone resumed>, child_tidptr=0x7f2fefda6bd0) = 387452
+[pid 387452] <... set_robust_list resumed>) = 0
+[pid 317625] close(49)                  = 0
+[pid 317625] close(52)                  = 0
+[pid 317625] write(50, "0x5593f5aaf4f9\n", 15 <unfinished ...>
+[pid 387452] dup2(49, 0)                = 0
+[pid 387452] dup2(52, 1 <unfinished ...>
+[pid 317625] <... write resumed>)       = 15
+[pid 387452] <... dup2 resumed>)        = 1
+[pid 387452] close(49)                  = 0
+[pid 387452] close(50)                  = 0
+[pid 387452] close(51)                  = 0
+[pid 387452] close(52 <unfinished ...>
+[pid 317625] poll([{fd=51, events=POLLIN|POLLRDBAND}], 1, 500 <unfinished ...>
+[pid 387452] <... close resumed>)       = 0
+[pid 387452] execve("/usr/local/sbin/addr2line", ["addr2line", "-C", "-f", "-e", "./mysqld"], 0x7ffce77f88c0 /* 46 vars */) = -1 ENOENT (No such file or directory)
+[pid 387452] execve("/usr/local/bin/addr2line", ["addr2line", "-C", "-f", "-e", "./mysqld"], 0x7ffce77f88c0 /* 46 vars */) = -1 ENOENT (No such file or directory)
+[pid 387452] execve("/usr/sbin/addr2line", ["addr2line", "-C", "-f", "-e", "./mysqld"], 0x7ffce77f88c0 /* 46 vars */) = -1 ENOENT (No such file or directory)
+[pid 387452] execve("/usr/bin/addr2line", ["addr2line", "-C", "-f", "-e", "./mysqld"], 0x7ffce77f88c0 /* 46 vars */) = 0
+[pid 387452] brk(NULL)                  = 0x565453ea5000
+[pid 387452] arch_prctl(0x3001 /* ARCH_??? */, 0x7ffe52392360) = -1 EINVAL (Invalid argument)
+[pid 387452] mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f34375ea000
+[pid 387452] access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+[pid 387452] openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+[pid 387452] newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=95335, ...}, AT_EMPTY_PATH) = 0
+[pid 387452] mmap(NULL, 95335, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f34375d2000
+[pid 387452] close(3)                   = 0
+[pid 387452] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libbfd-2.38-system.so", O_RDONLY|O_CLOEXEC) = 3
+[pid 387452] read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+[pid 387452] newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=1535032, ...}, AT_EMPTY_PATH) = 0
+[pid 387452] mmap(NULL, 1537608, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f343745a000
+[pid 387452] mprotect(0x7f343749a000, 1179648, PROT_NONE) = 0
+[pid 387452] mmap(0x7f343749a000, 942080, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x40000) = 0x7f343749a000
+[pid 387452] mmap(0x7f3437580000, 233472, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x126000) = 0x7f3437580000
+[pid 387452] mmap(0x7f34375ba000, 98304, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x15f000) = 0x7f34375ba000
+[pid 387452] close(3)                   = 0
+[pid 387452] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+[pid 387452] read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 832) = 832
+[pid 387452] pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+[pid 387452] pread64(3, "\4\0\0\0 \0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 48, 848) = 48
+[pid 387452] pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0i8\235HZ\227\223\333\350s\360\352,\223\340."..., 68, 896) = 68
+[pid 387452] newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=2216304, ...}, AT_EMPTY_PATH) = 0
+[pid 387452] pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+[pid 387452] mmap(NULL, 2260560, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f3437232000
+[pid 387452] mmap(0x7f343725a000, 1658880, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7f343725a000
+[pid 387452] mmap(0x7f34373ef000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1bd000) = 0x7f34373ef000
+[pid 387452] mmap(0x7f3437447000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x214000) = 0x7f3437447000
+[pid 387452] mmap(0x7f343744d000, 52816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f343744d000
+[pid 387452] close(3)                   = 0
+[pid 387452] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libz.so.1", O_RDONLY|O_CLOEXEC) = 3
+[pid 387452] read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+[pid 387452] newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=108936, ...}, AT_EMPTY_PATH) = 0
+[pid 387452] mmap(NULL, 110776, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f3437216000
+[pid 387452] mprotect(0x7f3437218000, 98304, PROT_NONE) = 0
+[pid 387452] mmap(0x7f3437218000, 69632, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f3437218000
+[pid 387452] mmap(0x7f3437229000, 24576, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x13000) = 0x7f3437229000
+[pid 387452] mmap(0x7f3437230000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19000) = 0x7f3437230000
+[pid 387452] close(3)                   = 0
+[pid 387452] mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f3437213000
+[pid 387452] arch_prctl(ARCH_SET_FS, 0x7f3437213740) = 0
+[pid 387452] set_tid_address(0x7f3437213a10) = 387452
+[pid 387452] set_robust_list(0x7f3437213a20, 24) = 0
+[pid 387452] rseq(0x7f34372140e0, 0x20, 0, 0x53053053) = 0
+[pid 387452] mprotect(0x7f3437447000, 16384, PROT_READ) = 0
+[pid 387452] mprotect(0x7f3437230000, 4096, PROT_READ) = 0
+[pid 387452] mprotect(0x7f34375ba000, 86016, PROT_READ) = 0
+[pid 387452] mprotect(0x56545353a000, 4096, PROT_READ) = 0
+[pid 387452] mprotect(0x7f3437624000, 8192, PROT_READ) = 0
+[pid 387452] prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+[pid 387452] munmap(0x7f34375d2000, 95335) = 0
+[pid 387452] getrandom("\x91\xb2\x40\x94\x1f\x96\xd0\x82", 8, GRND_NONBLOCK) = 8
+[pid 387452] brk(NULL)                  = 0x565453ea5000
+[pid 387452] brk(0x565453ec6000)        = 0x565453ec6000
+[pid 387452] openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3
+[pid 387452] newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=5712208, ...}, AT_EMPTY_PATH) = 0
+[pid 387452] mmap(NULL, 5712208, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f3436ca0000
+[pid 387452] close(3)                   = 0
+[pid 387452] openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY) = 3
+[pid 387452] newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=27002, ...}, AT_EMPTY_PATH) = 0
+[pid 387452] mmap(NULL, 27002, PROT_READ, MAP_SHARED, 3, 0) = 0x7f34375e3000
+[pid 387452] close(3)                   = 0
+[pid 387452] futex(0x7f343744ca6c, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+[pid 387452] newfstatat(AT_FDCWD, "./mysqld", 0x7ffe52392340, 0) = -1 ENOENT (No such file or directory)
+[pid 387452] openat(AT_FDCWD, "/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC) = 3
+[pid 387452] newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=2996, ...}, AT_EMPTY_PATH) = 0
+[pid 387452] read(3, "# Locale name alias data base.\n#"..., 4096) = 2996
+[pid 387452] read(3, "", 4096)          = 0
+[pid 387452] close(3)                   = 0
+[pid 387452] openat(AT_FDCWD, "/usr/share/locale/en_CA/LC_MESSAGES/binutils.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 387452] openat(AT_FDCWD, "/usr/share/locale/en/LC_MESSAGES/binutils.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 387452] openat(AT_FDCWD, "/usr/share/locale-langpack/en_CA/LC_MESSAGES/binutils.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 387452] openat(AT_FDCWD, "/usr/share/locale-langpack/en/LC_MESSAGES/binutils.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 387452] write(2, "addr2line: ", 11) = 11
+[pid 387452] write(2, "'./mysqld': No such file", 24) = 24
+[pid 387452] write(2, "\n", 1)          = 1
+[pid 387452] exit_group(1)              = ?
+[pid 387452] +++ exited with 1 +++
+[pid 317625] <... poll resumed>)        = 1 ([{fd=51, revents=POLLHUP}])
+[pid 317626] <... restart_syscall resumed>) = ? ERESTART_RESTARTBLOCK (Interrupted by signal)
+[pid 317625] --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=387452, si_uid=1002, si_status=1, si_utime=0, si_stime=0} ---
+[pid 317626] restart_syscall(<... resuming interrupted restart_syscall ...> <unfinished ...>
+[pid 317625] read(51, "", 1024)         = 0
+[pid 317625] write(50, "0x85598f\n", 9) = -1 EPIPE (Broken pipe)
+[pid 317625] writev(2, [{iov_base="./mysqld", iov_len=8}, {iov_base="(", iov_len=1}, {iov_base="_Z26handle_connections_socketsv", iov_len=31}, {iov_base="+0x", iov_len=3}, {iov_base="1d4", iov_len=3}, {iov_base=")", iov_len=1}, {iov_base="[0x", iov_len=3}, {iov_base="5593f4bbf98f", iov_len=12}, {iov_base="]\n", iov_len=2}], 9) = 64
+[pid 317625] write(50, "0x854f46\n", 9) = -1 EPIPE (Broken pipe)
+[pid 317625] writev(2, [{iov_base="./mysqld", iov_len=8}, {iov_base="(", iov_len=1}, {iov_base="_Z11mysqld_mainiPPc", iov_len=19}, {iov_base="+0x", iov_len=3}, {iov_base="c85", iov_len=3}, {iov_base=")", iov_len=1}, {iov_base="[0x", iov_len=3}, {iov_base="5593f4bbef46", iov_len=12}, {iov_base="]\n", iov_len=2}], 9) = 52
+[pid 317625] write(50, "0x8488cd\n", 9) = -1 EPIPE (Broken pipe)
+[pid 317625] writev(2, [{iov_base="./mysqld", iov_len=8}, {iov_base="(", iov_len=1}, {iov_base="main", iov_len=4}, {iov_base="+0x", iov_len=3}, {iov_base="24", iov_len=2}, {iov_base=")", iov_len=1}, {iov_base="[0x", iov_len=3}, {iov_base="5593f4bb28cd", iov_len=12}, {iov_base="]\n", iov_len=2}], 9) = 36
+[pid 317625] close(50)                  = 0
+[pid 317625] close(51)                  = 0
+[pid 317625] wait4(387452, NULL, 0, NULL) = 387452
+[pid 317625] pipe2([49, 50], 0)         = 0
+[pid 317625] pipe2([51, 52], 0)         = 0
+[pid 317625] clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLDstrace: Process 387453 attached
+, child_tidptr=0x7f2fefda6bd0) = 387453
+[pid 387453] set_robust_list(0x7f2fefda6be0, 24) = 0
+[pid 317625] close(49)                  = 0
+[pid 317625] close(52 <unfinished ...>
+[pid 387453] dup2(49, 0)                = 0
+[pid 387453] dup2(52, 1 <unfinished ...>
+[pid 317625] <... close resumed>)       = 0
+[pid 387453] <... dup2 resumed>)        = 1
+[pid 387453] close(49 <unfinished ...>
+[pid 317625] write(50, "0x29d90\n", 8 <unfinished ...>
+[pid 387453] <... close resumed>)       = 0
+[pid 317625] <... write resumed>)       = 8
+[pid 387453] close(50 <unfinished ...>
+[pid 317625] poll([{fd=51, events=POLLIN|POLLRDBAND}], 1, 500 <unfinished ...>
+[pid 387453] <... close resumed>)       = 0
+[pid 387453] close(51)                  = 0
+[pid 387453] close(52)                  = 0
+[pid 387453] execve("/usr/local/sbin/addr2line", ["addr2line", "-C", "-f", "-e", "/lib/x86_64-linux-gnu/libc.so.6"], 0x7ffce77f88c0 /* 46 vars */) = -1 ENOENT (No such file or directory)
+[pid 387453] execve("/usr/local/bin/addr2line", ["addr2line", "-C", "-f", "-e", "/lib/x86_64-linux-gnu/libc.so.6"], 0x7ffce77f88c0 /* 46 vars */) = -1 ENOENT (No such file or directory)
+[pid 387453] execve("/usr/sbin/addr2line", ["addr2line", "-C", "-f", "-e", "/lib/x86_64-linux-gnu/libc.so.6"], 0x7ffce77f88c0 /* 46 vars */) = -1 ENOENT (No such file or directory)
+[pid 387453] execve("/usr/bin/addr2line", ["addr2line", "-C", "-f", "-e", "/lib/x86_64-linux-gnu/libc.so.6"], 0x7ffce77f88c0 /* 46 vars */) = 0
+[pid 387453] brk(NULL)                  = 0x55da5d386000
+[pid 387453] arch_prctl(0x3001 /* ARCH_??? */, 0x7ffdd9193e20) = -1 EINVAL (Invalid argument)
+[pid 387453] mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f84448cc000
+[pid 387453] access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+[pid 387453] openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+[pid 387453] newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=95335, ...}, AT_EMPTY_PATH) = 0
+[pid 387453] mmap(NULL, 95335, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f84448b4000
+[pid 387453] close(3)                   = 0
+[pid 387453] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libbfd-2.38-system.so", O_RDONLY|O_CLOEXEC) = 3
+[pid 387453] read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+[pid 387453] newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=1535032, ...}, AT_EMPTY_PATH) = 0
+[pid 387453] mmap(NULL, 1537608, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f844473c000
+[pid 387453] mprotect(0x7f844477c000, 1179648, PROT_NONE) = 0
+[pid 387453] mmap(0x7f844477c000, 942080, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x40000) = 0x7f844477c000
+[pid 387453] mmap(0x7f8444862000, 233472, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x126000) = 0x7f8444862000
+[pid 387453] mmap(0x7f844489c000, 98304, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x15f000) = 0x7f844489c000
+[pid 387453] close(3)                   = 0
+[pid 387453] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+[pid 387453] read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 832) = 832
+[pid 387453] pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+[pid 387453] pread64(3, "\4\0\0\0 \0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 48, 848) = 48
+[pid 387453] pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0i8\235HZ\227\223\333\350s\360\352,\223\340."..., 68, 896) = 68
+[pid 387453] newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=2216304, ...}, AT_EMPTY_PATH) = 0
+[pid 387453] pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+[pid 387453] mmap(NULL, 2260560, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f8444514000
+[pid 387453] mmap(0x7f844453c000, 1658880, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7f844453c000
+[pid 387453] mmap(0x7f84446d1000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1bd000) = 0x7f84446d1000
+[pid 387453] mmap(0x7f8444729000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x214000) = 0x7f8444729000
+[pid 387453] mmap(0x7f844472f000, 52816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f844472f000
+[pid 387453] close(3)                   = 0
+[pid 387453] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libz.so.1", O_RDONLY|O_CLOEXEC) = 3
+[pid 387453] read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+[pid 387453] newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=108936, ...}, AT_EMPTY_PATH) = 0
+[pid 387453] mmap(NULL, 110776, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f84444f8000
+[pid 387453] mprotect(0x7f84444fa000, 98304, PROT_NONE) = 0
+[pid 387453] mmap(0x7f84444fa000, 69632, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f84444fa000
+[pid 387453] mmap(0x7f844450b000, 24576, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x13000) = 0x7f844450b000
+[pid 387453] mmap(0x7f8444512000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19000) = 0x7f8444512000
+[pid 387453] close(3)                   = 0
+[pid 387453] mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f84444f5000
+[pid 387453] arch_prctl(ARCH_SET_FS, 0x7f84444f5740) = 0
+[pid 387453] set_tid_address(0x7f84444f5a10) = 387453
+[pid 387453] set_robust_list(0x7f84444f5a20, 24) = 0
+[pid 387453] rseq(0x7f84444f60e0, 0x20, 0, 0x53053053) = 0
+[pid 387453] mprotect(0x7f8444729000, 16384, PROT_READ) = 0
+[pid 387453] mprotect(0x7f8444512000, 4096, PROT_READ) = 0
+[pid 387453] mprotect(0x7f844489c000, 86016, PROT_READ) = 0
+[pid 387453] mprotect(0x55da5caf8000, 4096, PROT_READ) = 0
+[pid 387453] mprotect(0x7f8444906000, 8192, PROT_READ) = 0
+[pid 387453] prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+[pid 387453] munmap(0x7f84448b4000, 95335) = 0
+[pid 387453] getrandom("\x7f\xa9\xc0\x4f\x76\x66\xfd\x45", 8, GRND_NONBLOCK) = 8
+[pid 387453] brk(NULL)                  = 0x55da5d386000
+[pid 387453] brk(0x55da5d3a7000)        = 0x55da5d3a7000
+[pid 387453] openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3
+[pid 387453] newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=5712208, ...}, AT_EMPTY_PATH) = 0
+[pid 387453] mmap(NULL, 5712208, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f8443f82000
+[pid 387453] close(3)                   = 0
+[pid 387453] openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY) = 3
+[pid 387453] newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=27002, ...}, AT_EMPTY_PATH) = 0
+[pid 387453] mmap(NULL, 27002, PROT_READ, MAP_SHARED, 3, 0) = 0x7f84448c5000
+[pid 387453] close(3)                   = 0
+[pid 387453] futex(0x7f844472ea6c, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+[pid 387453] newfstatat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", {st_mode=S_IFREG|0644, st_size=2216304, ...}, 0) = 0
+[pid 387453] newfstatat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", {st_mode=S_IFREG|0644, st_size=2216304, ...}, 0) = 0
+[pid 387453] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY) = 3
+[pid 387453] fcntl(3, F_GETFD)          = 0
+[pid 387453] fcntl(3, F_SETFD, FD_CLOEXEC) = 0
+[pid 387453] prlimit64(0, RLIMIT_NOFILE, NULL, {rlim_cur=32186, rlim_max=32186}) = 0
+[pid 387453] newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=2216304, ...}, AT_EMPTY_PATH) = 0
+[pid 387453] read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 4096) = 4096
+[pid 387453] lseek(3, 0, SEEK_SET)      = 0
+[pid 387453] read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 4096) = 4096
+[pid 387453] lseek(3, 4096, SEEK_SET)   = 4096
+[pid 387453] lseek(3, 4096, SEEK_SET)   = 4096
+[pid 387453] lseek(3, 4096, SEEK_SET)   = 4096
+[pid 387453] lseek(3, 4096, SEEK_SET)   = 4096
+[pid 387453] lseek(3, 4096, SEEK_SET)   = 4096
+[pid 387453] lseek(3, 4096, SEEK_SET)   = 4096
+[pid 387453] lseek(3, 4096, SEEK_SET)   = 4096
+[pid 387453] lseek(3, 4096, SEEK_SET)   = 4096
+[pid 387453] lseek(3, 4096, SEEK_SET)   = 4096
+[pid 387453] lseek(3, 4096, SEEK_SET)   = 4096
+[pid 387453] lseek(3, 4096, SEEK_SET)   = 4096
+[pid 387453] lseek(3, 4096, SEEK_SET)   = 4096
+[pid 387453] lseek(3, 4096, SEEK_SET)   = 4096
+[pid 387453] lseek(3, 4096, SEEK_SET)   = 4096
+[pid 387453] lseek(3, 4096, SEEK_SET)   = 4096
+[pid 387453] lseek(3, 2211840, SEEK_SET) = 2211840
+[pid 387453] read(3, "gets_chk\0.gnu.warning.inet6_opti"..., 4096) = 4096
+[pid 387453] newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=2216304, ...}, AT_EMPTY_PATH) = 0
+[pid 387453] lseek(3, 2215936, SEEK_SET) = 2215936
+[pid 387453] read(3, "\0\0\0\0\0\0\0\0\200\273!\0\0\0\0\0<\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096) = 368
+[pid 387453] lseek(3, 2211840, SEEK_SET) = 2211840
+[pid 387453] read(3, "gets_chk\0.gnu.warning.inet6_opti"..., 4096) = 4096
+[pid 387453] read(3, "\0\0\0\0\0\0\0\0\200\273!\0\0\0\0\0<\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096) = 368
+[pid 387453] lseek(3, 0, SEEK_SET)      = 0
+[pid 387453] read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 4096) = 4096
+[pid 387453] lseek(3, 2207744, SEEK_SET) = 2207744
+[pid 387453] read(3, "stapsdt\0Xg\n\0\0\0\0\0(>\36\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096) = 4096
+[pid 387453] read(3, "gets_chk\0.gnu.warning.inet6_opti"..., 4096) = 4096
+[pid 387453] lseek(3, 0, SEEK_SET)      = 0
+[pid 387453] read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 4096) = 4096
+[pid 387453] lseek(3, 2199552, SEEK_SET) = 2199552
+[pid 387453] read(3, "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096) = 4096
+[pid 387453] read(3, "\0\0\0\0libc\0mutex_entry\08@%rdi\0\10\0\0\0"..., 4096) = 4096
+[pid 387453] read(3, "stapsdt\0Xg\n\0\0\0\0\0(>\36\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096) = 4096
+[pid 387453] brk(0x55da5d3ca000)        = 0x55da5d3ca000
+[pid 387453] lseek(3, 131072, SEEK_SET) = 131072
+[pid 387453] read(3, "b~\0\0\10\0\0\0W~\0\0\0\0\0\0\1\0\0\0\27\0\2\0\202\221\226\6\24\0\0\0"..., 4096) = 4096
+[pid 387453] lseek(3, 90112, SEEK_SET)  = 90112
+[pid 387453] read(3, "%\0\0\0\0\0\0\0\273\r\0\0\22\0\17\0\200@\27\0\0\0\0\0,\0\0\0\0\0\0\0"..., 4096) = 4096
+[pid 387453] read(3, "dl_fatal_printf\0xdr_bool\0wcscat\0"..., 28672) = 28672
+[pid 387453] read(3, "\0__strftime_l\0_IO_wfile_underflo"..., 4096) = 4096
+[pid 387453] lseek(3, 126976, SEEK_SET) = 126976
+[pid 387453] read(3, "\2\0\v\0\7\0\2\0\2\200\2\0%\0\2\200\2\0\34\0\2\0\2\0\2\0\2\0\2\0\2\0"..., 4096) = 4096
+[pid 387453] read(3, "b~\0\0\10\0\0\0W~\0\0\0\0\0\0\1\0\0\0\27\0\2\0\202\221\226\6\24\0\0\0"..., 4096) = 4096
+[pid 387453] lseek(3, 16384, SEEK_SET)  = 16384
+[pid 387453] read(3, "z\350V\216T\252\211\345\321_9\17\233,v\17\\\10\262\343\344C]\27697W\241X\322\353\234"..., 4096) = 4096
+[pid 387453] read(3, "P\256\25\0\0\0\0\0\16\0\0\0\0\0\0\0007l\0\0\22\0\17\0\240E\27\0\0\0\0\0"..., 69632) = 69632
+[pid 387453] read(3, "%\0\0\0\0\0\0\0\273\r\0\0\22\0\17\0\200@\27\0\0\0\0\0,\0\0\0\0\0\0\0"..., 4096) = 4096
+[pid 387453] brk(0x55da5d3fb000)        = 0x55da5d3fb000
+[pid 387453] mmap(NULL, 290816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f8443f3b000
+[pid 387453] lseek(3, 122880, SEEK_SET) = 122880
+[pid 387453] read(3, "\0__strftime_l\0_IO_wfile_underflo"..., 4096) = 4096
+[pid 387453] read(3, "\2\0\v\0\7\0\2\0\2\200\2\0%\0\2\200\2\0\34\0\2\0\2\0\2\0\2\0\2\0\2\0"..., 4096) = 4096
+[pid 387453] brk(0x55da5d3d2000)        = 0x55da5d3d2000
+[pid 387453] newfstatat(0, "", {st_mode=S_IFIFO|0600, st_size=0, ...}, AT_EMPTY_PATH) = 0
+[pid 387453] read(0, "0x29d90\n", 4096) = 8
+[pid 387453] readlink("/lib", "usr/lib", 1023) = 7
+[pid 387453] readlink("/usr", 0x7ffdd9192260, 1023) = -1 EINVAL (Invalid argument)
+[pid 387453] readlink("/usr/lib", 0x7ffdd9192260, 1023) = -1 EINVAL (Invalid argument)
+[pid 387453] readlink("/usr/lib/x86_64-linux-gnu", 0x7ffdd9192260, 1023) = -1 EINVAL (Invalid argument)
+[pid 387453] readlink("/usr/lib/x86_64-linux-gnu/libc.so.6", 0x7ffdd9192260, 1023) = -1 EINVAL (Invalid argument)
+[pid 387453] newfstatat(AT_FDCWD, ".build-id/69/389d485a9793dbe873f0ea2c93e02efaa9aa3d.debug", 0x7ffdd91939e0, 0) = -1 ENOENT (No such file or directory)
+[pid 387453] openat(AT_FDCWD, ".build-id/69/389d485a9793dbe873f0ea2c93e02efaa9aa3d.debug", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 387453] newfstatat(AT_FDCWD, ".debug/.build-id/69/389d485a9793dbe873f0ea2c93e02efaa9aa3d.debug", 0x7ffdd91939e0, 0) = -1 ENOENT (No such file or directory)
+[pid 387453] openat(AT_FDCWD, ".debug/.build-id/69/389d485a9793dbe873f0ea2c93e02efaa9aa3d.debug", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 387453] newfstatat(AT_FDCWD, "/usr/lib/debug/.build-id/69/389d485a9793dbe873f0ea2c93e02efaa9aa3d.debug", {st_mode=S_IFREG|0644, st_size=4415848, ...}, 0) = 0
+[pid 387453] openat(AT_FDCWD, "/usr/lib/debug/.build-id/69/389d485a9793dbe873f0ea2c93e02efaa9aa3d.debug", O_RDONLY) = 4
+[pid 387453] fcntl(4, F_GETFD)          = 0
+[pid 387453] fcntl(4, F_SETFD, FD_CLOEXEC) = 0
+[pid 387453] newfstatat(4, "", {st_mode=S_IFREG|0644, st_size=4415848, ...}, AT_EMPTY_PATH) = 0
+[pid 387453] read(4, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 4096) = 4096
+[pid 387453] lseek(4, 4407296, SEEK_SET) = 4407296
+[pid 387453] read(4, "py_chk\0getprotobyname_r@@GLIBC_2"..., 4096) = 4096
+[pid 387453] newfstatat(4, "", {st_mode=S_IFREG|0644, st_size=4415848, ...}, AT_EMPTY_PATH) = 0
+[pid 387453] lseek(4, 4415488, SEEK_SET) = 4415488
+[pid 387453] read(4, "x\2171\0\0\0\0\0\225*\0\0\0\0\0\0\0\0\0\0\0\0\0\0\10\0\0\0\0\0\0\0"..., 4096) = 360
+[pid 387453] lseek(4, 4407296, SEEK_SET) = 4407296
+[pid 387453] read(4, "py_chk\0getprotobyname_r@@GLIBC_2"..., 4096) = 4096
+[pid 387453] read(4, "\304\3\0\0\0\0\0\0\25\177\0\0\0\0\0\0\0\0\0\0\0\0\0\0\1\0\0\0\0\0\0\0"..., 4096) = 4096
+[pid 387453] read(4, "x\2171\0\0\0\0\0\225*\0\0\0\0\0\0\0\0\0\0\0\0\0\0\10\0\0\0\0\0\0\0"..., 4096) = 360
+[pid 387453] lseek(4, 0, SEEK_SET)      = 0
+[pid 387453] read(4, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 4096) = 4096
+[pid 387453] lseek(4, 4407296, SEEK_SET) = 4407296
+[pid 387453] read(4, "py_chk\0getprotobyname_r@@GLIBC_2"..., 4096) = 4096
+[pid 387453] lseek(4, 0, SEEK_SET)      = 0
+[pid 387453] read(4, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 4096) = 4096
+[pid 387453] lseek(4, 4096, SEEK_SET)   = 4096
+[pid 387453] read(4, "%rdi\0\0\0\0\10\0\0\09\0\0\0\3\0\0\0stapsdt\0\27\262\t\0"..., 4096) = 4096
+[pid 387453] read(4, "\10\0\0\0B\0\0\0\3\0\0\0stapsdt\0\215f\23\0\0\0\0\0(>\36\0"..., 4096) = 4096
+[pid 387453] lseek(4, 12288, SEEK_SET)  = 12288
+[pid 387453] lseek(4, 28672, SEEK_SET)  = 28672
+[pid 387453] read(4, "\\\342\5\233P<\374{\32\265\26\213\2677\345\337\363\201\363\237\7\"\342\3\255M\276O\31\27\273\215"..., 4096) = 4096
+[pid 387453] lseek(4, 2506752, SEEK_SET) = 2506752
+[pid 387453] read(4, "\10\327Q%\302uT\211p\35U\"\340\256\312\366\274\375\303\220\353\250\22\1wU\"\340\256J\4\334"..., 4096) = 4096
+[pid 387453] lseek(4, 2654208, SEEK_SET) = 2654208
+[pid 387453] read(4, "\361-\246\245C\263\327\30f6\307%{M \26&\25\215My\23a\342\273\\\263v7\376\r\246"..., 4096) = 4096
+[pid 387453] lseek(4, 3182592, SEEK_SET) = 3182592
+[pid 387453] read(4, "\315\366\232L\335\242\323\23\340\327M\317Cg\250\3469\314\251h[\255N[\253\223e\276\372\367\365W"..., 4096) = 4096
+[pid 387453] lseek(4, 3244032, SEEK_SET) = 3244032
+[pid 387453] read(4, "\254\216\251\366\240\312\351RmB\335\347\203\226YH\321\222\224\25\26(\260\333\3058\0.\255\301\232\315"..., 4096) = 4096
+[pid 387453] lseek(4, 3256320, SEEK_SET) = 3256320
+[pid 387453] read(4, "\33\327\377\305\306Q(\256n\321t\20\327id\220\262\343-ZN9\304+\316\321\306\34\233\t\343>"..., 4096) = 4096
+[pid 387453] lseek(4, 3940352, SEEK_SET) = 3940352
+[pid 387453] read(4, "\300\34m\276\252Z\217\210\303\200E,c1\271\214\245\311E\222N\320\313\35{\201<\\\342\344\212\361"..., 4096) = 4096
+[pid 387453] close(4)                   = 0
+[pid 387453] newfstatat(AT_FDCWD, "/usr/lib/debug/.build-id/69/389d485a9793dbe873f0ea2c93e02efaa9aa3d.debug", {st_mode=S_IFREG|0644, st_size=4415848, ...}, 0) = 0
+[pid 387453] openat(AT_FDCWD, "/usr/lib/debug/.build-id/69/389d485a9793dbe873f0ea2c93e02efaa9aa3d.debug", O_RDONLY) = 4
+[pid 387453] fcntl(4, F_GETFD)          = 0
+[pid 387453] fcntl(4, F_SETFD, FD_CLOEXEC) = 0
+[pid 387453] newfstatat(4, "", {st_mode=S_IFREG|0644, st_size=4415848, ...}, AT_EMPTY_PATH) = 0
+[pid 387453] read(4, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 4096) = 4096
+[pid 387453] lseek(4, 4407296, SEEK_SET) = 4407296
+[pid 387453] read(4, "py_chk\0getprotobyname_r@@GLIBC_2"..., 4096) = 4096
+[pid 387453] newfstatat(4, "", {st_mode=S_IFREG|0644, st_size=4415848, ...}, AT_EMPTY_PATH) = 0
+[pid 387453] lseek(4, 4415488, SEEK_SET) = 4415488
+[pid 387453] read(4, "x\2171\0\0\0\0\0\225*\0\0\0\0\0\0\0\0\0\0\0\0\0\0\10\0\0\0\0\0\0\0"..., 4096) = 360
+[pid 387453] lseek(4, 4407296, SEEK_SET) = 4407296
+[pid 387453] read(4, "py_chk\0getprotobyname_r@@GLIBC_2"..., 4096) = 4096
+[pid 387453] read(4, "\304\3\0\0\0\0\0\0\25\177\0\0\0\0\0\0\0\0\0\0\0\0\0\0\1\0\0\0\0\0\0\0"..., 4096) = 4096
+[pid 387453] read(4, "x\2171\0\0\0\0\0\225*\0\0\0\0\0\0\0\0\0\0\0\0\0\0\10\0\0\0\0\0\0\0"..., 4096) = 360
+[pid 387453] lseek(4, 0, SEEK_SET)      = 0
+[pid 387453] read(4, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 4096) = 4096
+[pid 387453] lseek(4, 4407296, SEEK_SET) = 4407296
+[pid 387453] read(4, "py_chk\0getprotobyname_r@@GLIBC_2"..., 4096) = 4096
+[pid 387453] lseek(4, 0, SEEK_SET)      = 0
+[pid 387453] read(4, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 4096) = 4096
+[pid 387453] lseek(4, 4096, SEEK_SET)   = 4096
+[pid 387453] read(4, "%rdi\0\0\0\0\10\0\0\09\0\0\0\3\0\0\0stapsdt\0\27\262\t\0"..., 4096) = 4096
+[pid 387453] read(4, "\10\0\0\0B\0\0\0\3\0\0\0stapsdt\0\215f\23\0\0\0\0\0(>\36\0"..., 4096) = 4096
+[pid 387453] lseek(4, 12288, SEEK_SET)  = 12288
+[pid 387453] lseek(4, 12288, SEEK_SET)  = 12288
+[pid 387453] lseek(4, 28672, SEEK_SET)  = 28672
+[pid 387453] read(4, "\\\342\5\233P<\374{\32\265\26\213\2677\345\337\363\201\363\237\7\"\342\3\255M\276O\31\27\273\215"..., 4096) = 4096
+[pid 387453] lseek(4, 32768, SEEK_SET)  = 32768
+[pid 387453] lseek(4, 2506752, SEEK_SET) = 2506752
+[pid 387453] read(4, "\10\327Q%\302uT\211p\35U\"\340\256\312\366\274\375\303\220\353\250\22\1wU\"\340\256J\4\334"..., 4096) = 4096
+[pid 387453] lseek(4, 2510848, SEEK_SET) = 2510848
+[pid 387453] lseek(4, 2654208, SEEK_SET) = 2654208
+[pid 387453] read(4, "\361-\246\245C\263\327\30f6\307%{M \26&\25\215My\23a\342\273\\\263v7\376\r\246"..., 4096) = 4096
+[pid 387453] lseek(4, 2658304, SEEK_SET) = 2658304
+[pid 387453] lseek(4, 3182592, SEEK_SET) = 3182592
+[pid 387453] read(4, "\315\366\232L\335\242\323\23\340\327M\317Cg\250\3469\314\251h[\255N[\253\223e\276\372\367\365W"..., 4096) = 4096
+[pid 387453] lseek(4, 3186688, SEEK_SET) = 3186688
+[pid 387453] lseek(4, 3244032, SEEK_SET) = 3244032
+[pid 387453] read(4, "\254\216\251\366\240\312\351RmB\335\347\203\226YH\321\222\224\25\26(\260\333\3058\0.\255\301\232\315"..., 4096) = 4096
+[pid 387453] lseek(4, 3248128, SEEK_SET) = 3248128
+[pid 387453] lseek(4, 3256320, SEEK_SET) = 3256320
+[pid 387453] read(4, "\33\327\377\305\306Q(\256n\321t\20\327id\220\262\343-ZN9\304+\316\321\306\34\233\t\343>"..., 4096) = 4096
+[pid 387453] lseek(4, 3260416, SEEK_SET) = 3260416
+[pid 387453] lseek(4, 3940352, SEEK_SET) = 3940352
+[pid 387453] read(4, "\300\34m\276\252Z\217\210\303\200E,c1\271\214\245\311E\222N\320\313\35{\201<\\\342\344\212\361"..., 4096) = 4096
+[pid 387453] lseek(4, 3944448, SEEK_SET) = 3944448
+[pid 387453] brk(0x55da5d402000)        = 0x55da5d402000
+[pid 387453] mmap(NULL, 237568, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f8443f01000
+[pid 387453] lseek(4, 4038656, SEEK_SET) = 4038656
+[pid 387453] read(4, "M\2130U{\235*\314\16R\3D\25\263\237\363v\261\214\252P\367\260\6I\2039\240\31\207aq"..., 4096) = 4096
+[pid 387453] read(4, "\220\23\36\0\0\0\0\0\25\0\0\0\0\0\0\0K\1\0\0\2\0\20\0\200\253\33\0\0\0\0\0"..., 233472) = 233472
+[pid 387453] read(4, "\360\375\t\0\0\0\0\0\16\0\0\0\0\0\0\0\373\256\0\0\22\0\17\0\260\200\n\0\0\0\0\0"..., 4096) = 4096
+[pid 387453] mmap(NULL, 319488, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f8443eb3000
+[pid 387453] munmap(0x7f8443f01000, 237568) = 0
+[pid 387453] mmap(NULL, 950272, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f8443dcb000
+[pid 387453] read(4, "ype_LC_MONETARY\0_nl_value_type_L"..., 126976) = 126976
+[pid 387453] read(4, "py_chk\0getprotobyname_r@@GLIBC_2"..., 4096) = 4096
+[pid 317626] <... restart_syscall resumed>) = -1 ETIMEDOUT (Connection timed out)
+[pid 387453] munmap(0x7f8443eb3000, 319488 <unfinished ...>
+[pid 317626] futex(0x5593f71ae348, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 387453] <... munmap resumed>)      = 0
+[pid 317626] <... futex resumed>)       = 0
+[pid 387453] mmap(NULL, 6115328, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f84437f6000
+[pid 317626] futex(0x5593f71ae40c, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 0, {tv_sec=1666011837, tv_nsec=367726000}, FUTEX_BITSET_MATCH_ANY <unfinished ...>
+[pid 387453] mmap(NULL, 2482176, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f8443598000
+[pid 387453] lseek(4, 28672, SEEK_SET)  = 28672
+[pid 387453] read(4, "\\\342\5\233P<\374{\32\265\26\213\2677\345\337\363\201\363\237\7\"\342\3\255M\276O\31\27\273\215"..., 4096) = 4096
+[pid 387453] read(4, "\227\320G\223c\23\220:\322\301RmXp\304\"\243\322\f\367K\350\336\225\26#\216\272\233Db\245"..., 2473984) = 2473984
+[pid 387453] read(4, "\10\327Q%\302uT\211p\35U\"\340\256\312\366\274\375\303\220\353\250\22\1wU\"\340\256J\4\334"..., 4096) = 4096
+[pid 387453] brk(0x55da5d424000)        = 0x55da5d424000
+[pid 387453] munmap(0x7f8443598000, 2482176) = 0
+[pid 387453] brk(0x55da5d517000)        = 0x55da5d517000
+[pid 387453] brk(0x55da5d53b000)        = 0x55da5d53b000
+[pid 387453] lseek(4, 2510848, SEEK_SET) = 2510848
+[pid 387453] read(4, "\271\271\0017\10\271hz_\2103w\371\27%o\272'2\0\205W\321@\323y\2538\257\371\271\363"..., 143360) = 143360
+[pid 387453] read(4, "\361-\246\245C\263\327\30f6\307%{M \26&\25\215My\23a\342\273\\\263v7\376\r\246"..., 4096) = 4096
+[pid 387453] lseek(4, 3182592, SEEK_SET) = 3182592
+[pid 387453] read(4, "\315\366\232L\335\242\323\23\340\327M\317Cg\250\3469\314\251h[\255N[\253\223e\276\372\367\365W"..., 4096) = 4096
+[pid 387453] read(4, "\"|\230\177]\3350Q&\354\314i\225g\272\270S\254\301\20\\/\23\216'H\300+\210\201\23\244"..., 57344) = 57344
+[pid 387453] read(4, "\254\216\251\366\240\312\351RmB\335\347\203\226YH\321\222\224\25\26(\260\333\3058\0.\255\301\232\315"..., 4096) = 4096
+[pid 387453] lseek(4, 3248128, SEEK_SET) = 3248128
+[pid 387453] read(4, "\300\336\364zz\207?\374E\274\260\363\345}\266\6\2\212v.5\263_\354T6\375\224\301_\377V"..., 8192) = 8192
+[pid 387453] read(4, "\33\327\377\305\306Q(\256n\321t\20\327id\220\262\343-ZN9\304+\316\321\306\34\233\t\343>"..., 4096) = 4096
+[pid 387453] brk(0x55da5d6ae000)        = 0x55da5d6ae000
+[pid 387453] brk(0x55da5d72f000)        = 0x55da5d72f000
+[pid 387453] lseek(4, 2654208, SEEK_SET) = 2654208
+[pid 387453] read(4, "\361-\246\245C\263\327\30f6\307%{M \26&\25\215My\23a\342\273\\\263v7\376\r\246"..., 4096) = 4096
+[pid 387453] read(4, "l\340'\257\334\317\206\264\310j%\2660\316G\23\254\216\233&\370\341TM\320\3427\301#\272\334\f"..., 524288) = 524288
+[pid 387453] read(4, "\315\366\232L\335\242\323\23\340\327M\317Cg\250\3469\314\251h[\255N[\253\223e\276\372\367\365W"..., 4096) = 4096
+[pid 387453] lseek(4, 3940352, SEEK_SET) = 3940352
+[pid 387453] read(4, "\300\34m\276\252Z\217\210\303\200E,c1\271\214\245\311E\222N\320\313\35{\201<\\\342\344\212\361"..., 4096) = 4096
+[pid 387453] read(4, "\25Q\24\261\200`A\354\250\250\377\347\3140w\6\343\276\277\367\367\371\377\374 \367\234\247\236\376<\317"..., 94208) = 94208
+[pid 387453] read(4, "M\2130U{\235*\314\16R\3D\25\263\237\363v\261\214\252P\367\260\6I\2039\240\31\207aq"..., 4096) = 4096
+[pid 387453] newfstatat(1, "", {st_mode=S_IFIFO|0600, st_size=0, ...}, AT_EMPTY_PATH) = 0
+[pid 387453] write(1, "__libc_start_call_main\n./csu/../"..., 71) = 71
+[pid 317625] <... poll resumed>)        = 1 ([{fd=51, revents=POLLIN}])
+[pid 387453] read(0,  <unfinished ...>
+[pid 317625] read(51, "__libc_start_call_main\n./csu/../"..., 1024) = 71
+[pid 317625] write(2, "nptl/libc_start_call_main.h:58(_"..., 71) = 71
+[pid 317625] write(50, "0x29e40\n", 8 <unfinished ...>
+[pid 387453] <... read resumed>"0x29e40\n", 4096) = 8
+[pid 317625] <... write resumed>)       = 8
+[pid 387453] write(1, "call_init\n./csu/../csu/libc-star"..., 40) = 40
+[pid 317625] poll([{fd=51, events=POLLIN|POLLRDBAND}], 1, 500 <unfinished ...>
+[pid 387453] read(0,  <unfinished ...>
+[pid 317625] <... poll resumed>)        = 1 ([{fd=51, revents=POLLIN}])
+[pid 317625] read(51, "call_init\n./csu/../csu/libc-star"..., 1024) = 40
+[pid 317625] write(2, "csu/libc-start.c:128(call_init)["..., 48) = 48
+[pid 317625] close(50 <unfinished ...>
+[pid 387453] <... read resumed>"", 4096) = 0
+[pid 317625] <... close resumed>)       = 0
+[pid 387453] munmap(0x7f84437f6000, 6115328 <unfinished ...>
+[pid 317625] close(51)                  = 0
+[pid 317625] wait4(387453,  <unfinished ...>
+[pid 387453] <... munmap resumed>)      = 0
+[pid 387453] close(4)                   = 0
+[pid 387453] munmap(0x7f8443dcb000, 950272) = 0
+[pid 387453] close(3)                   = 0
+[pid 387453] munmap(0x7f8443f3b000, 290816) = 0
+[pid 387453] exit_group(0)              = ?
+[pid 387453] +++ exited with 0 +++
+[pid 317625] <... wait4 resumed>NULL, 0, NULL) = 387453
+[pid 317625] --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=387453, si_uid=1002, si_status=0, si_utime=4, si_stime=1} ---
+[pid 317625] pipe2([49, 50], 0)         = 0
+[pid 317625] pipe2([51, 52], 0)         = 0
+[pid 317625] clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLDstrace: Process 387454 attached
+ <unfinished ...>
+[pid 387454] set_robust_list(0x7f2fefda6be0, 24 <unfinished ...>
+[pid 317625] <... clone resumed>, child_tidptr=0x7f2fefda6bd0) = 387454
+[pid 387454] <... set_robust_list resumed>) = 0
+[pid 317625] close(49)                  = 0
+[pid 317625] close(52)                  = 0
+[pid 387454] dup2(49, 0 <unfinished ...>
+[pid 317625] write(50, "0x5593f5aaf4f9\n", 15 <unfinished ...>
+[pid 387454] <... dup2 resumed>)        = 0
+[pid 387454] dup2(52, 1)                = 1
+[pid 317625] <... write resumed>)       = 15
+[pid 387454] close(49 <unfinished ...>
+[pid 317625] poll([{fd=51, events=POLLIN|POLLRDBAND}], 1, 500 <unfinished ...>
+[pid 387454] <... close resumed>)       = 0
+[pid 387454] close(50)                  = 0
+[pid 387454] close(51)                  = 0
+[pid 387454] close(52)                  = 0
+[pid 387454] execve("/usr/local/sbin/addr2line", ["addr2line", "-C", "-f", "-e", "./mysqld"], 0x7ffce77f88c0 /* 46 vars */) = -1 ENOENT (No such file or directory)
+[pid 387454] execve("/usr/local/bin/addr2line", ["addr2line", "-C", "-f", "-e", "./mysqld"], 0x7ffce77f88c0 /* 46 vars */) = -1 ENOENT (No such file or directory)
+[pid 387454] execve("/usr/sbin/addr2line", ["addr2line", "-C", "-f", "-e", "./mysqld"], 0x7ffce77f88c0 /* 46 vars */) = -1 ENOENT (No such file or directory)
+[pid 387454] execve("/usr/bin/addr2line", ["addr2line", "-C", "-f", "-e", "./mysqld"], 0x7ffce77f88c0 /* 46 vars */) = 0
+[pid 387454] brk(NULL)                  = 0x560054c1d000
+[pid 387454] arch_prctl(0x3001 /* ARCH_??? */, 0x7ffed6f46480) = -1 EINVAL (Invalid argument)
+[pid 387454] mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fdd2c1ba000
+[pid 387454] access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+[pid 387454] openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+[pid 387454] newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=95335, ...}, AT_EMPTY_PATH) = 0
+[pid 387454] mmap(NULL, 95335, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fdd2c1a2000
+[pid 387454] close(3)                   = 0
+[pid 387454] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libbfd-2.38-system.so", O_RDONLY|O_CLOEXEC) = 3
+[pid 387454] read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+[pid 387454] newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=1535032, ...}, AT_EMPTY_PATH) = 0
+[pid 387454] mmap(NULL, 1537608, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fdd2c02a000
+[pid 387454] mprotect(0x7fdd2c06a000, 1179648, PROT_NONE) = 0
+[pid 387454] mmap(0x7fdd2c06a000, 942080, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x40000) = 0x7fdd2c06a000
+[pid 387454] mmap(0x7fdd2c150000, 233472, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x126000) = 0x7fdd2c150000
+[pid 387454] mmap(0x7fdd2c18a000, 98304, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x15f000) = 0x7fdd2c18a000
+[pid 387454] close(3)                   = 0
+[pid 387454] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+[pid 387454] read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 832) = 832
+[pid 387454] pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+[pid 387454] pread64(3, "\4\0\0\0 \0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 48, 848) = 48
+[pid 387454] pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0i8\235HZ\227\223\333\350s\360\352,\223\340."..., 68, 896) = 68
+[pid 387454] newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=2216304, ...}, AT_EMPTY_PATH) = 0
+[pid 387454] pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+[pid 387454] mmap(NULL, 2260560, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fdd2be02000
+[pid 387454] mmap(0x7fdd2be2a000, 1658880, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7fdd2be2a000
+[pid 387454] mmap(0x7fdd2bfbf000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1bd000) = 0x7fdd2bfbf000
+[pid 387454] mmap(0x7fdd2c017000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x214000) = 0x7fdd2c017000
+[pid 387454] mmap(0x7fdd2c01d000, 52816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fdd2c01d000
+[pid 387454] close(3)                   = 0
+[pid 387454] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libz.so.1", O_RDONLY|O_CLOEXEC) = 3
+[pid 387454] read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+[pid 387454] newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=108936, ...}, AT_EMPTY_PATH) = 0
+[pid 387454] mmap(NULL, 110776, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fdd2bde6000
+[pid 387454] mprotect(0x7fdd2bde8000, 98304, PROT_NONE) = 0
+[pid 387454] mmap(0x7fdd2bde8000, 69632, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7fdd2bde8000
+[pid 387454] mmap(0x7fdd2bdf9000, 24576, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x13000) = 0x7fdd2bdf9000
+[pid 387454] mmap(0x7fdd2be00000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19000) = 0x7fdd2be00000
+[pid 387454] close(3)                   = 0
+[pid 387454] mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fdd2bde3000
+[pid 387454] arch_prctl(ARCH_SET_FS, 0x7fdd2bde3740) = 0
+[pid 387454] set_tid_address(0x7fdd2bde3a10) = 387454
+[pid 387454] set_robust_list(0x7fdd2bde3a20, 24) = 0
+[pid 387454] rseq(0x7fdd2bde40e0, 0x20, 0, 0x53053053) = 0
+[pid 387454] mprotect(0x7fdd2c017000, 16384, PROT_READ) = 0
+[pid 387454] mprotect(0x7fdd2be00000, 4096, PROT_READ) = 0
+[pid 387454] mprotect(0x7fdd2c18a000, 86016, PROT_READ) = 0
+[pid 387454] mprotect(0x560053a81000, 4096, PROT_READ) = 0
+[pid 387454] mprotect(0x7fdd2c1f4000, 8192, PROT_READ) = 0
+[pid 387454] prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+[pid 387454] munmap(0x7fdd2c1a2000, 95335) = 0
+[pid 387454] getrandom("\x2d\xa4\xeb\xa8\xa6\x1d\xa7\xa8", 8, GRND_NONBLOCK) = 8
+[pid 387454] brk(NULL)                  = 0x560054c1d000
+[pid 387454] brk(0x560054c3e000)        = 0x560054c3e000
+[pid 387454] openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3
+[pid 387454] newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=5712208, ...}, AT_EMPTY_PATH) = 0
+[pid 387454] mmap(NULL, 5712208, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fdd2b870000
+[pid 387454] close(3)                   = 0
+[pid 387454] openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY) = 3
+[pid 387454] newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=27002, ...}, AT_EMPTY_PATH) = 0
+[pid 387454] mmap(NULL, 27002, PROT_READ, MAP_SHARED, 3, 0) = 0x7fdd2c1b3000
+[pid 387454] close(3)                   = 0
+[pid 387454] futex(0x7fdd2c01ca6c, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+[pid 387454] newfstatat(AT_FDCWD, "./mysqld", 0x7ffed6f46460, 0) = -1 ENOENT (No such file or directory)
+[pid 387454] openat(AT_FDCWD, "/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC) = 3
+[pid 387454] newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=2996, ...}, AT_EMPTY_PATH) = 0
+[pid 387454] read(3, "# Locale name alias data base.\n#"..., 4096) = 2996
+[pid 387454] read(3, "", 4096)          = 0
+[pid 387454] close(3)                   = 0
+[pid 387454] openat(AT_FDCWD, "/usr/share/locale/en_CA/LC_MESSAGES/binutils.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 387454] openat(AT_FDCWD, "/usr/share/locale/en/LC_MESSAGES/binutils.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 387454] openat(AT_FDCWD, "/usr/share/locale-langpack/en_CA/LC_MESSAGES/binutils.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 387454] openat(AT_FDCWD, "/usr/share/locale-langpack/en/LC_MESSAGES/binutils.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 387454] write(2, "addr2line: ", 11) = 11
+[pid 387454] write(2, "'./mysqld': No such file", 24) = 24
+[pid 387454] write(2, "\n", 1)          = 1
+[pid 387454] exit_group(1)              = ?
+[pid 387454] +++ exited with 1 +++
+[pid 317625] <... poll resumed>)        = 1 ([{fd=51, revents=POLLHUP}])
+[pid 317626] <... futex resumed>)       = ? ERESTART_RESTARTBLOCK (Interrupted by signal)
+[pid 317625] --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=387454, si_uid=1002, si_status=1, si_utime=0, si_stime=0} ---
+[pid 317625] read(51,  <unfinished ...>
+[pid 317626] restart_syscall(<... resuming interrupted futex ...> <unfinished ...>
+[pid 317625] <... read resumed>"", 1024) = 0
+[pid 317625] write(50, "0x8487e5\n", 9) = -1 EPIPE (Broken pipe)
+[pid 317625] writev(2, [{iov_base="./mysqld", iov_len=8}, {iov_base="(", iov_len=1}, {iov_base="_start", iov_len=6}, {iov_base="+0x", iov_len=3}, {iov_base="25", iov_len=2}, {iov_base=")", iov_len=1}, {iov_base="[0x", iov_len=3}, {iov_base="5593f4bb27e5", iov_len=12}, {iov_base="]\n", iov_len=2}], 9) = 38
+[pid 317625] write(2, "The manual page at https://maria"..., 169) = 169
+[pid 317625] readlink("/proc/self/cwd", "/home/lottaquestions/work/MariaD"..., 4095) = 79
+[pid 317625] write(2, "Writing a core file...\nWorking d"..., 124) = 124
+[pid 317625] openat(AT_FDCWD, "/proc/self/limits", O_RDONLY|O_CLOEXEC) = 49
+[pid 317625] write(2, "Resource Limits:\n", 17) = 17
+[pid 317625] read(49, "Limit                     Soft L"..., 4096) = 1323
+[pid 317625] write(2, "Limit                     Soft L"..., 1323) = 1323
+[pid 317625] read(49, "", 4096)         = 0
+[pid 317625] close(49)                  = 0
+[pid 317625] openat(AT_FDCWD, "/proc/sys/kernel/core_pattern", O_RDONLY|O_CLOEXEC) = 49
+[pid 317625] read(49, "|/usr/share/apport/apport -p%p -"..., 4096) = 67
+[pid 317625] write(2, "Core pattern: |/usr/share/apport"..., 82) = 82
+[pid 317625] close(49)                  = 0
+[pid 317625] openat(AT_FDCWD, "/proc/version", O_RDONLY|O_CLOEXEC) = 49
+[pid 317625] read(49, "Linux version 5.15.0-48-generic "..., 4096) = 179
+[pid 317625] write(2, "Kernel version: Linux version 5."..., 196) = 196
+[pid 317625] close(49)                  = 0
+[pid 317625] rt_sigaction(SIGABRT, {sa_handler=SIG_DFL, sa_mask=[ABRT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f2feff6e520}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER|SA_NODEFER|SA_RESETHAND, sa_restorer=0x7f2feff6e520}, 8) = 0
+[pid 317625] getpid()                   = 317625
+[pid 317625] kill(317625, SIGABRT)      = 0
+[pid 317625] --- SIGABRT {si_signo=SIGABRT, si_code=SI_USER, si_pid=317625, si_uid=1002} ---
+[pid 317649] <... futex resumed>)       = ?
+[pid 317661] <... rt_sigtimedwait resumed> <unfinished ...>) = ?
+[pid 317660] <... futex resumed>)       = 0
+[pid 317651] <... futex resumed>)       = ?
+[pid 317626] <... restart_syscall resumed>) = ?
+[pid 385071] <... futex resumed>)       = ?
+[pid 317650] <... futex resumed>)       = ?
+[pid 317648] <... restart_syscall resumed>) = ?
+[pid 317647] <... futex resumed>)       = ?
+[pid 317646] <... restart_syscall resumed>) = ?
+[pid 317645] <... restart_syscall resumed>) = ?
+[pid 317629] <... futex resumed>)       = ?
+[pid 317628] <... futex resumed>)       = ?
+[pid 317627] <... futex resumed>)       = ?
+[pid 317649] +++ killed by SIGABRT (core dumped) +++
+[pid 317629] +++ killed by SIGABRT (core dumped) +++
+[pid 317628] +++ killed by SIGABRT (core dumped) +++
+[pid 317651] +++ killed by SIGABRT (core dumped) +++
+[pid 385071] +++ killed by SIGABRT (core dumped) +++
+[pid 317627] +++ killed by SIGABRT (core dumped) +++
+[pid 317661] +++ killed by SIGABRT (core dumped) +++
+[pid 317660] +++ killed by SIGABRT (core dumped) +++
+[pid 317650] +++ killed by SIGABRT (core dumped) +++
+[pid 317648] +++ killed by SIGABRT (core dumped) +++
+[pid 317647] +++ killed by SIGABRT (core dumped) +++
+[pid 317646] +++ killed by SIGABRT (core dumped) +++
+[pid 317645] +++ killed by SIGABRT (core dumped) +++
+[pid 317626] +++ killed by SIGABRT (core dumped) +++
++++ killed by SIGABRT (core dumped) +++
+lottaquestions@dawn-Inspiron-3668:~/work/MariaDBServer/build-mariadb$ 
+
