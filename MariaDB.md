@@ -153,7 +153,11 @@ I then had to connect to the database as root as follows:
 sudo /home/lottaquestions/work/MariaDBServer/build-mariadb/client/mysql test
 ```
 
+I was able to run the mariadb with rocksdb setup in valgrind's callgrind, and even had callgrind trace child processes as follows:
 
+```
+valgrind --trace-children=yes --tool=callgrind /home/lottaquestions/work/MariaDBServer/build-mariadb/sql/mysqld --defaults-file=~/work/MariaDBServer/my_rocksdb.cnf
+```
 
 ## Testing Code Discovery and Debugging
 

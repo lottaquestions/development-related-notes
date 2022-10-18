@@ -1,0 +1,8592 @@
+# callgrind format
+version: 1
+creator: callgrind-3.18.1
+pid: 9781
+cmd:  /home/lottaquestions/work/MariaDBServer/build-mariadb/sql/mysqld --defaults-file=~/work/MariaDBServer/my_rocksdb.cnf
+part: 2
+
+
+desc: I1 cache: 
+desc: D1 cache: 
+desc: LL cache: 
+
+desc: Timerange: Basic block 324145348 - 331980900
+desc: Trigger: Program termination
+
+positions: line
+events: Ir
+summary: 572727
+
+
+ob=(14) /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+fl=(190) ???
+fn=(7186) 0x0000000000016660
+0 1660
+cfn=(85346) 0x0000000000015e40
+calls=2 0 
+0 248
+0 5344
+cfn=(85346)
+calls=34 0 
+0 3176
+0 726
+
+fn=(6986) 0x0000000000016a80
+0 98
+cfn=(6992) 0x00000000000157d0
+calls=2 0 
+0 2760
+0 14
+cob=(2) ???
+cfi=(51) ???
+cfn=(7172) 0x000000000510e5f0
+calls=2 0 
+0 16
+0 32
+cfn=(7186)
+calls=2 0 
+0 648
+0 14
+
+fn=(7018) 0x0000000000017b40
+0 2072
+
+fn=(7236) _Unwind_GetIP
+0 63
+
+fn=(7238) _Unwind_GetCFA
+0 63
+
+fn=(7100) 0x0000000000014f50
+0 12013
+
+fn=(85346)
+0 3424
+
+fn=(7006) _Unwind_Find_FDE
+0 384
+cob=(2)
+cfi=(51)
+cfn=(7008) 0x000000000510e560
+calls=24 0 
+0 1588
+0 288
+cfn=(7018)
+calls=24 0 
+0 672
+0 240
+cfn=(7018)
+calls=24 0 
+0 672
+0 5056
+cfn=(7034) 0x0000000000017c90
+calls=24 0 
+0 1464
+0 456
+cfn=(7018)
+calls=24 0 
+0 672
+0 240
+
+fn=(7464) 0x0000000000014d80
+0 190
+
+fn=(7034)
+0 168
+cob=(2)
+cfi=(51)
+cfn=(7036) 0x000000000510e400
+calls=24 0 
+0 384
+0 658
+cfn=(7018)
+calls=2 0 
+0 56
+0 198
+
+fn=(6992)
+0 1769
+cob=(2)
+cfi=(51)
+cfn=(7000) 0x000000000510e540
+calls=24 0 
+0 11780
+0 264
+cob=(2)
+cfi=(51)
+cfn=(7036)
+calls=24 0 
+0 384
+0 1688
+cfn=(7100)
+calls=24 0 
+0 3776
+0 848
+cfn=(7100)
+calls=22 0 
+0 7689
+0 12
+cfn=(7100)
+calls=2 0 
+0 548
+0 778
+cfn=(7464)
+calls=2 0 
+0 96
+0 235
+cfn=(7464)
+calls=2 0 
+0 94
+0 8
+
+fn=(6984) _Unwind_Backtrace
+0 34
+cfn=(6986)
+calls=2 0 
+0 3582
+0 109
+cfn=(7186)
+calls=21 0 
+0 10506
+0 466
+cfn=(6992)
+calls=20 0 
+0 24801
+0 4
+cfn=(6992)
+calls=1 0 
+0 74
+0 6
+cfn=(6992)
+calls=2 0 
+0 2334
+0 205
+cob=(3) /usr/lib/x86_64-linux-gnu/libc.so.6
+cfi=(869) ./debug/./debug/backtrace.c
+cfn=(7226) backtrace_helper
+calls=23 35 
+0 1034
+0 65
+
+ob=(15) /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30
+fl=(192) ???
+fn=(5534) operator delete(void*)
+0 2
+cob=(2)
+cfi=(51)
+cfn=(5536) 0x0000000004e99b50
+calls=1 0 
+0 91
+
+fn=(32372) std::condition_variable::notify_all()
+0 2
+cob=(2)
+cfi=(51)
+cfn=(32374) 0x0000000004e9bfb0
+calls=1 0 
+0 24
+
+fn=(41320) std::thread::_State::~_State()
+0 2
+
+fn=(79022) std::condition_variable::notify_one()
+0 40
+cob=(2)
+cfi=(51)
+cfn=(79024) 0x0000000004e98cc0
+calls=20 0 
+0 2540
+
+fn=(78960) std::chrono::_V2::steady_clock::now()
+0 328
+cob=(2)
+cfi=(51)
+cfn=(43872) 0x0000000004e98b20
+calls=41 0 
+0 533
+0 287
+
+fn=(24414) 0x00000000000dc2a0
+cob=(21) /home/lottaquestions/work/MariaDBServer/build-mariadb/sql/mariadbd
+cfi=(691) /usr/include/c++/11/bits/std_thread.h
+cfn=(78846) std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (tpool::thread_pool_generic::*)(tpool::worker_data*), tpool::thread_pool_generic*, tpool::worker_data*> > >::_M_run()
+calls=0 211 
+0 241630
+0 3
+cob=(21)
+cfi=(691)
+cfn=(85310) std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (tpool::thread_pool_generic::*)(tpool::worker_data*), tpool::thread_pool_generic*, tpool::worker_data*> > >::~_State_impl()
+calls=1 201 
+0 127
+0 5
+
+fn=(43870) std::chrono::_V2::system_clock::now()
+0 392
+cob=(2)
+cfi=(51)
+cfn=(43872)
+calls=49 0 
+0 637
+0 343
+
+ob=(21)
+fl=(701) /home/lottaquestions/work/MariaDBServer/server/mysys/psi_noop.c
+fn=(7438) memory_free_noop
+862 6
++1 1
++1 2
+
+fn=(85298) delete_current_thread_noop
+283 6
++1 2
++1 4
+
+fn=(5758) memory_alloc_noop
+844 6
++1 2
++1 1
++1 2
+
+fl=(1015) /home/lottaquestions/work/MariaDBServer/server/mysys/thr_timer.c
+fn=(74422) compare_timespec
+50 2052
++1 6378
++2 684
+
+fn=(74418) thr_timer_settime
+174 140
++2 160
+cfi=(283) /home/lottaquestions/work/MariaDBServer/server/dbug/dbug.c
+cfn=(2692) _db_enter_
+calls=20 1134 
+* 5080
++1 80
+cfi=(283)
+cfn=(3640) _db_pargs_
+calls=20 1265 
+* 1920
+* 40
++3 140
++2 20
+cfi=(879) /home/lottaquestions/work/MariaDBServer/server/mysys/my_getsystime.c
+cfn=(7748) my_hrtime
+calls=20 76 
+* 4920
+* 540
++1 40
++2 120
+cfi=(437) /home/lottaquestions/work/MariaDBServer/server/include/mysql/psi/mysql_thread.h
+cfn=(6930) inline_mysql_mutex_lock
+calls=20 743 
+* 30660
++1 100
+cfi=(1016) /home/lottaquestions/work/MariaDBServer/server/mysys/queues.c
+cfn=(74420) queue_insert_safe
+calls=20 +52 
+* 4082
+* 40
++10 564
++1 120
+cfi=(437)
+cfn=(7252) inline_mysql_mutex_unlock
+calls=20 781 
+* 7780
++1 40
++9 40
+-31 60
+cfi=(283)
+cfn=(2702) _db_return_
+calls=20 1201 
+* 4600
++32 80
+
+fn=(74820) process_timers
+241 345
++2 552
+cfi=(283)
+cfn=(2692)
+calls=69 1134 
+* 17526
++1 276
+cfi=(283)
+cfn=(3640)
+calls=69 1265 
+* 6624
+* 138
++13 207
++1 207
++1 207
++1 345
++1 138
++9 276
+cfi=(1016)
+cfn=(74822) queue_remove
+calls=69 -3 
+* 21510
++1 276
+cfi=(804) /home/lottaquestions/work/MariaDBServer/server/tpool/tpool_generic.cc
+cfn=(80710) tpool::thread_pool_generic::timer_generic::submit_task(void*)
+calls=20 +95 
+* 18886
+cfi=(804)
+cfn=(74826) tpool::thread_pool_generic::timer_generic::execute(void*)
+calls=49 +89 
+* 36677
++6 334
++2 49
+cfi=(879)
+cfn=(7748)
+calls=49 76 
+* 12054
+* 1372
++1 98
++1 245
+cfi=(1016)
+cfn=(8728) queue_insert
+calls=49 -64 
+* 11078
++4 207
++1 1014
++3 69
+-46 207
+cfi=(283)
+cfn=(2702)
+calls=69 1201 
+* 15870
++46 69
++1 138
+
+fn=(74414) thr_timer_end
+218 100
++1 160
+cfi=(283)
+cfn=(2692)
+calls=20 1134 
+* 5080
++2 120
+cfi=(437)
+cfn=(6930)
+calls=20 743 
+* 30660
++1 80
++9 120
+cfi=(437)
+cfn=(7252)
+calls=20 781 
+* 7780
++1 20
+-13 60
+cfi=(283)
+cfn=(2702)
+calls=20 1201 
+* 4600
++13 20
++1 40
+
+fn=(8896) timer_handler
+309 69
+cfi=(879)
+cfn=(7748)
+calls=69 76 
+* 16974
+* 1380
++2 276
++2 1030
++2 207
+cfn=(74820)
+calls=69 -74 
+* 146994
++1 276
++3 345
++1 414
++1 690
+cfi=(437)
+cfn=(8912) inline_mysql_cond_timedwait
+calls=69 1083 
+* 52854
+* 69
+-18 414
+
+fl=(285) /home/lottaquestions/work/MariaDBServer/server/mysys/my_thr_init.c
+fn=(2700) my_thread_var_dbug
+433 5076
++2 3807
++2 1269
+cfn=(6906) _my_thread_var
+calls=1269 -51 
+* 33318
+* 1269
++1 9207
++1 2538
+
+fn=(6906)
+386 4455
++1 5940
+cob=(2)
+cfi=(51)
+cfn=(6908) 0x0000000000950580
+calls=1485 0 
+* 25653
++1 2970
+
+fn=(7248) my_thread_var_mutex_in_use
+445 848
++2 636
++2 212
+cfn=(6906)
+calls=212 -63 
+* 5588
+* 212
++1 944
++1 424
+
+fn=(85302) my_thread_destory_thr_mutex
+110 5
++1 7
+cfi=(437)
+cfn=(73906) inline_mysql_mutex_destroy
+calls=1 715 
+* 423
++1 4
+cfi=(437)
+cfn=(73926) inline_mysql_cond_destroy
+calls=1 1041 
+* 41
++1 3
+
+fn=(85300) my_thread_end
+330 4
++2 1
+cfn=(6906)
+calls=1 +54 
+* 28
+* 1
++12 4
+cfi=(701)
+cfn=(85298)
+calls=1 -61 
+* 6
++8 1
+cfi=(283)
+cfn=(7250) _db_pop_
+calls=1 926 
+* 86
++1 2
+cfn=(6918) set_mysys_var
+calls=1 +38 
+* 50
++2 6
++4 4
++2 4
+cob=(2)
+cfi=(51)
+cfn=(7446) 0x000000000094e3e0
+calls=1 0 
+* 99
++1 2
++3 3
+cfn=(85302)
+calls=1 110 
+* 483
++8 6
+cfi=(437)
+cfn=(6930)
+calls=1 743 
+* 680
++1 7
++1 9
++2 6
+cfi=(437)
+cfn=(7252)
+calls=1 781 
+* 306
++3 2
++1 3
+cob=(2)
+cfi=(51)
+cfn=(7446)
+calls=1 0 
+* 99
++2 3
+
+fn=(6918)
+391 5
++1 6
+cob=(2)
+cfi=(51)
+cfn=(6920) 0x000000000094e960
+calls=1 0 
+* 37
++1 2
+
+fn=(6950) my_thread_dbug_id
+400 4
++5 1
+cfn=(6906)
+calls=1 -19 
+* 28
+* 1
++1 5
++1 2
+
+fl=(1610) /home/lottaquestions/work/MariaDBServer/server/storage/innobase/include/srw_lock.h
+fn=(76740) ssux_lock_impl<false>::wr_unlock()
+302 95
++2 57
+cfn=(75830) ssux_lock_impl<false>::is_write_locked() const
+calls=19 +5 
+* 589
+* 190
++1 95
+fi=(484) /usr/include/c++/11/bits/atomic_base.h
+452 76
+cfn=(7862) std::operator&(std::memory_order, std::__memory_order_modifier)
+calls=19 105 
+* 190
+* 19
++5 57
++1 19
+fe=(1610)
+306 57
+cfn=(76744) srw_mutex_impl<false>::wr_unlock()
+calls=19 135 
+* 380
++1 57
+
+fn=(77138) ssux_lock_impl<false>::wr_lock_try()
+234 95
++2 57
+cfn=(75712) srw_mutex_impl<false>::wr_lock_try()
+calls=19 126 
+* 1007
+* 57
++2 19
++1 114
+fi=(484)
+564 76
+cfn=(7862)
+calls=19 105 
+* 190
+* 19
++2 76
+cfn=(7862)
+calls=19 105 
+* 190
+* 19
++5 171
++1 19
+fe=(1610)
+239 38
++3 38
++3 38
+
+fn=(75712)
+126 95
++2 19
++1 95
+fi=(484)
+564 76
+cfn=(7862)
+calls=19 105 
+* 190
+* 19
++2 76
+cfn=(7862)
+calls=19 105 
+* 190
+* 19
++5 171
++1 19
+fe=(1610)
+132 38
+
+fn=(75830)
+309 95
++1 76
+fi=(484)
+477 76
+cfn=(7862)
+calls=19 105 
+* 190
+* 19
++4 57
+fe=(1610)
+310 76
+
+fn=(77136) srw_lock_impl<false>::wr_lock_try()
+537 171
+cfn=(77138)
+calls=19 234 
+* 2223
+* 38
+
+fn=(76744)
+135 95
++2 76
+fi=(484)
+646 95
+fe=(1610)
+137 19
++1 38
++5 57
+
+fn=(76738) srw_lock_impl<false>::wr_unlock()
+530 95
++2 190
++2 76
+cfn=(76740)
+calls=19 302 
+* 1881
++1 57
+
+fl=(1589) /home/lottaquestions/work/MariaDBServer/server/storage/maria/ma_loghandler.c
+fn=(73820) translog_unlock
+3012 3
++1 3
+cfn=(73822) translog_buffer_unlock
+calls=1 1753 
+* 946
++1 3
+
+fn=(73822)
+1753 5
++1 8
+cfi=(283)
+cfn=(2692)
+calls=1 1134 
+* 254
++1 4
+cfi=(283)
+cfn=(3640)
+calls=1 1265 
+* 96
+* 2
++3 7
+cfi=(437)
+cfn=(7252)
+calls=1 781 
+* 333
++1 1
+-5 3
+cfi=(283)
+cfn=(2702)
+calls=1 1201 
+* 230
++5 1
++1 2
+
+fn=(73818) translog_buffer_lock
+1734 5
++1 8
+cfi=(283)
+cfn=(2692)
+calls=1 1134 
+* 239
++1 4
+cfi=(283)
+cfn=(3640)
+calls=1 1265 
+* 96
+* 2
++3 7
+cfi=(437)
+cfn=(6930)
+calls=1 743 
+* 1465
++1 1
+-5 3
+cfi=(283)
+cfn=(2702)
+calls=1 1201 
+* 230
++5 1
++1 2
+
+fn=(73816) translog_lock
+2976 4
++2 8
+cfi=(283)
+cfn=(2692)
+calls=1 1134 
+* 254
++12 2
++1 6
+cfn=(73818)
+calls=1 1734 
+* 2063
++1 3
++1 1
++3 1
+-18 3
+cfi=(283)
+cfn=(2702)
+calls=1 1201 
+* 230
++18 1
++1 2
+
+fn=(73814) translog_get_horizon
+6626 4
++2 9
++2 2
+cfn=(73816)
+calls=1 2976 
+* 2578
++1 2
++1 2
+cfn=(73820)
+calls=1 3012 
+* 955
++1 1
++1 2
+
+fl=(746) /home/lottaquestions/work/MariaDBServer/server/storage/innobase/trx/trx0sys.cc
+fn=(83240) trx_sys_t::history_exists()
+228 95
++1 57
+cfi=(747) /home/lottaquestions/work/MariaDBServer/server/storage/innobase/include/trx0sys.h
+cfn=(75698) trx_sys_t::is_initialised() const
+calls=19 1040 
+* 152
+* 190
++1 5035
++1 9728
+-1 9785
++3 19
++1 38
+
+fl=(368) /home/lottaquestions/work/MariaDBServer/server/strings/strnmov.c
+fn=(3172) strnmov
+39 90
++1 15
++1 13221
++1 10
+-2 7395
++6 30
+
+fl=(1016)
+fn=(74824) queue_replace
+350 414
++1 483
++2 207
++1 207
++1 207
++1 207
++1 69
++2 69
++2 207
++1 207
++1 138
++2 552
+-2 138
++1 414
+-1 414
+cfi=(1015)
+cfn=(74422)
+calls=69 50 
+* 1932
++3 138
+-1 69
+-3 138
++6 138
++1 345
++1 414
+-1 414
+cfi=(1015)
+cfn=(74422)
+calls=69 50 
+* 2004
++2 207
+-3 138
++10 69
++1 828
++1 138
++1 759
++1 138
+-23 483
++26 414
+cfn=(8730) insert_at
+calls=69 186 
+* 5154
++1 207
+
+fn=(74420)
+238 120
++2 120
++8 100
+cfn=(8728)
+calls=20 -31 
+* 3682
++1 20
++1 40
+
+fn=(74822)
+267 414
++2 345
++1 483
++1 483
++1 1173
++1 345
+cfn=(74824)
+calls=69 +77 
+* 18060
++1 69
++1 138
+
+fn=(8728)
+217 414
++1 621
++1 828
+cfn=(8730)
+calls=69 -33 
+* 12690
++1 207
+
+fn=(8730)
+186 966
++1 414
++1 414
++2 138
++6 1152
++1 192
++1 1056
++1 192
+-9 1170
++1 408
++2 1224
+-2 1836
+cfi=(1015)
+cfn=(74422)
+calls=204 50 
+* 5178
++3 408
+-1 204
+-3 408
++11 966
++1 276
++1 828
++1 414
+
+fl=(972) /home/lottaquestions/work/MariaDBServer/server/mysys/my_open.c
+fn=(8278) my_open
+45 24
++2 24
+cfi=(283)
+cfn=(2692)
+calls=3 1134 
+* 717
++1 12
+cfi=(283)
+cfn=(3640)
+calls=3 1265 
+* 288
+* 6
++2 12
++1 9
++4 12
++3 30
+cob=(2)
+cfi=(51)
+cfn=(8280) 0x000000000094e490
+calls=3 -58 
+* 186
+* 3
++3 24
+cfn=(8282) my_register_filename
+calls=3 +72 
+* 25283
+* 3
++2 6
+-16 9
+cfi=(283)
+cfn=(2702)
+calls=3 1201 
+* 690
++16 3
++1 9
+
+fn=(8282)
+133 30
++1 24
+cfi=(283)
+cfn=(2692)
+calls=3 1134 
+* 717
++1 6
++2 6
++1 27
++1 6
++1 13
+cfi=(855) /home/lottaquestions/work/MariaDBServer/server/mysys/my_malloc.c
+cfn=(7400) my_strdup
+calls=1 +88 
+* 23624
+* 1
++1 5
++1 8
++1 4
+cfi=(283)
+cfn=(3640)
+calls=1 1265 
+* 96
+* 2
++1 3
+-10 9
+cfi=(283)
+cfn=(2702)
+calls=3 1201 
+* 690
++24 12
+
+fn=(8294) my_close
+78 21
++2 3
++1 24
+cfi=(283)
+cfn=(2692)
+calls=3 1134 
+* 717
++1 12
+cfi=(283)
+cfn=(3640)
+calls=3 1265 
+* 288
+* 6
++1 12
++1 9
++2 42
++2 8
++1 7
++1 7
++3 3
+cob=(2)
+cfi=(51)
+cfn=(8296) 0x000000000094f7d0
+calls=1 -93 
+* 38
+* 6
+cob=(2)
+cfi=(51)
+cfn=(8296)
+calls=2 -93 
+* 76
+* 3
++4 6
++8 6
++2 3
+cfi=(855)
+cfn=(7436) my_free
+calls=1 +80 
+* 1110
++2 6
++1 6
+-29 9
+cfi=(283)
+cfn=(2702)
+calls=3 1201 
+* 690
++29 3
++1 9
+
+fl=(694) /home/lottaquestions/work/MariaDBServer/server/storage/innobase/include/log0log.h
+fn=(75808) log_t::is_pmem() const
+306 190
+
+fn=(76454) log_t::get_lsn(std::memory_order) const
+374 234
++1 156
+fi=(484)
+477 156
+cfn=(7862)
+calls=39 105 
+* 390
+* 39
++4 117
+fe=(694)
+375 78
+
+fl=(879)
+fn=(8772) my_interval_timer
+50 76
++3 76
+cob=(2)
+cfi=(51)
+cfn=(7570) 0x000000000094e950
+calls=19 -53 
+* 247
++1 76
++16 38
+
+fn=(7748)
+76 716
++8 716
+cob=(2)
+cfi=(51)
+cfn=(7570)
+calls=179 -84 
+* 2327
++1 1790
++7 895
+cfi=(283)
+cfn=(6942) _db_keyword_
+calls=179 1766 
+* 16885
+* 358
++1 895
+cfi=(283)
+cfn=(6942)
+calls=179 1766 
+* 16885
+* 358
++1 179
++1 358
+
+fl=(1593) /home/lottaquestions/work/MariaDBServer/server/storage/maria/ma_servicethread.c
+fn=(74398) my_service_thread_sleep
+94 7
++2 1
++1 8
+cfi=(283)
+cfn=(2692)
+calls=1 1134 
+* 254
++1 4
+cfi=(283)
+cfn=(3640)
+calls=1 1265 
+* 96
+* 2
++1 7
+cfi=(437)
+cfn=(6930)
+calls=1 743 
+* 1534
++1 4
++11 4
+cfi=(283)
+cfn=(3640)
+calls=1 1265 
+* 96
+* 2
++1 2
++2 1
+cfi=(879)
+cfn=(7748)
+calls=1 -38 
+* 246
+* 22
++1 9
+cfi=(437)
+cfn=(8912)
+calls=1 1083 
+* 738
++4 4
++2 7
+cfi=(437)
+cfn=(7252)
+calls=1 781 
+* 392
++1 2
+-25 3
+cfi=(283)
+cfn=(2702)
+calls=1 1201 
+* 230
++26 4
+
+fl=(747)
+fn=(75698)
+1040 152
+
+fl=(261) /home/lottaquestions/work/MariaDBServer/server/sql/mysqld.cc
+fn=(8036) set_server_version(char*, unsigned long)
+8744 6
++1 14
++1 5
+cob=(2)
+cfi=(51)
+cfn=(8038) 0x000000000094ea30
+calls=1 0 
+* 49
+* 3
++1 2
++5 23
+cfi=(946) /home/lottaquestions/work/MariaDBServer/server/strings/strxnmov.c
+cfn=(8008) strxnmov
+calls=1 54 
+* 490
+* 1
++8 3
+
+fn=(7728) mariadb_dbug_id
+3672 4
++2 1
+cfn=(7242) _current_thd
+calls=1 695 
+* 8
+* 6
++4 1
+cfi=(285)
+cfn=(6950)
+calls=1 400 
+* 41
+* 1
++1 2
+
+fn=(7240) my_malloc_size_cb_func
+3685 20
++1 2
+cfn=(7242)
+calls=2 695 
+* 16
+* 2
++3 10
++9 18
++2 4
++31 10
++7 6
+cfi=(279) /home/lottaquestions/work/MariaDBServer/server/sql/sql_class.h
+cfn=(7244) update_global_memory_status(long long)
+calls=2 1059 
+* 234
++1 14
+
+fn=(83500) signal_hand
+3189 6
+cfi=(1794) /home/lottaquestions/work/MariaDBServer/server/include/my_pthread.h
+cfn=(83514) my_sigwait
+calls=1 192 
+* 91
+* 5
+
+fn=(7242)
+695 32
+
+fl=(275) /home/lottaquestions/work/MariaDBServer/server/include/my_counter.h
+fn=(76346) Atomic_counter<unsigned int>::operator unsigned int() const
+45 616
+fi=(484)
+477 308
+cfn=(7862)
+calls=77 105 
+* 770
+* 77
++4 231
+fe=(275)
+45 154
+
+fn=(78396) Atomic_counter<int>::operator int() const
+45 152
+fi=(484)
+477 76
+cfn=(7862)
+calls=19 105 
+* 190
+* 19
++4 38
+fe=(275)
+45 38
+
+fn=(75152) Atomic_counter<unsigned long>::operator unsigned long() const
+45 32
+fi=(484)
+477 16
+cfn=(7862)
+calls=4 105 
+* 40
+* 4
++4 12
+fe=(275)
+45 8
+
+fl=(1853) /home/lottaquestions/work/MariaDBServer/server/mysys/my_addr_resolve.c
+fn=(85420) start_addr2line_fork
+176 25
++2 15
++3 12
+cob=(2)
+cfi=(51)
+cfn=(8296)
+calls=4 0 
+* 152
++1 12
+cob=(2)
+cfi=(51)
+cfn=(8296)
+calls=4 0 
+* 152
++2 20
+cob=(2)
+cfi=(51)
+cfn=(85456) 0x000000000094f0e0
+calls=4 0 
+* 192
++3 15
+cob=(2)
+cfi=(51)
+cfn=(85422) 0x000000000094ef00
+calls=5 0 
+* 45
+* 10
++2 15
+cob=(2)
+cfi=(51)
+cfn=(85422)
+calls=5 0 
+* 45
+* 10
++3 5
+cob=(2)
+cfi=(51)
+cfn=(85426) 0x0000000000950420
+calls=5 0 
+* 2405
+* 5
++1 15
++3 15
++12 15
+cob=(2)
+cfi=(51)
+cfn=(8296)
+calls=5 0 
+* 190
++1 15
+cob=(2)
+cfi=(51)
+cfn=(8296)
+calls=5 0 
+* 190
++2 5
++1 10
+
+fn=(85412) my_addr_resolve
+299 60
++3 50
+cob=(2)
+cfi=(51)
+cfn=(85414) 0x00000000009503e0
+calls=10 0 
+* 9310524
+* 20
++3 50
+cob=(2)
+cfi=(51)
+cfn=(3418) 0x00000000009501f0
+calls=10 0 
+* 281
+* 20
++7 15
+cfn=(85420)
+calls=5 176 
+* 3590
+* 10
++8 30
+cfi=(368)
+cfn=(3172)
+calls=5 39 
+* 3681
++7 10
++2 30
+cob=(2)
+cfi=(51)
+cfn=(3418)
+calls=5 0 
+* 166
+* 10
++1 15
+cfn=(85448) addr_resolve
+calls=3 217 
+* 2289
+-1 6
++7 80
+cfn=(85448)
+calls=10 217 
+* 7246
++1 20
+
+fn=(85410) my_addr_resolve_init
+341 3
++1 1
++1 2
+
+fn=(85448)
+217 117
++4 13
++1 13
++1 13
++4 13
++1 13
++2 26
++1 13
++2 104
+cfi=(365) /home/lottaquestions/work/MariaDBServer/server/strings/my_vsnprintf.c
+cfn=(3152) my_snprintf
+calls=13 821 
+* 7728
+* 13
++1 78
+cob=(2)
+cfi=(51)
+cfn=(83142) 0x0000000000950480
+calls=13 0 
+* 546
+* 26
++10 39
++1 65
+cob=(2)
+cfi=(51)
+cfn=(85285) 0x000000000094f870'2
+calls=13 0 
+* 546
+* 13
+-1 39
++37 26
++1 26
++13 65
+
+fl=(1331) /usr/include/x86_64-linux-gnu/c++/11/bits/gthr-default.h
+fn=(22772) __gthread_active_p()
+301 508
++1 254
++1 508
+-2 98
++1 49
++1 98
+
+fn=(22780) __gthread_mutex_unlock(pthread_mutex_t*)
+777 608
++1 152
+cfn=(22772)
+calls=152 301 
+* 760
+* 608
++1 456
+cob=(2)
+cfi=(51)
+cfn=(3644) 0x000000000094f810
+calls=152 0 
+* 4225
+* 152
++3 304
+
+fn=(22770) __gthread_mutex_lock(pthread_mutex_t*)
+747 408
++1 102
+cfn=(22772)
+calls=102 301 
+* 510
+* 408
++1 306
+cob=(2)
+cfi=(51)
+cfn=(3642) 0x000000000094f930
+calls=102 0 
+* 3774
+* 102
++3 204
+
+fn=(74840) __gthread_mutex_trylock(pthread_mutex_t*)
+756 196
++1 49
+cfn=(22772)
+calls=49 301 
+* 245
+* 196
++1 147
+cob=(2)
+cfi=(51)
+cfn=(74842) 0x000000000094eb50
+calls=49 0 
+* 2009
+* 49
++3 98
+
+fl=(868) /home/lottaquestions/work/MariaDBServer/server/mysys/safemalloc.c
+fn=(7444) free_memory
+257 6
++1 3
++3 5
++9 3
+cob=(2)
+cfi=(51)
+cfn=(3642)
+calls=1 0 
+* 37
++2 4
++8 4
++3 3
++2 4
++1 5
++3 3
++2 2
++1 3
+cob=(2)
+cfi=(51)
+cfn=(3644)
+calls=1 0 
+* 26
++3 1
++1 16
+cob=(2)
+cfi=(51)
+cfn=(2648) 0x000000000094e830
+calls=1 0 
+* 14
++1 3
+cob=(2)
+cfi=(51)
+cfn=(7446)
+calls=1 0 
+* 91
++1 1
++1 3
+
+fn=(7442) bad_ptr
+323 6
++1 3
++3 4
++5 6
++5 4
++7 5
++1 4
++1 3
+-1 2
++2 3
+-1 2
++2 3
+-1 2
++10 1
++1 2
+
+fn=(7440) sf_free
+199 5
++1 7
+cfn=(7442)
+calls=1 323 
+* 50
+* 2
++3 3
+cfn=(7444)
+calls=1 +54 
+* 237
+* 1
++1 2
+
+fn=(6944) sf_malloc
+107 6
++9 3
++7 2
++3 4
+cob=(2)
+cfi=(51)
+cfn=(5752) 0x0000000000950360
+calls=1 0 
+* 354
+* 3
++7 3
++1 3
++1 2
++1 4
++1 2
++1 3
+cfi=(261)
+cfn=(7728)
+calls=1 3672 
+* 64
+* 2
++1 4
++1 5
++1 5
++1 5
++5 4
+cob=(2)
+cfi=(51)
+cfn=(6952) 0x000000000094f490
+calls=1 0 
+* 21393
+* 1
++1 2
++4 1
++1 10
+cob=(2)
+cfi=(51)
+cfn=(2792) 0x000000000094f630
+calls=1 0 
+* 14
++2 2
++5 3
+cob=(2)
+cfi=(51)
+cfn=(3642)
+calls=1 0 
+* 37
++3 7
++1 3
++1 2
++3 3
++1 3
++1 3
++2 3
+cob=(2)
+cfi=(51)
+cfn=(3644)
+calls=1 0 
+* 26
++2 7
+cob=(2)
+cfi=(51)
+cfn=(2648)
+calls=1 0 
+* 14
++1 1
++1 2
+
+fl=(728) /home/lottaquestions/work/MariaDBServer/server/storage/innobase/include/ut0counter.h
+fn=(85290) ib_counter_t<unsigned long, ib_counter_element_t, 128>::operator unsigned long() const
+107 8
++1 2
++2 528
++1 768
+-1 1030
++4 2
++1 4
+
+fl=(1794)
+fn=(83514)
+192 6
++3 5
+cob=(2)
+cfi=(51)
+cfn=(83516) 0x0000000000950140
+calls=1 0 
+* 60
+* 2
++1 3
++1 5
+cob=(2)
+cfi=(51)
+cfn=(7346) 0x0000000000950530
+calls=1 0 
+* 6
+* 2
++5 2
+
+fl=(327) /usr/include/c++/11/bits/move.h
+fn=(31718) std::mutex* std::__addressof<std::mutex>(std::mutex&)
+49 600
++1 450
+
+fl=(438) /home/lottaquestions/work/MariaDBServer/server/storage/perfschema/pfs.cc
+fn=(83144) pfs_spawn_thread
+cfi=(261)
+cfn=(83500)
+calls=0 3136 
+2201 102
+
+fl=(369) /home/lottaquestions/work/MariaDBServer/server/strings/int2str.c
+fn=(73872) int2str
+67 224
++4 64
++1 16
++2 32
++12 64
++15 32
++1 16
++1 80
++1 272
++1 16
++2 16
++3 280
+cob=(2)
+cfi=(51)
+cfn=(73874) 0x000000000094fd90
+calls=70 0 
+* 490
+* 140
++1 490
++1 70
+-5 172
++15 934
++1 16
++1 144
+
+fn=(3176) int10_to_str
+146 143
++4 26
++2 26
++2 14
++8 26
++1 13
++1 78
++1 182
++1 26
++2 13
++2 260
++1 364
++1 52
+-4 78
++6 533
++1 26
++1 78
+
+fl=(437)
+fn=(73906)
+715 6
++2 4
++7 6
+cfi=(440) /home/lottaquestions/work/MariaDBServer/server/mysys/thr_mutex.c
+cfn=(73908) safe_mutex_destroy
+calls=1 583 
+* 405
++4 2
+
+fn=(73926)
+1041 4
++2 7
++6 3
+cob=(2)
+cfi=(51)
+cfn=(73928) 0x000000000094e8e0
+calls=1 0 
+* 25
++1 2
+
+fn=(6930)
+743 6
++2 7
++5 6
+cfi=(440)
+cfn=(6932) safe_mutex_lock
+calls=1 232 
+* 1444
++4 2
+-11 6
++2 7
++5 6
+cfi=(440)
+cfn=(6932)
+calls=1 232 
+* 1513
++4 2
+-11 6
++2 10
++5 6
+cfi=(440)
+cfn=(6932)
+calls=1 232 
+* 1441
+* 1
++4 2
+-11 6
++2 7
++5 6
+cfi=(440)
+cfn=(6932)
+calls=1 232 
+* 659
++4 2
+-11 240
++2 280
++5 240
+cfi=(440)
+cfn=(6932)
+calls=40 232 
+* 60480
++4 80
+
+fn=(7252)
+781 6
++4 7
++5 6
+cfi=(440)
+cfn=(7254) safe_mutex_unlock
+calls=1 408 
+* 310
+* 1
++5 1
++1 2
+-15 6
++4 7
++5 6
+cfi=(440)
+cfn=(7254)
+calls=1 408 
+* 369
+* 1
++5 1
++1 2
+-15 6
++4 10
++5 6
+cfi=(440)
+cfn=(7254)
+calls=1 408 
+* 356
+* 1
++5 1
++1 2
+-15 6
++4 7
++5 6
+cfi=(440)
+cfn=(7254)
+calls=1 408 
+* 283
+* 1
++5 1
++1 2
+-15 240
++4 280
++5 240
+cfi=(440)
+cfn=(7254)
+calls=40 408 
+* 14640
+* 40
++5 40
++1 80
+
+fn=(8912)
+1083 8
++2 7
++3 7
+cfi=(440)
+cfn=(8914) safe_cond_timedwait
+calls=1 530 
+* 714
++1 2
+-6 552
++2 483
++3 483
+cfi=(440)
+cfn=(8914)
+calls=69 530 
+* 51198
++1 138
+
+fl=(283)
+fn=(6934) _db_push_
+862 605
++3 121
+cfn=(2694) code_state
+calls=121 361 
+* 7663
+* 363
++1 630
+cfn=(7274) ListFlags
+calls=63 1568 
+* 693
+* 126
++1 189
+cfn=(7764) PushState
+calls=63 1596 
+* 8442
++1 315
+cfn=(7766) DbugParse
+calls=63 483 
+* 13482
+* 126
++1 315
+cfn=(7778) FixTraceFlags
+calls=63 741 
+* 2457
+* 63
+-4 58
++5 242
+
+fn=(7250)
+926 488
++4 122
+cfn=(2694)
+calls=122 361 
+* 7734
+* 366
++2 320
++2 630
+cfn=(7274)
+calls=63 1568 
+* 693
+* 126
++1 252
+cfn=(7770) FreeState
+calls=63 1623 
+* 14112
++1 315
+cfn=(7778)
+calls=63 741 
+* 2457
+* 63
+-6 58
++8 244
+
+fn=(7770)
+1623 756
++1 378
++1 378
+cfn=(7768) LockIfInitSettings
+calls=126 350 
+* 1638
++1 1386
++5 378
+cfn=(7772) UnlockIfInitSettings
+calls=126 355 
+* 1638
++1 1386
++2 1386
++3 504
+cfn=(7774) DBUGCloseFile
+calls=126 1998 
+* 3402
++2 252
++2 189
++1 189
+cob=(2)
+cfi=(51)
+cfn=(7446)
+calls=63 0 
+* 6237
++1 189
++2 378
+
+fn=(7764)
+1596 315
++3 126
+cfn=(7272) DbugMalloc
+calls=63 2071 
+* 3717
+* 63
++1 315
+cob=(2)
+cfi=(51)
+cfn=(2648)
+calls=63 0 
+* 3276
++1 252
++1 189
++1 189
+
+fn=(7276) DoTrace
+1708 1260
++1 252
++1 1260
++1 2268
+cfn=(7278) InList
+calls=252 1543 
+* 3528
+* 252
+-1 504
++3 2268
+cfn=(7278)
+calls=252 1543 
+* 3528
+* 1512
++10 3528
++1 252
++10 252
++1 504
+
+fn=(2702)
+1201 1016
++1 508
++2 127
+cfn=(2694)
+calls=127 361 
+* 9001
+* 381
++2 504
++3 1008
++7 378
+cfn=(7276)
+calls=126 1708 
+* 10584
+* 378
++2 756
++2 630
++16 882
++1 504
++1 504
++1 504
++1 756
+-36 2
++37 635
+
+fn=(7766)
+483 441
++2 63
++3 189
++2 252
++3 630
++1 126
++2 189
+cfn=(7768)
+calls=63 350 
+* 819
++1 252
+cfn=(7770)
+calls=63 1623 
+* 6552
++1 126
++1 126
++1 126
++1 126
++1 252
++1 126
++1 126
++1 126
++1 189
+cfn=(7772)
+calls=63 355 
+* 819
+* 63
++28 189
+cfn=(7776) DbugStrTok
+calls=63 2085 
+* 756
+* 63
++1 315
+706 252
++1 189
+
+fn=(7768)
+350 945
++1 945
++2 567
+
+fn=(7774)
+1998 756
++2 1512
++3 504
++14 315
+-16 63
++17 252
+
+fn=(7776)
+2085 252
++1 315
++3 63
++1 126
+
+fn=(2692)
+1134 1143
++2 127
+cfn=(2694)
+calls=127 361 
+* 9001
+* 381
++2 2
++1 2
++1 1
++3 252
++1 504
++1 504
++1 378
++1 378
++1 504
++1 2016
+cfn=(7274)
+calls=112 1568 
+* 1232
+* 896
++1 336
++2 336
+cfn=(7276)
+calls=112 1708 
+* 9408
+-3 56
++1 42
++2 42
+cfn=(7276)
+calls=14 1708 
+* 1176
+* 1260
++6 756
++2 630
++11 126
++7 381
+
+fn=(2694)
+361 5076
++7 5076
++3 3807
++11 1269
+cfi=(285)
+cfn=(2700)
+calls=1269 +51 
+* 56484
+* 3807
++1 738
++1 4500
++10 900
++1 2538
+
+fn=(7272)
+2071 315
++3 189
+cob=(2)
+cfi=(51)
+cfn=(5752)
+calls=63 0 
+* 2835
+* 189
++2 63
++1 126
+
+fn=(7274)
+1568 1288
++2 1288
++2 322
++1 644
+
+fn=(7772)
+355 945
++1 945
++2 567
+
+fn=(7778)
+741 756
++9 378
++1 252
++8 840
+cfn=(7274)
+calls=84 1568 
+* 924
+* 168
++1 336
++11 756
+-19 84
++20 168
++38 252
+
+fn=(3640)
+1265 2472
++2 412
+cfn=(2694)
+calls=412 361 
+* 26452
+* 1586
++1 711
++1 711
++2 1659
++1 824
+
+fn=(6942)
+1766 2520
++1 1800
++2 1080
+cfn=(2694)
+calls=360 361 
+* 24344
+* 1232
++2 1704
++1 568
++5 720
+
+fn=(7278)
+1543 3528
++2 2016
++12 504
++1 1008
+
+fl=(365)
+fn=(3152)
+821 156
++3 78
++1 78
+cfn=(3154) my_vsnprintf
+calls=13 -10 
+* 7364
+* 13
++2 13
++1 26
+
+fn=(3154)
+815 272
++1 306
+cfn=(3156) my_vsnprintf_ex
+calls=34 662 
+* 42790
++1 68
+
+fn=(3160) check_longlong
+117 195
++1 78
++1 156
++2 4
++1 16
++1 12
++7 140
++2 2
++1 6
++2 132
++1 30
++1 15
++1 30
+-1 24
++1 48
+
+fn=(3174) process_int_arg
+354 406
++2 58
++3 203
++1 12
++2 102
++1 42
+cfi=(369)
+cfn=(3176)
+calls=7 146 
+* 746
+* 14
++1 44
++1 36
+cfi=(369)
+cfn=(3176)
+calls=6 146 
+* 1192
+* 12
++1 32
++2 30
++1 45
++1 105
+cfi=(369)
+cfn=(73872)
+calls=15 67 
+* 3357
+* 30
++2 2
++6 4
++1 9
+cfi=(369)
+cfn=(73872)
+calls=1 67 
+* 211
+* 1
++3 174
++3 87
++2 30
++1 18
++14 36
+cob=(2)
+cfi=(51)
+cfn=(3178) 0x000000000094e640
+calls=6 0 
+* 120
++2 58
++1 29
++1 145
+
+fn=(3156)
+662 442
++1 238
++4 34
++2 1852
++2 1272
++2 2544
++1 424
++2 39
++2 117
++1 39
++3 468
++2 36
+cfn=(3158) get_length
+calls=6 70 
+* 514
+* 6
++1 24
++8 132
++5 132
++2 132
++6 198
+cfn=(3158)
+calls=33 70 
+* 726
+* 33
++3 156
++2 3
++1 3
++1 12
++2 3
++1 60
++6 36
++2 180
+cfn=(3160)
+calls=36 117 
+* 822
+* 15
+cfn=(3160)
+calls=3 117 
+* 66
+* 39
++2 272
++2 170
++2 20
+-1 160
+cfn=(3162) process_str_arg
+calls=10 229 
+* 19120
+* 20
++2 10
++2 116
++6 232
++13 356
++1 30
+-1 30
++1 60
++5 87
++1 399
++1 36
++1 133
++2 19
++2 12
+cfn=(3174)
+calls=1 354 
+* 126
+* 336
+cfn=(3174)
+calls=28 354 
+* 7264
+* 29
++1 29
+-99 2485
+801 102
++1 68
++1 68
++1 204
+
+fn=(3162)
+229 120
++2 10
++1 50
++1 10
++7 20
++6 20
++2 20
++3 20
++26 50
+cob=(2)
+cfi=(51)
+cfn=(3164) 0x000000000094fe60
+calls=10 0 
+* 540
+* 30
++1 10
++1 30
++7 120
+cfi=(366) /home/lottaquestions/work/MariaDBServer/server/include/m_ctype.h
+cfn=(3166) my_well_formed_length
+calls=10 1814 
+* 730
+* 10
++1 40
++9 20
++2 50
++3 60
+cfi=(368)
+cfn=(3172)
+calls=10 39 
+* 17080
+* 10
++1 20
++4 20
++2 10
++1 20
+
+fn=(3158)
+70 234
++2 39
++2 165
++1 44
++1 30
+-4 611
++6 39
++1 78
+
+fl=(1404) /usr/include/c++/11/bits/unique_lock.h
+fn=(31762) std::unique_lock<std::mutex>::unlock()
+189 755
++2 755
++2 604
++2 604
+cfi=(692) /usr/include/c++/11/bits/std_mutex.h
+cfn=(22778) std::mutex::unlock()
+calls=151 -80 
+* 8880
++1 302
++2 453
+
+fn=(79002) std::unique_lock<std::mutex>::mutex() const
+224 80
++1 80
+
+fn=(74836) std::unique_lock<std::mutex>::try_lock()
+145 245
++2 196
++2 196
++4 196
+cfi=(692)
+cfn=(74838) std::mutex::try_lock()
+calls=49 -45 
+* 3577
+* 98
++1 98
++2 98
+
+fn=(31716) std::unique_lock<std::mutex>::unique_lock(std::mutex&)
+66 606
++1 303
+cfi=(327)
+cfn=(31718)
+calls=101 -18 
+* 707
+* 404
++2 303
+cfn=(31720) std::unique_lock<std::mutex>::lock()
+calls=101 +62 
+* 9393
++1 202
++1 303
+
+fn=(31760) std::unique_lock<std::mutex>::~unique_lock()
+101 755
++2 604
++1 453
+cfn=(31762)
+calls=151 +85 
+* 12353
++1 453
+
+fn=(74834) std::unique_lock<std::mutex>::unique_lock(std::mutex&, std::defer_lock_t)
+73 294
++1 147
+cfi=(327)
+cfn=(31718)
+calls=49 -25 
+* 343
+* 196
++1 147
+
+fn=(31720)
+131 505
++2 404
++2 404
++4 404
+cfi=(692)
+cfn=(22768) std::mutex::lock()
+calls=101 -41 
+* 7171
++1 202
++2 303
+
+fl=(481) /home/lottaquestions/work/MariaDBServer/server/sql/signal_handler.cc
+fn=(85314) handle_fatal_signal
+129 6
++10 1
++3 5
++5 1
++1 4
+cfi=(283)
+cfn=(3640)
+calls=1 1265 
+* 96
+* 4
++2 1
+cfi=(879)
+cfn=(7748)
+calls=1 -74 
+* 246
+* 5
++1 5
+cob=(2)
+cfi=(51)
+cfn=(7918) 0x000000000094e6a0
+calls=1 0 
+* 725
++2 4
++1 1
+-1 1
++1 1
+-1 18
+cfi=(1852) /home/lottaquestions/work/MariaDBServer/server/mysys/stacktrace.c
+cfn=(85316) my_safe_printf_stderr
+calls=1 730 
+* 2751
+* 1
++3 4
++12 6
+cfi=(1852)
+cfn=(85316)
+calls=1 730 
+* 1010
++2 6
+cfi=(1852)
+cfn=(85316)
+calls=1 730 
+* 3730
++5 6
+cfi=(1852)
+cfn=(85316)
+calls=1 730 
+* 1436
++3 6
+cfi=(1852)
+cfn=(85316)
+calls=1 730 
+* 3030
++5 4
+cfi=(261)
+cfn=(8036)
+calls=1 8744 
+* 596
++1 6
+cfi=(1852)
+cfn=(85316)
+calls=1 730 
+* 1114
++2 4
++1 8
+cfi=(1852)
+cfn=(85316)
+calls=1 730 
+* 1091
++3 7
+cfi=(1852)
+cfn=(85316)
+calls=1 730 
+* 996
++3 7
+cfi=(1852)
+cfn=(85316)
+calls=1 730 
+* 882
++3 4
++2 4
+-1 8
+cfi=(1852)
+cfn=(85316)
+calls=1 730 
+* 787
++4 1
+cfi=(279)
+cfn=(85320) THD_count::value()
+calls=1 1119 
+* 36
+* 5
+cfi=(1852)
+cfn=(85316)
+calls=1 730 
+* 738
++2 8
++3 3
++4 6
+-3 2
++1 2
+-1 1
++2 7
+-1 1
++1 2
+-4 2
++7 6
+cfi=(1852)
+cfn=(85316)
+calls=1 730 
+* 3200
++5 6
+cfi=(1852)
+cfn=(85316)
+calls=1 730 
+* 1436
++6 1
+cfi=(261)
+cfn=(7242)
+calls=1 695 
+* 8
+* 1
++2 4
++2 6
+cfi=(1852)
+cfn=(85316)
+calls=1 730 
+* 820
++1 6
+cfi=(1852)
+cfn=(85316)
+calls=1 730 
+* 2778
++5 9
+cfi=(1852)
+cfn=(85322) my_print_stacktrace
+calls=1 -24 
+* 18665746
++3 2
++69 6
+cfi=(1852)
+cfn=(85316)
+calls=1 730 
+* 2922
++8 6
++13 4
++14 2
++11 1
+cfn=(85462) output_core_info()
+calls=1 55 
+* 39962
++2 5
++6 1
++7 4
+cob=(2)
+cfi=(51)
+cfn=(85464) 0x000000000094f9c0
+calls=1 0 
+* 120
++1 1
+cob=(2)
+cfi=(51)
+cfn=(8040) 0x0000000000950680
+calls=1 0 
+* 6
+* 5
+cob=(2)
+cfi=(51)
+cfn=(85472) 0x00000000009502b0
+calls=1 0 
+* 2
+
+fn=(85462)
+55 8
++6 6
+cob=(2)
+cfi=(51)
+cfn=(73628) 0x000000000094e7e0
+calls=1 -61 
+* 8
+* 6
++2 4
++1 9
+cfi=(1852)
+cfn=(85316)
+calls=1 730 
+* 2503
++6 5
+cfi=(972)
+cfn=(8278)
+calls=1 -25 
+* 1199
+* 6
++3 4
+cfi=(1852)
+cfn=(85316)
+calls=1 730 
+* 493
++1 1
++2 5
+cfi=(1852)
+cfn=(85318) my_write_stderr
+calls=1 724 
+* 73
+-2 12
+cob=(2)
+cfi=(51)
+cfn=(8290) 0x00000000009500d0
+calls=2 -74 
+* 84
+* 10
++4 4
+cfi=(972)
+cfn=(8294)
+calls=1 * 
+* 665
++3 5
+cfi=(972)
+cfn=(8278)
+calls=1 -36 
+* 1199
+* 1
++1 3
+-1 2
++3 6
+cob=(2)
+cfi=(51)
+cfn=(8290)
+calls=1 -84 
+* 42
+* 1
++1 9
+cfi=(1852)
+cfn=(85316)
+calls=1 730 
+* 1765
++1 4
+cfi=(972)
+cfn=(8294)
+calls=1 -8 
+* 665
++2 5
+cfi=(972)
+cfn=(8278)
+calls=1 -43 
+* 24952
+* 6
++2 6
+cfi=(973) /home/lottaquestions/work/MariaDBServer/server/mysys/my_read.c
+cfn=(8288) my_read
+calls=1 -53 
+* 976
+* 1
++1 9
+cfi=(1852)
+cfn=(85316)
+calls=1 730 
+* 3390
++1 4
+cfi=(972)
+cfn=(8294)
+calls=1 -14 
+* 1800
++20 6
+
+fl=(691)
+fn=(78848) std::thread::_Invoker<std::tuple<void (tpool::thread_pool_generic::*)(tpool::worker_data*), tpool::thread_pool_generic*, tpool::worker_data*> >::operator()()
+cfn=(78850) void std::thread::_Invoker<std::tuple<void (tpool::thread_pool_generic::*)(tpool::worker_data*), tpool::thread_pool_generic*, tpool::worker_data*> >::_M_invoke<0ul, 1ul, 2ul>(std::_Index_tuple<0ul, 1ul, 2ul>)
+calls=0 252 
+260 241624
+260 1
++1 2
+
+fn=(78846)
+cfn=(78848)
+calls=0 256 
+211 241627
+211 3
+
+fn=(85310)
+201 8
+cfn=(85311) std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (tpool::thread_pool_generic::*)(tpool::worker_data*), tpool::thread_pool_generic*, tpool::worker_data*> > >::~_State_impl()'2
+calls=1 * 
+* 19
+* 3
+cob=(2)
+cfi=(51)
+cfn=(5532) 0x000000000094eb10
+calls=1 0 
+* 95
+* 2
+
+fn=(85311)
+201 12
+cob=(2)
+cfi=(51)
+cfn=(85312) 0x000000000094ea00
+calls=1 0 
+* 4
+* 3
+
+fn=(78850)
+cfi=(1628) /usr/include/c++/11/bits/invoke.h
+cfn=(78880) std::__invoke_result<void (tpool::thread_pool_generic::*)(tpool::worker_data*), tpool::thread_pool_generic*, tpool::worker_data*>::type std::__invoke<void (tpool::thread_pool_generic::*)(tpool::worker_data*), tpool::thread_pool_generic*, tpool::worker_data*>(void (tpool::thread_pool_generic::*&&)(tpool::worker_data*), tpool::thread_pool_generic*&&, tpool::worker_data*&&)
+calls=0 90 
+253 241618
+253 6
+
+fl=(692)
+fn=(22766) std::lock_guard<std::mutex>::lock_guard(std::mutex&)
+228 9
++1 4
+cfn=(22768)
+calls=1 98 
+* 71
+* 3
+
+fn=(22778)
+115 760
++3 456
+cfi=(1331)
+cfn=(22780)
+calls=152 777 
+* 7265
++1 456
+
+fn=(79004) std::__condvar::wait_until(std::mutex&, int, timespec&)
+167 160
++2 60
+cfn=(79006) std::mutex::native_handle()
+calls=20 -47 
+* 140
+* 120
+cob=(2)
+cfi=(51)
+cfn=(79008) 0x000000000094f400
+calls=20 0 
+* 5657
++2 63
+
+fn=(22776) std::lock_guard<std::mutex>::~lock_guard()
+234 5
++1 4
+cfn=(22778)
+calls=1 115 
+* 57
+* 3
+
+fn=(22768)
+98 510
++2 306
+cfi=(1331)
+cfn=(22770)
+calls=102 747 
+* 5814
+* 102
++3 204
++2 306
+
+fn=(74838)
+108 245
++3 147
+cfi=(1331)
+cfn=(74840)
+calls=49 756 
+* 2989
+* 98
++1 98
+
+fn=(79006)
+122 80
++1 60
+
+fl=(1852)
+fn=(85316)
+730 315
++4 126
++1 126
+cfi=(365)
+cfn=(3154)
+calls=21 +80 
+* 36072
+* 21
++2 105
+cfn=(85318)
+calls=21 -13 
+* 1533
++1 21
++1 105
+
+fn=(85322)
+209 8
++2 1
++1 4
+cob=(2)
+cfi=(51)
+cfn=(6952)
+calls=1 0 
+* 21951
+* 1
++1 7
+cfn=(85316)
+calls=1 730 
+* 1552
++3 5
+cfn=(85408) print_with_addr_resolve
+calls=1 -32 
+* 18642212
+* 2
++1 1
++13 2
+
+fn=(85318)
+724 154
++1 132
+cob=(2)
+cfi=(51)
+cfn=(7396) 0x000000000094f440
+calls=22 0 
+* 198
+* 132
+cob=(2)
+cfi=(51)
+cfn=(83142)
+calls=22 0 
+* 924
++1 66
+
+fn=(85408)
+184 6
++4 2
+cfi=(1853)
+cfn=(85410)
+calls=1 341 
+* 6
+* 3
++6 2
++3 100
+cfi=(1853)
+cfn=(85412)
+calls=10 299 
+* 9328203
+* 20
++1 40
+cob=(2)
+cfi=(51)
+cfn=(7396)
+calls=10 0 
+* 90
+* 90
+cob=(2)
+cfi=(51)
+cfn=(85450) 0x000000000094ef80
+calls=10 0 
+* 9313594
+* 10
+-4 43
++9 1
++1 2
+
+fl=(681) /home/lottaquestions/work/MariaDBServer/server/include/my_atomic_wrapper.h
+fn=(75284) Atomic_relaxed<unsigned long>::operator unsigned long() const
+48 608
+fi=(484)
+477 304
+cfn=(7862)
+calls=76 105 
+* 760
+* 76
++4 228
+fe=(681)
+48 152
+
+fl=(730) /home/lottaquestions/work/MariaDBServer/server/tpool/tpool_structs.h
+fn=(78786) tpool::circular_queue<tpool::task*>::push(tpool::task*)
+238 120
++2 60
+cfn=(78788) tpool::circular_queue<tpool::task*>::full()
+calls=20 -24 
+* 360
+* 40
++5 140
+cfi=(693) /usr/include/c++/11/bits/stl_vector.h
+cfn=(78790) std::vector<tpool::task*, std::allocator<tpool::task*> >::operator[](unsigned long)
+calls=20 1043 
+* 240
+* 40
++1 200
++1 60
+
+fn=(78788)
+216 360
+
+fn=(78898) tpool::circular_queue<tpool::task*>::pop()
+265 100
++2 60
+cfn=(74848) tpool::circular_queue<tpool::task*>::empty()
+calls=20 -52 
+* 240
+* 60
++1 200
++1 60
+
+fn=(79016) tpool::doubly_linked_list<tpool::worker_data>::back()
+365 80
++2 40
++1 40
+
+fn=(78794) tpool::doubly_linked_list<tpool::worker_data>::size()
+348 176
++2 88
++1 88
+
+fn=(78948) tpool::doubly_linked_list<tpool::worker_data>::erase(tpool::worker_data*)
+396 132
++2 110
+cfn=(78950) tpool::doubly_linked_list<tpool::worker_data>::contains(tpool::worker_data*)
+calls=22 -16 
+* 440
+* 44
++2 88
++2 88
++1 88
++1 4
++2 63
++15 110
++1 66
+
+fn=(78796) tpool::doubly_linked_list<tpool::worker_data>::empty()
+369 160
++2 160
++1 80
+
+fn=(74848)
+215 2856
+
+fn=(78950)
+382 110
++2 44
++2 66
++1 22
++2 66
++1 44
+-3 44
++7 44
+
+fn=(85308) tpool::cache<tpool::worker_data>::is_full()
+93 4
++2 4
++1 2
+
+fn=(85306) tpool::cache<tpool::worker_data>::put(tpool::worker_data*)
+142 6
++2 5
+cfi=(1404)
+cfn=(31716)
+calls=1 -78 
+* 121
++1 3
+cfn=(85308)
+calls=1 -52 
+* 10
+* 3
++2 12
+cfi=(693)
+cfn=(74384) std::vector<tpool::worker_data*, std::allocator<tpool::worker_data*> >::operator[](unsigned long)
+calls=1 1043 
+* 12
+* 2
++4 8
++1 4
+cob=(2)
+cfi=(51)
+cfn=(78944) 0x000000000094f1c0
+calls=1 0 
+* 28
++1 3
+cfi=(1404)
+cfn=(31760)
+calls=1 -52 
+* 95
+* 2
+
+fn=(79018) tpool::doubly_linked_list<tpool::worker_data>::pop_back()
+373 80
++2 100
++1 80
++1 52
++2 14
++1 35
++1 21
+-1 65
++1 39
+
+fn=(78896) tpool::circular_queue<tpool::task*>::front()
+260 100
++2 60
+cfn=(74848)
+calls=20 -47 
+* 240
+* 60
++1 140
+cfi=(693)
+cfn=(78790)
+calls=20 1043 
+* 240
++1 40
+
+fn=(78810) tpool::doubly_linked_list<tpool::worker_data>::push_back(tpool::worker_data*)
+352 205
++2 164
++1 164
++1 52
++2 26
++1 39
++1 52
+-2 56
++1 84
++1 112
++1 112
++2 140
++1 84
+-1 65
++1 39
+
+fl=(279)
+fn=(7244)
+1059 8
++1 8
+cfi=(283)
+cfn=(3640)
+calls=2 1265 
+* 192
+* 8
++4 6
++1 6
++1 6
+
+fn=(85320)
+1119 6
+cfi=(275)
+cfn=(76346)
+calls=1 45 
+* 28
+* 2
+
+fl=(693)
+fn=(74384)
+1043 5
++3 5
++1 2
+
+fn=(78790)
+1043 200
++3 200
++1 80
+
+fl=(689) /home/lottaquestions/work/MariaDBServer/server/storage/innobase/log/log0log.cc
+fn=(81156) log_buffer_flush_to_disk(bool)
+945 133
++1 247
++1 95
+cfi=(694)
+cfn=(76454)
+calls=19 374 
+* 570
+* 76
+cfn=(81158) log_write_up_to(unsigned long, bool, completion_callback const*)
+calls=19 -60 
+* 3382
++1 76
+
+fn=(81158)
+887 152
++1 247
++1 209
++2 95
++8 76
+cfi=(694)
+cfn=(76454)
+calls=19 374 
+* 570
+* 209
++3 57
+cfi=(694)
+cfn=(75808)
+calls=19 306 
+* 190
+* 38
++9 19
++1 38
++2 114
+cfi=(690) /home/lottaquestions/work/MariaDBServer/server/storage/innobase/log/log0sync.cc
+cfn=(81160) group_commit_lock::acquire(unsigned long, completion_callback const*)
+calls=19 199 
+* 1235
+* 76
++1 19
++25 38
+
+fl=(703) /home/lottaquestions/work/MariaDBServer/server/storage/innobase/os/os0file.cc
+fn=(85288) os_aio_refresh_stats()
+3941 3
++1 3
+cfi=(275)
+cfn=(75152)
+calls=1 45 
+* 28
+* 1
++2 1
++2 3
+cfi=(275)
+cfn=(75152)
+calls=1 45 
+* 28
+* 1
++2 3
+cfi=(275)
+cfn=(75152)
+calls=1 45 
+* 28
+* 1
++2 3
+cfi=(275)
+cfn=(75152)
+calls=1 45 
+* 28
+* 1
++2 1
++2 2
+cob=(2)
+cfi=(51)
+cfn=(5956) 0x0000000000950030
+calls=1 0 
+* 8
+* 1
++1 3
+
+fl=(484)
+fn=(7862)
+105 1840
++1 1104
++1 736
+
+fl=(739) /home/lottaquestions/work/MariaDBServer/server/storage/innobase/include/trx0purge.h
+fn=(78002) purge_sys_t::enabled()
+215 190
+cfi=(483) /usr/include/c++/11/atomic
+cfn=(39426) std::atomic<bool>::load(std::memory_order) const
+calls=19 111 
+* 589
+* 38
+
+fn=(83238) purge_sys_t::paused()
+217 95
++1 76
+cfi=(275)
+cfn=(76346)
+calls=19 45 
+* 532
+* 76
+
+fl=(483)
+fn=(39426)
+111 114
++1 76
+fi=(484)
+477 76
+cfn=(7862)
+calls=19 105 
+* 190
+* 19
++4 76
+fe=(483)
+112 38
+
+fl=(1592) /home/lottaquestions/work/MariaDBServer/server/storage/maria/ma_checkpoint.c
+fn=(74394) ma_checkpoint_background
+597 6
++5 4
++6 2
+cfi=(1589)
+cfn=(73814)
+calls=1 6626 
+* 3555
+* 1
++16 6
++2 5
++2 4
+-1 1
++1 1
+-3 2
++10 2
++1 1
++89 6
+cfi=(1593)
+cfn=(74398)
+calls=1 94 
+* 3679
+* 2
++3 2
+597 1
+
+fl=(1628)
+fn=(78880)
+cfn=(78882) void std::__invoke_impl<void, void (tpool::thread_pool_generic::*)(tpool::worker_data*), tpool::thread_pool_generic*, tpool::worker_data*>(std::__invoke_memfun_deref, void (tpool::thread_pool_generic::*&&)(tpool::worker_data*), tpool::thread_pool_generic*&&, tpool::worker_data*&&)
+calls=0 71 
+96 241612
+97 1
++1 5
+
+fn=(78882)
+cfi=(804)
+cfn=(78884) tpool::thread_pool_generic::worker_main(tpool::worker_data*)
+calls=0 570 
+74 241606
+74 1
++1 5
+
+fl=(367) /home/lottaquestions/work/MariaDBServer/server/strings/ctype-simple.c
+fn=(3170) my_well_formed_char_length_8bit
+1188 80
++1 30
++1 50
++1 20
++1 50
++1 10
++1 20
+
+fl=(771) /home/lottaquestions/work/MariaDBServer/server/storage/innobase/dict/dict0dict.cc
+fn=(77220) dict_lru_validate()
+4571 76
++3 57
+cfi=(772) /home/lottaquestions/work/MariaDBServer/server/storage/innobase/include/dict0dict.h
+cfn=(77206) dict_sys_t::frozen() const
+calls=19 1499 
+* 1064
+* 190
++2 57
++1 38
++6 57
++4 1064
+-2 399
+-1 304
++6 19
++1 38
+
+fn=(77996) dict_sys_t::unlock()
+1029 95
++1 228
++1 76
+cfi=(275)
+cfn=(76346)
+calls=19 45 
+* 532
+* 209
++1 38
++1 76
+cfi=(1610)
+cfn=(76738)
+calls=19 530 
+* 2299
++1 57
+
+fn=(81840) dict_sys_t::evict_table_LRU(bool)
+1342 133
++5 57
++2 19
++2 114
+cfi=(772)
+cfn=(77134) dict_sys_t::lock(char const*, unsigned int)
+calls=19 1516 
+* 3762
++1 19
+cfn=(77220)
+calls=19 4571 
+* 3363
+* 209
++2 57
++2 57
++1 38
++1 57
+cfn=(77996)
+calls=19 1029 
+* 3610
++1 38
++22 38
+
+fl=(946)
+fn=(8008)
+54 12
++2 4
++2 6
++1 1
++4 81
++3 297
++1 6
++1 57
+-9 6
++9 6
+-9 8
++11 1
++1 2
++2 1
++1 2
+
+fl=(727) /home/lottaquestions/work/MariaDBServer/server/storage/innobase/include/srv0srv.h
+fn=(75296) simple_counter<unsigned long>::operator unsigned long() const
+71 152
+
+fl=(1419) /usr/include/c++/11/chrono
+fn=(78914) std::common_type<std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::type std::chrono::operator-<long, std::ratio<1l, 1000000000l>, long, std::ratio<1l, 1000000000l> >(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&, std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&)
+660 336
++6 288
+cfn=(43890) std::chrono::duration<long, std::ratio<1l, 1000000000l> >::count() const
+calls=48 537 
+* 384
+* 336
+cfn=(43890)
+calls=48 537 
+* 384
+* 432
+cfn=(74320) std::chrono::duration<long, std::ratio<1l, 1000000000l> >::duration<long, void>(long const&)
+calls=48 521 
+* 576
+* 48
++1 144
+
+fn=(78916) bool std::chrono::operator< <long, std::ratio<1l, 1000000000l>, long, std::ratio<1l, 1000l> >(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&, std::chrono::duration<long, std::ratio<1l, 1000l> > const&)
+772 140
++6 120
+cfn=(43890)
+calls=20 537 
+* 160
+* 120
+cfn=(78918) std::chrono::duration<long, std::ratio<1l, 1000000000l> >::duration<long, std::ratio<1l, 1000l>, void>(std::chrono::duration<long, std::ratio<1l, 1000l> > const&)
+calls=20 529 
+* 1480
+* 60
+cfn=(43890)
+calls=20 537 
+* 160
+* 40
++1 60
+
+fn=(78986) std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long, std::ratio<1l, 1l> > >::time_since_epoch() const
+898 160
++1 160
+
+fn=(78920) std::enable_if<std::chrono::__is_duration<std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::value, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::type std::chrono::duration_cast<std::chrono::duration<long, std::ratio<1l, 1000000000l> >, long, std::ratio<1l, 1000l> >(std::chrono::duration<long, std::ratio<1l, 1000l> > const&)
+267 200
++9 120
+cfn=(78922) std::chrono::duration<long, std::ratio<1l, 1000000000l> > std::chrono::__duration_cast_impl<std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::ratio<1000000l, 1l>, long, false, true>::__cast<long, std::ratio<1l, 1000l> >(std::chrono::duration<long, std::ratio<1l, 1000l> > const&)
+calls=40 -40 
+* 1520
++1 80
+
+fn=(78982) std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long, std::ratio<1l, 1l> > >::time_point(std::chrono::duration<long, std::ratio<1l, 1l> > const&)
+885 100
++1 80
++1 60
+
+fn=(78994) std::chrono::duration<long, std::ratio<1l, 1000000000l> > std::chrono::__duration_cast_impl<std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::ratio<1000000000l, 1l>, long, false, true>::__cast<long, std::ratio<1l, 1l> >(std::chrono::duration<long, std::ratio<1l, 1l> > const&)
+236 100
++4 60
+cfn=(78996) std::chrono::duration<long, std::ratio<1l, 1l> >::count() const
+calls=20 537 
+* 160
+* 20
+-1 120
+cfn=(74320)
+calls=20 521 
+* 240
++1 20
++1 40
+
+fn=(78996)
+537 160
++1 160
+
+fn=(83098) std::chrono::duration<long, std::ratio<1l, 1000000000l> > std::chrono::__duration_cast_impl<std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::ratio<60000000000l, 1l>, long, false, true>::__cast<long, std::ratio<60l, 1l> >(std::chrono::duration<long, std::ratio<60l, 1l> > const&)
+236 240
++4 144
+cfn=(83100) std::chrono::duration<long, std::ratio<60l, 1l> >::count() const
+calls=48 537 
+* 384
+* 96
+-1 288
+cfn=(74320)
+calls=48 521 
+* 576
++1 48
++1 96
+
+fn=(78954) std::chrono::duration<long, std::ratio<1l, 1000000000l> > std::chrono::__detail::ceil<std::chrono::duration<long, std::ratio<1l, 1000000000l> >, long, std::ratio<1l, 1000l> >(std::chrono::duration<long, std::ratio<1l, 1000l> > const&)
+420 100
++2 60
+cfn=(78920)
+calls=20 267 
+* 960
+* 120
+cfn=(78956) std::chrono::duration<long, std::ratio<1l, 1000000000l> > std::chrono::__detail::__ceil_impl<std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000l> > >(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&, std::chrono::duration<long, std::ratio<1l, 1000l> > const&)
+calls=20 -10 
+* 2680
++1 40
+
+fn=(78964) std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::time_since_epoch() const
+898 408
++1 408
+
+fn=(79000) std::chrono::duration<long, std::ratio<1l, 1000000000l> > std::chrono::__duration_cast_impl<std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::ratio<1l, 1l>, long, true, true>::__cast<long, std::ratio<1l, 1000000000l> >(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&)
+211 100
++3 60
+cfn=(43890)
+calls=20 537 
+* 160
+* 120
+cfn=(74320)
+calls=20 521 
+* 240
+* 20
++1 40
+
+fn=(78976) std::enable_if<std::chrono::__is_duration<std::chrono::duration<long, std::ratio<1l, 1l> > >::value, std::chrono::duration<long, std::ratio<1l, 1l> > >::type std::chrono::duration_cast<std::chrono::duration<long, std::ratio<1l, 1l> >, long, std::ratio<1l, 1000000000l> >(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&)
+267 100
++9 60
+cfn=(78978) std::chrono::duration<long, std::ratio<1l, 1l> > std::chrono::__duration_cast_impl<std::chrono::duration<long, std::ratio<1l, 1l> >, std::ratio<1l, 1000000000l>, long, true, false>::__cast<long, std::ratio<1l, 1000000000l> >(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&)
+calls=20 -53 
+* 920
++1 40
+
+fn=(83092) bool std::chrono::operator< <long, std::ratio<60l, 1l>, long, std::ratio<1l, 1000000000l> >(std::chrono::duration<long, std::ratio<60l, 1l> > const&, std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&)
+772 336
++6 240
+cfn=(83094) std::chrono::duration<long, std::ratio<1l, 1000000000l> >::duration<long, std::ratio<60l, 1l>, void>(std::chrono::duration<long, std::ratio<60l, 1l> > const&)
+calls=48 529 
+* 3600
+* 144
+cfn=(43890)
+calls=48 537 
+* 384
+* 336
+cfn=(43890)
+calls=48 537 
+* 384
+* 96
++1 144
+
+fn=(74410) std::chrono::duration<long, std::ratio<1l, 1000l> >::count() const
+537 160
++1 160
+
+fn=(80708) bool std::chrono::operator==<long, std::ratio<1l, 1000000000l>, long, std::ratio<1l, 1000000000l> >(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&, std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&)
+760 343
++6 294
+cfn=(43890)
+calls=49 537 
+* 392
+* 343
+cfn=(43890)
+calls=49 537 
+* 392
+* 98
++1 147
+
+fn=(78984) std::common_type<std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1l> > >::type std::chrono::operator-<std::chrono::_V2::steady_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1l> > >(std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > > const&, std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long, std::ratio<1l, 1l> > > const&)
+1042 120
++2 60
+cfn=(78986)
+calls=20 898 
+* 160
+* 80
+cfn=(78964)
+calls=20 898 
+* 160
+* 120
+cfn=(78988) std::common_type<std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1l> > >::type std::chrono::operator-<long, std::ratio<1l, 1000000000l>, long, std::ratio<1l, 1l> >(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&, std::chrono::duration<long, std::ratio<1l, 1l> > const&)
+calls=20 660 
+* 2740
+* 40
+
+fn=(83090) bool std::chrono::operator><long, std::ratio<1l, 1000000000l>, long, std::ratio<60l, 1l> >(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&, std::chrono::duration<long, std::ratio<60l, 1l> > const&)
+812 288
++2 240
+cfn=(83092)
+calls=48 -42 
+* 5664
+* 96
+
+fn=(78974) std::enable_if<std::chrono::__is_duration<std::chrono::duration<long, std::ratio<1l, 1l> > >::value, std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long, std::ratio<1l, 1l> > > >::type std::chrono::time_point_cast<std::chrono::duration<long, std::ratio<1l, 1l> >, std::chrono::_V2::steady_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >(std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > > const&)
+957 100
++3 60
+cfn=(78964)
+calls=20 -62 
+* 160
+* 80
+cfn=(78976)
+calls=20 267 
+* 1120
+* 120
+cfn=(78982)
+calls=20 -75 
+* 240
+* 20
++1 40
+
+fn=(80706) bool std::chrono::operator==<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >(std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > > const&, std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > > const&)
+1054 294
++2 147
+cfn=(43878) std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::time_since_epoch() const
+calls=49 898 
+* 392
+* 196
+cfn=(43878)
+calls=49 898 
+* 392
+* 294
+cfn=(80708)
+calls=49 760 
+* 2009
+* 98
+
+fn=(78922)
+236 200
++4 120
+cfn=(74410)
+calls=40 537 
+* 320
+* 40
+-1 240
+cfn=(74320)
+calls=40 521 
+* 480
++1 40
++1 80
+
+fn=(78998) std::enable_if<std::chrono::__is_duration<std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::value, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::type std::chrono::duration_cast<std::chrono::duration<long, std::ratio<1l, 1000000000l> >, long, std::ratio<1l, 1000000000l> >(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&)
+267 100
++9 60
+cfn=(79000)
+calls=20 -65 
+* 740
++1 40
+
+fn=(78962) std::chrono::time_point<std::chrono::_V2::steady_clock, std::common_type<std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::type> std::chrono::operator+<std::chrono::_V2::steady_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> >, long, std::ratio<1l, 1000000000l> >(std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > > const&, std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&)
+1002 120
++6 60
+cfn=(78964)
+calls=20 898 
+* 160
+* 120
+cfn=(78966) std::common_type<std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::type std::chrono::operator+<long, std::ratio<1l, 1000000000l>, long, std::ratio<1l, 1000000000l> >(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&, std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&)
+calls=20 646 
+* 1180
+* 120
+cfn=(78968) std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::time_point(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&)
+calls=20 885 
+* 240
+* 20
++1 40
+
+fn=(78988)
+660 140
++6 120
+cfn=(43890)
+calls=20 537 
+* 160
+* 120
+cfn=(78990) std::chrono::duration<long, std::ratio<1l, 1000000000l> >::duration<long, std::ratio<1l, 1l>, void>(std::chrono::duration<long, std::ratio<1l, 1l> > const&)
+calls=20 529 
+* 1480
+* 60
+cfn=(43890)
+calls=20 537 
+* 160
+* 180
+cfn=(74320)
+calls=20 521 
+* 240
+* 20
++1 60
+
+fn=(78956)
+412 120
++2 100
+cfn=(78916)
+calls=20 772 
+* 2340
+* 80
++1 40
+
+fn=(78966)
+646 140
++6 120
+cfn=(43890)
+calls=20 537 
+* 160
+* 140
+cfn=(43890)
+calls=20 537 
+* 160
+* 140
+cfn=(74320)
+calls=20 521 
+* 240
+* 20
++1 60
+
+fn=(78978)
+223 100
++4 60
+cfn=(43890)
+calls=20 537 
+* 160
+* 180
+-1 120
+cfn=(78980) std::chrono::duration<long, std::ratio<1l, 1l> >::duration<long, void>(long const&)
+calls=20 521 
+* 240
++1 20
++1 40
+
+fn=(79050) bool std::chrono::operator< <std::chrono::_V2::steady_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >(std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > > const&, std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > > const&)
+1075 126
++2 63
+cfn=(78964)
+calls=21 898 
+* 168
+* 84
+cfn=(78964)
+calls=21 898 
+* 168
+* 126
+cfn=(79052) bool std::chrono::operator< <long, std::ratio<1l, 1000000000l>, long, std::ratio<1l, 1000000000l> >(std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&, std::chrono::duration<long, std::ratio<1l, 1000000000l> > const&)
+calls=21 772 
+* 861
+* 42
+
+fn=(43878)
+898 776
++1 776
+
+fn=(78918)
+529 120
++1 60
+cfn=(78920)
+calls=20 267 
+* 960
+* 80
+cfn=(43890)
+calls=20 +7 
+* 160
+* 100
+
+fn=(78968)
+885 100
++1 80
++1 60
+
+fn=(83096) std::enable_if<std::chrono::__is_duration<std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::value, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::type std::chrono::duration_cast<std::chrono::duration<long, std::ratio<1l, 1000000000l> >, long, std::ratio<60l, 1l> >(std::chrono::duration<long, std::ratio<60l, 1l> > const&)
+267 240
++9 144
+cfn=(83098)
+calls=48 -40 
+* 1872
++1 96
+
+fn=(83100)
+537 192
++1 192
+
+fn=(74320)
+521 1080
++1 1512
+
+fn=(78912) std::common_type<std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::type std::chrono::operator-<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> >, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >(std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > > const&, std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > > const&)
+1042 288
++2 144
+cfn=(43878)
+calls=48 898 
+* 384
+* 192
+cfn=(43878)
+calls=48 898 
+* 384
+* 288
+cfn=(78914)
+calls=48 660 
+* 2928
+* 96
+
+fn=(78980)
+521 100
++1 140
+
+fn=(78990)
+529 120
++1 60
+cfn=(78992) std::enable_if<std::chrono::__is_duration<std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::value, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >::type std::chrono::duration_cast<std::chrono::duration<long, std::ratio<1l, 1000000000l> >, long, std::ratio<1l, 1l> >(std::chrono::duration<long, std::ratio<1l, 1l> > const&)
+calls=20 267 
+* 960
+* 80
+cfn=(43890)
+calls=20 +7 
+* 160
+* 100
+
+fn=(78992)
+267 100
++9 60
+cfn=(78994)
+calls=20 -40 
+* 760
++1 40
+
+fn=(83094)
+529 288
++1 144
+cfn=(83096)
+calls=48 267 
+* 2352
+* 192
+cfn=(43890)
+calls=48 +7 
+* 384
+* 240
+
+fn=(79052)
+772 147
++6 126
+cfn=(43890)
+calls=21 537 
+* 168
+* 147
+cfn=(43890)
+calls=21 537 
+* 168
+* 42
++1 63
+
+fn=(43890)
+537 2400
++1 2400
+
+fl=(734) /home/lottaquestions/work/MariaDBServer/server/tpool/task.cc
+fn=(80712) tpool::waitable_task::add_ref()
+47 100
++1 120
+cfi=(1404)
+cfn=(31716)
+calls=20 +18 
+* 2420
++1 100
++1 60
+cfi=(1404)
+cfn=(31760)
+calls=20 +51 
+* 1900
+* 40
+
+fn=(78900) tpool::task::execute()
+28 100
++1 80
++8 120
+cfi=(804)
+cfn=(74826)
+calls=20 360 
+* 196561
++1 140
+cfn=(81148) tpool::waitable_task::release()
+calls=20 +15 
+* 4900
++2 60
+
+fn=(81148)
+53 100
++1 120
+cfi=(1404)
+cfn=(31716)
+calls=20 +12 
+* 2420
++1 100
++1 160
++2 60
+cfi=(1404)
+cfn=(31760)
+calls=20 +43 
+* 1900
+* 40
+
+fl=(804)
+fn=(74832) tpool::thread_pool_generic::maintenance()
+641 294
++6 49
++1 294
+cfi=(1404)
+cfn=(74834)
+calls=49 73 
+* 1127
++1 147
++4 147
+cfi=(1404)
+cfn=(74836)
+calls=49 145 
+* 4704
+* 147
++6 49
++2 98
+cob=(2)
+cfi=(51)
+cfn=(74846) 0x0000000000950090
+calls=49 0 
+* 1470
+* 49
++2 196
+cfi=(730)
+cfn=(74848)
+calls=49 215 
+* 588
+* 98
++2 294
+cfn=(74850) tpool::thread_pool_generic::check_idle(std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > >)
+calls=49 -60 
+* 17910
++1 392
++1 98
++30 147
+cfi=(1404)
+cfn=(31760)
+calls=49 101 
+* 4655
+* 245
+
+fn=(80710)
+366 100
++2 40
++1 240
+cfn=(78782) tpool::thread_pool_generic::submit_task(tpool::task*)
+calls=20 849 
+* 18446
++1 60
+
+fn=(78894) tpool::worker_data::is_waiting()
+168 80
++2 100
++1 40
+
+fn=(78782)
+849 140
++1 120
+cfi=(1404)
+cfn=(31716)
+calls=20 66 
+* 2420
++1 80
++2 120
+cfi=(734)
+cfn=(80712)
+calls=20 47 
+* 4740
++1 100
++1 120
+cfi=(730)
+cfn=(78786)
+calls=20 238 
+* 1260
++1 60
+cfn=(78792) tpool::thread_pool_generic::maybe_wake_or_create_thread()
+calls=20 -31 
+* 7206
++1 80
+cfi=(1404)
+cfn=(31760)
+calls=20 101 
+* 1900
+* 100
+
+fn=(78892) tpool::worker_data::is_long_task()
+164 84
++2 105
++1 42
+
+fn=(85304) tpool::thread_pool_generic::worker_end(tpool::worker_data*)
+553 7
++1 6
+cfi=(692)
+cfn=(22766)
+calls=1 228 
+* 87
++1 3
+cfn=(78892)
+calls=1 164 
+* 11
+* 6
++1 6
+cfi=(730)
+cfn=(78948)
+calls=1 396 
+* 56
++1 6
+cfi=(730)
+cfn=(85306)
+calls=1 142 
+* 314
++2 3
+cfn=(78800) tpool::thread_pool_generic::thread_count()
+calls=1 300 
+* 35
+* 5
++5 3
+cfi=(692)
+cfn=(22776)
+calls=1 234 
+* 69
+* 4
+
+fn=(78890) tpool::thread_pool_generic::get_task(tpool::worker_data*, tpool::task**)
+517 160
++1 120
+cfi=(1404)
+cfn=(31716)
+calls=20 66 
+* 2420
++2 60
+cfn=(78892)
+calls=20 164 
+* 220
+* 40
++5 60
+cfn=(78894)
+calls=20 168 
+* 220
+* 120
++1 40
++2 20
++2 80
++3 120
+cfn=(78946) tpool::thread_pool_generic::wait_for_tasks(std::unique_lock<std::mutex>&, tpool::worker_data*)
+calls=20 -63 
+* 27241
+* 63
++1 2
++1 80
+cfi=(730)
+cfn=(74848)
+calls=20 215 
+* 240
+* 40
+-7 160
+cfi=(730)
+cfn=(74848)
+calls=40 215 
+* 480
+* 80
++15 80
+cfi=(730)
+cfn=(78896)
+calls=20 260 
+* 880
+* 60
++1 80
+cfi=(730)
+cfn=(78898)
+calls=20 265 
+* 720
++1 100
++1 120
++1 80
++1 20
++1 60
+cfi=(1404)
+cfn=(31760)
+calls=20 101 
+* 2160
+* 3
+cfi=(1404)
+cfn=(31760)
+calls=1 101 
+* 108
+* 105
+
+fn=(74828) tpool::thread_pool_generic::timer_generic::run()
+332 414
++7 345
+fi=(484)
+636 276
+fe=(804)
+339 276
++4 414
+cfi=(726) /home/lottaquestions/work/MariaDBServer/server/storage/innobase/srv/srv0srv.cc
+cfn=(81150) srv_master_callback
+calls=19 1443 
+* 50027
+cfi=(726)
+cfn=(81132) srv_monitor_task
+calls=1 1131 
+* 13108
+cfn=(74830) tpool::thread_pool_generic::maintenance_func(void*)
+calls=49 -56 
+* 33737
++2 345
+fi=(484)
+646 345
+fe=(804)
+345 276
++2 356
++2 120
+cfi=(1404)
+cfn=(31716)
+calls=20 66 
+* 2420
++1 80
++2 140
+cfi=(283)
+cfn=(6934)
+calls=20 862 
+* 9680
++1 80
+cfi=(1015)
+cfn=(74414)
+calls=20 218 
+* 48840
++1 180
+cfi=(1015)
+cfn=(74418)
+calls=20 174 
+* 61366
++1 100
+cfi=(283)
+cfn=(7250)
+calls=20 926 
+* 7160
++2 60
+cfi=(1404)
+cfn=(31760)
+calls=20 101 
+* 1900
++1 296
+
+fn=(74830)
+287 245
++2 147
+cfn=(74832)
+calls=49 641 
+* 33198
++1 147
+
+fn=(74826)
+360 345
++2 138
++1 207
+cfn=(74828)
+calls=69 -31 
+* 232341
++1 207
+
+fn=(74850)
+605 294
++1 196
+cfi=(730)
+cfn=(74848)
+calls=49 215 
+* 588
+* 490
++7 245
++2 196
++6 245
+cfi=(1419)
+cfn=(80706)
+calls=49 1054 
+* 3822
+* 98
++2 2
++1 1
++4 240
+cfi=(1419)
+cfn=(78912)
+calls=48 1042 
+* 4704
+* 288
+cfi=(1419)
+cfn=(83090)
+calls=48 812 
+* 6288
+* 96
++2 2
++1 4
+cfn=(85294) tpool::thread_pool_generic::switch_timer(tpool::thread_pool_generic::timer_state_t)
+calls=1 895 
+* 13
++2 98
+
+fn=(78946)
+470 140
++1 80
+cfi=(730)
+cfn=(74848)
+calls=20 215 
+* 240
+* 40
++1 100
++2 40
++1 120
+cfi=(730)
+cfn=(78948)
+calls=20 -79 
+* 1120
++1 120
+cfi=(730)
+cfn=(78810)
+calls=20 352 
+* 680
++4 140
+cfi=(1681) /usr/include/c++/11/condition_variable
+cfn=(78952) std::cv_status std::condition_variable::wait_for<long, std::ratio<1l, 1000l> >(std::unique_lock<std::mutex>&, std::chrono::duration<long, std::ratio<1l, 1000l> > const&)
+calls=20 159 
+* 24105
++2 84
++3 40
++3 3
+cfn=(78800)
+calls=1 300 
+* 35
+* 7
++12 6
+cfi=(730)
+cfn=(78948)
+calls=1 396 
+* 57
++1 6
+cfi=(730)
+cfn=(78810)
+calls=1 352 
+* 34
++1 2
++2 42
+
+fn=(79014) tpool::thread_pool_generic::wake(tpool::worker_wake_reason, tpool::task*)
+769 140
++1 40
++2 80
+cfi=(730)
+cfn=(78796)
+calls=20 369 
+* 200
+* 40
++2 80
+cfi=(730)
+cfn=(79016)
+calls=20 365 
+* 160
+* 20
++1 80
+cfi=(730)
+cfn=(79018)
+calls=20 373 
+* 486
++1 120
+cfi=(730)
+cfn=(78810)
+calls=20 352 
+* 680
++1 80
++1 60
++1 60
+cob=(2)
+cfi=(51)
+cfn=(79020) 0x000000000094fe00
+calls=20 0 
+* 2620
++1 100
++1 20
++1 40
+
+fn=(78792)
+825 100
++1 80
+cfi=(730)
+cfn=(74848)
+calls=20 215 
+* 240
+* 40
++2 80
+cfi=(730)
+cfn=(78794)
+calls=20 348 
+* 160
+* 340
++1 80
+cfi=(730)
+cfn=(78794)
+calls=20 348 
+* 160
+* 320
++2 80
+cfi=(730)
+cfn=(78796)
+calls=20 369 
+* 200
+* 60
++2 100
+cfn=(79014)
+calls=20 -64 
+* 5106
+* 20
++6 40
+
+fn=(78800)
+300 12
++2 8
+cfi=(730)
+cfn=(78794)
+calls=2 +46 
+* 16
+* 10
+cfi=(730)
+cfn=(78794)
+calls=2 +46 
+* 16
+* 2
++1 6
+
+fn=(78884)
+580 140
+cfi=(734)
+cfn=(78900)
+calls=20 28 
+* 201961
+-2 120
+cfn=(78890)
+calls=20 -61 
+* 36642
+* 185
++5 4
++1 3
+cfi=(726)
+cfn=(85296) thread_pool_thread_end()
+calls=1 +13 
+* 1922
++2 5
+cfn=(85304)
+calls=1 -33 
+* 621
++1 3
+
+fn=(85294)
+895 6
++1 4
++1 1
++17 2
+
+fl=(690)
+fn=(81162) group_commit_lock::value() const
+174 95
++1 76
+fi=(484)
+477 76
+cfn=(7862)
+calls=19 105 
+* 190
+* 19
++4 57
+fe=(690)
+176 38
+
+fn=(83102) do_completion_callback(completion_callback const*)
+193 76
++1 38
++2 57
+
+fn=(81160)
+199 152
++1 19
++4 57
+cfn=(81162)
+calls=19 -30 
+* 551
+* 95
++3 57
+cfn=(83102)
+calls=19 -14 
+* 171
++1 38
++71 95
+
+fl=(1681)
+fn=(78952)
+159 140
++6 60
+cfi=(1419)
+cfn=(78954)
+calls=20 420 
+* 3960
+* 20
+-1 20
+cob=(2)
+cfi=(51)
+cfn=(78958) 0x000000000094f180
+calls=20 0 
+* 600
+* 120
+cfi=(1419)
+cfn=(78962)
+calls=20 1002 
+* 2060
+* 20
+-1 120
+cfn=(78970) std::cv_status std::condition_variable::wait_until<std::chrono::duration<long, std::ratio<1l, 1000000000l> > >(std::unique_lock<std::mutex>&, std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > > const&)
+calls=20 -54 
+* 16943
++3 42
+
+fn=(78972) std::cv_status std::condition_variable::__wait_until_impl<std::chrono::duration<long, std::ratio<1l, 1000000000l> > >(std::unique_lock<std::mutex>&, std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l> > > const&)
+189 160
++3 60
+cfi=(1419)
+cfn=(78974)
+calls=20 957 
+* 1940
+* 20
++1 100
+cfi=(1419)
+cfn=(78984)
+calls=20 1042 
+* 3480
+* 80
+cfi=(1419)
+cfn=(78998)
+calls=20 +74 
+* 940
+* 20
++4 60
+cfi=(1419)
+cfn=(78986)
+calls=20 898 
+* 160
+* 80
+cfi=(1419)
+cfn=(78996)
+calls=20 537 
+* 160
+-2 20
++3 60
+cfi=(1419)
+cfn=(43890)
+calls=20 537 
+* 160
+-3 20
++6 80
+cfi=(1404)
+cfn=(79002)
+calls=20 +23 
+* 160
+* 120
+cfi=(692)
+cfn=(79004)
+calls=20 -34 
+* 6200
++2 21
+cob=(2)
+cfi=(51)
+cfn=(78958)
+calls=21 0 
+* 630
+* 126
+cfi=(1419)
+cfn=(79050)
+calls=21 1075 
+* 1638
++1 83
++1 63
+
+fn=(78970)
+109 140
++2 120
+cfn=(78972)
+calls=20 +78 
+* 16641
+* 42
+
+fl=(1624) /home/lottaquestions/work/MariaDBServer/server/storage/innobase/buf/buf0lru.cc
+fn=(81134) buf_LRU_stat_update()
+1284 4
++4 4
++1 1
++24 5
+cob=(2)
+cfi=(51)
+cfn=(2648)
+calls=1 0 
+* 14
++1 3
+
+fl=(366)
+fn=(3168) my_ci_well_formed_char_length
+1242 80
++1 110
+cfi=(367)
+cfn=(3170)
+calls=10 -55 
+* 260
++1 20
+
+fn=(3166)
+1814 80
++2 80
+cfn=(3168)
+calls=10 1242 
+* 470
++1 60
++1 20
++1 20
+
+fl=(855)
+fn=(7400)
+228 8
++2 3
+cob=(2)
+cfi=(51)
+cfn=(2906) 0x000000000094e970
+calls=1 0 
+* 16
+* 2
++1 8
+cfi=(283)
+cfn=(2692)
+calls=1 1134 
+* 239
++2 6
+cfn=(6940) my_malloc
+calls=1 68 
+* 23079
+* 3
++1 6
+cob=(2)
+cfi=(51)
+cfn=(2792)
+calls=1 0 
+* 15
++1 2
+-4 3
+cfi=(283)
+cfn=(2702)
+calls=1 1201 
+* 230
++4 1
++1 3
+
+fn=(7436)
+187 5
++4 8
+cfi=(283)
+cfn=(2692)
+calls=1 1134 
+* 239
++1 4
+cfi=(283)
+cfn=(3640)
+calls=1 1265 
+* 96
+* 2
++2 2
++3 3
++1 4
++1 4
++1 11
+cfi=(701)
+cfn=(7438)
+calls=1 862 
+* 9
++2 8
+cfi=(261)
+cfn=(7240)
+calls=1 3685 
+* 168
++9 3
+cfi=(868)
+cfn=(7440)
+calls=1 -12 
+* 307
++1 2
+-21 3
+cfi=(283)
+cfn=(2702)
+calls=1 1201 
+* 230
++22 2
+
+fn=(6940)
+68 8
++3 8
+cfi=(283)
+cfn=(2692)
+calls=1 1134 
+* 239
++1 4
+cfi=(283)
+cfn=(3640)
+calls=1 1265 
+* 96
+* 2
++3 4
++1 3
++3 2
++2 2
++4 4
++2 5
+cfi=(283)
+cfn=(6942)
+calls=1 1766 
+* 99
+* 2
++3 6
+cfi=(868)
+cfn=(6944)
+calls=1 +17 
+* 22015
+* 1
++2 2
++13 4
++1 6
++1 9
+cfi=(701)
+cfn=(5758)
+calls=1 844 
+* 11
+* 2
++1 8
+cfi=(261)
+cfn=(7240)
+calls=1 3685 
+* 168
++1 3
++1 4
++3 7
+cob=(2)
+cfi=(51)
+cfn=(2648)
+calls=1 0 
+* 14
++2 4
+cfi=(283)
+cfn=(3640)
+calls=1 1265 
+* 96
+* 2
++1 2
+-45 3
+cfi=(283)
+cfn=(2702)
+calls=1 1201 
+* 230
++46 4
+
+fl=(973)
+fn=(8288)
+37 9
++1 1
++1 8
+cfi=(283)
+cfn=(2692)
+calls=1 1134 
+* 239
++1 4
+cfi=(283)
+cfn=(3640)
+calls=1 1265 
+* 96
+* 2
++2 4
++1 3
++4 1
+cob=(2)
+cfi=(51)
+cfn=(7346)
+calls=1 -47 
+* 6
+* 1
++4 6
+cob=(2)
+cfi=(51)
+cfn=(8290)
+calls=1 -51 
+* 42
+* 1
++2 5
+cfi=(283)
+cfn=(6942)
+calls=1 1766 
+* 99
+* 2
++8 3
++2 1
+cob=(2)
+cfi=(51)
+cfn=(7346)
+calls=1 -63 
+* 6
+* 2
+cfi=(285)
+cfn=(6906)
+calls=1 386 
+* 28
+* 4
++1 4
+cfi=(283)
+cfn=(3640)
+calls=1 1265 
+* 96
+* 2
++4 2
++2 1
+cfi=(285)
+cfn=(6906)
+calls=1 386 
+* 28
+* 1
++2 5
++8 4
++1 2
+-1 2
++9 4
++11 2
++1 2
+-1 2
++5 4
++3 2
++1 1
++2 2
+-72 3
+cfi=(283)
+cfn=(2702)
+calls=1 1201 
+* 230
++73 4
+
+fl=(760) /home/lottaquestions/work/MariaDBServer/server/storage/innobase/buf/buf0buf.cc
+fn=(85292) buf_refresh_io_stats()
+3646 3
++1 2
+cob=(2)
+cfi=(51)
+cfn=(5956)
+calls=1 0 
+* 8
+* 1
++1 6
+cob=(2)
+cfi=(51)
+cfn=(2792)
+calls=1 0 
+* 8250
++1 3
+
+fl=(440)
+fn=(7260) remove_from_active_list
+137 836
++1 1045
++3 448
++2 448
++3 112
+cfi=(285)
+cfn=(7248)
+calls=112 445 
+* 4928
+* 336
++2 672
++1 336
+-1 582
++1 291
+
+fn=(73910) safe_mutex_free_deadlock_data
+654 5
++2 9
++16 3
+
+fn=(7254)
+408 808
++2 404
+cfi=(283)
+cfn=(3640)
+calls=101 1265 
+* 8130
+* 202
++1 303
+cob=(2)
+cfi=(51)
+cfn=(3642)
+calls=101 0 
+* 5151
++1 404
++11 303
+cob=(2)
+cfi=(51)
+cfn=(6924) 0x000000000094edf0
+calls=101 0 
+* 505
+* 303
+cob=(2)
+cfi=(51)
+cfn=(7256) 0x000000000094f4f0
+calls=101 0 
+* 707
+* 202
++10 202
++1 505
++2 303
+cfn=(7260)
+calls=101 137 
+* 4170
++6 404
+cob=(2)
+cfi=(51)
+cfn=(3644)
+calls=101 0 
+* 4123
+* 101
++1 202
++9 303
+cob=(2)
+cfi=(51)
+cfn=(3644)
+calls=101 0 
+* 4444
++1 101
++1 303
+
+fn=(6932)
+232 909
++2 404
+cfi=(283)
+cfn=(3640)
+calls=101 1265 
+* 8130
+* 202
++2 707
+cfi=(283)
+cfn=(6934)
+calls=101 862 
+* 26210
++2 303
+cob=(2)
+cfi=(51)
+cfn=(3642)
+calls=101 0 
+* 5151
++1 404
++8 404
++18 303
+cob=(2)
+cfi=(51)
+cfn=(3644)
+calls=101 0 
+* 4444
++18 404
++7 404
+cob=(2)
+cfi=(51)
+cfn=(3642)
+calls=101 0 
+* 3638
+* 101
++2 505
+cob=(2)
+cfi=(51)
+cfn=(3642)
+calls=101 0 
+* 5151
+* 303
++7 101
+cob=(2)
+cfi=(51)
+cfn=(6924)
+calls=101 0 
+* 505
+* 202
++1 707
++7 303
++1 303
++1 606
++1 303
+cob=(2)
+cfi=(51)
+cfn=(3644)
+calls=101 0 
+* 4444
++4 606
++1 505
++1 200
+-1 200
++3 100
+cfi=(285)
+cfn=(7248)
+calls=100 445 
+* 3936
+* 100
++2 200
++3 406
++5 210
++65 336
++2 168
++4 1
++1 505
+cfi=(283)
+cfn=(7250)
+calls=101 926 
+* 20734
++1 202
++1 404
+cfi=(283)
+cfn=(3640)
+calls=101 1265 
+* 8130
+* 202
++1 101
++1 303
+
+fn=(8914)
+530 1404
++4 324
+cob=(2)
+cfi=(51)
+cfn=(3642)
+calls=108 0 
+* 5508
++1 756
+cob=(2)
+cfi=(51)
+cfn=(6924)
+calls=108 0 
+* 540
+* 324
+cob=(2)
+cfi=(51)
+cfn=(7256)
+calls=108 0 
+* 756
+* 216
++9 540
++1 4644
++1 324
+cfn=(7260)
+calls=108 137 
+* 5864
++1 324
+cob=(2)
+cfi=(51)
+cfn=(3644)
+calls=108 0 
+* 4752
++1 756
+cob=(2)
+cfi=(51)
+cfn=(8916) 0x0000000000950240
+calls=108 0 
+* 35982
+* 108
++10 324
+cob=(2)
+cfi=(51)
+cfn=(3642)
+calls=108 0 
+* 5508
++2 324
++1 324
++1 324
++1 324
++2 756
++10 324
++1 324
++1 324
+cob=(2)
+cfi=(51)
+cfn=(3644)
+calls=108 0 
+* 4752
++1 108
++1 648
+
+fn=(73908)
+583 8
++1 1
++1 8
+cfi=(283)
+cfn=(2692)
+calls=1 1134 
+* 76
++1 4
+cfi=(283)
+cfn=(3640)
+calls=1 1265 
+* 69
+* 2
++1 4
++8 4
++11 3
+cfn=(73910)
+calls=1 +48 
+* 17
++6 3
+cob=(2)
+cfi=(51)
+cfn=(73912) 0x000000000094e6f0
+calls=1 0 
+* 14
+* 2
++2 4
+cob=(2)
+cfi=(51)
+cfn=(73912)
+calls=1 0 
+* 14
+* 2
++3 2
++21 3
+cob=(2)
+cfi=(51)
+cfn=(3642)
+calls=1 0 
+* 36
++1 3
++1 3
+cob=(2)
+cfi=(51)
+cfn=(3644)
+calls=1 0 
+* 36
++2 2
+-57 3
+cfi=(283)
+cfn=(2702)
+calls=1 1201 
+* 78
++57 1
++1 3
+
+fl=(726)
+fn=(81140) srv_monitor()
+1078 4
++1 2
+cob=(2)
+cfi=(51)
+cfn=(5956)
+calls=1 0 
+* 8
+* 1
++2 5
+cob=(2)
+cfi=(51)
+cfn=(81142) 0x000000000094e870
+calls=1 0 
+* 11
+* 4
++1 2
++2 3
++19 1
++7 6
++16 3
+cfn=(81146) srv_refresh_innodb_monitor_stats(long)
+calls=1 677 
+* 12662
++1 3
+
+fn=(81150)
+1443 95
++3 133
++2 76
+cfi=(681)
+cfn=(75284)
+calls=19 48 
+* 532
+* 95
++1 57
+cfi=(275)
+cfn=(78396)
+calls=19 45 
+* 513
+* 76
++1 19
+cfn=(81152) srv_wake_purge_thread_if_not_active()
+calls=19 1208 
+* 27398
++1 19
+cfi=(879)
+cfn=(8772)
+calls=19 50 
+* 513
+* 114
++1 19
+cfn=(81154) srv_sync_log_buffer_in_background()
+calls=19 1334 
+* 5605
++1 76
+cfi=(681)
+cfn=(75284)
+calls=19 48 
+* 532
+* 95
++3 57
+cfn=(81836) srv_check_activity(unsigned long*)
+calls=19 1317 
+* 456
+* 38
++3 57
+cfn=(81838) srv_master_do_idle_tasks(unsigned long long)
+calls=19 -63 
+* 13357
++2 38
++1 57
+
+fn=(81154)
+1334 76
++1 38
+cob=(2)
+cfi=(51)
+cfn=(5956)
+calls=19 0 
+* 152
+* 19
++2 38
++1 95
+cob=(2)
+cfi=(51)
+cfn=(81142)
+calls=19 0 
+* 209
+* 19
++1 133
+-1 57
++2 38
+cfi=(689)
+cfn=(81156)
+calls=19 945 
+* 4579
++1 38
++1 57
++2 57
+
+fn=(81838)
+1396 95
++1 57
++2 76
+cfi=(681)
+cfn=(75284)
+calls=19 48 
+* 532
+* 95
++2 38
++1 76
+cfi=(771)
+cfn=(81840)
+calls=19 -60 
+* 11571
+* 57
++4 76
+cfi=(681)
+cfn=(75284)
+calls=19 48 
+* 532
+* 95
++2 57
+
+fn=(81146)
+677 5
++1 6
+cfi=(437)
+cfn=(6930)
+calls=1 +65 
+* 1466
++2 5
+cob=(2)
+cfi=(51)
+cfn=(81142)
+calls=1 0 
+* 11
+* 3
++7 2
++2 1
+cfi=(703)
+cfn=(85288)
+calls=1 3941 
+* 147
++3 3
+cfi=(728)
+cfn=(85290)
+calls=1 107 
+* 1171
+* 2
++1 3
+cfi=(728)
+cfn=(85290)
+calls=1 107 
+* 1171
+* 2
++3 1
+cfi=(760)
+cfn=(85292)
+calls=1 3646 
+* 8273
++2 6
+cfi=(437)
+cfn=(7252)
+calls=1 +83 
+* 382
++1 2
+
+fn=(81836)
+1317 95
++1 57
+cfi=(727)
+cfn=(75296)
+calls=19 71 
+* 152
+* 19
++1 76
++6 19
++1 38
+
+fn=(85296)
+597 3
++1 4
+cfi=(701)
+cfn=(85298)
+calls=1 283 
+* 6
++1 1
+cfi=(285)
+cfn=(85300)
+calls=1 330 
+* 1905
++1 3
+
+fn=(81132)
+1131 9
++2 5
++2 12
++5 4
+cfi=(694)
+cfn=(76454)
+calls=1 374 
+* 30
+* 1
++1 6
++1 2
++4 1
+cfi=(1624)
+cfn=(81134)
+calls=1 1284 
+* 31
++2 1
+cfi=(879)
+cfn=(7748)
+calls=1 76 
+* 246
+* 1
++1 2
++2 3
+cfi=(772)
+cfn=(81136) dict_sys_t::oldest_wait() const
+calls=1 1512 
+* 28
+* 3
++17 1
+cfn=(81140)
+calls=1 -90 
+* 12715
++1 7
+
+fn=(81152)
+1208 57
++1 228
++2 57
+cfi=(739)
+cfn=(78002)
+calls=19 215 
+* 817
++1 38
+-1 57
+cfi=(739)
+cfn=(83238)
+calls=19 217 
+* 779
+* 57
++1 57
+cfi=(746)
+cfn=(83240)
+calls=19 228 
+* 25099
+* 57
+-1 38
++6 57
+
+fl=(772)
+fn=(81136)
+1512 5
++1 3
+fi=(484)
+477 4
+cfn=(7862)
+calls=1 105 
+* 10
+* 1
++4 3
+fe=(772)
+1513 2
+
+fn=(77208) dict_sys_t::locked() const
+1503 152
+
+fn=(77206)
+1499 171
+cfi=(275)
+cfn=(76346)
+calls=19 45 
+* 532
+* 95
+cfn=(77208)
+calls=19 +4 
+* 152
+* 114
+
+fn=(77134)
+1516 133
++2 76
+cfi=(1610)
+cfn=(77136)
+calls=19 537 
+* 2432
+* 38
++2 76
+cfi=(275)
+cfn=(76346)
+calls=19 45 
+* 532
+* 209
++1 152
++1 38
++4 76
+
+ob=(1) /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+fl=(409) ./elf/./elf/dl-open.c
+fn=(3480) _dl_find_dso_for_object
+214 180
++4 60
++1 80
++1 432
++1 40
+-2 264
++5 40
++4 140
+
+fl=(159) ./elf/./elf/dl-find_object.c
+fn=(7014) _dl_find_object
+360 216
++3 72
++9 168
++7 30
++86 70
+-85 20
++3 10
+-62 30
++4 20
++2 84
++1 126
++1 126
++2 40
+-6 40
++13 50
++12 10
+-1 10
++1 20
+fi=(160) ./elf/./dl-find_object.h
+77 10
+-1 10
++1 10
++2 10
+fe=(159)
+388 10
+fi=(160)
+79 10
+fe=(159)
+388 10
+fi=(160)
+76 14
+fe=(159)
+375 14
+fi=(160)
+77 14
++2 28
+fe=(159)
+465 98
+325 88
+
+ob=(2)
+fl=(51)
+fn=(3476) 0x0000000005153470
+0 40
+cob=(1)
+cfi=(409)
+cfn=(3480)
+calls=20 214 
+0 1236
+
+fn=(1414) 0x0000000005153370
+0 4
+cob=(3)
+cfi=(194) ./malloc/./malloc/malloc.c
+cfn=(1390) free
+calls=2 3352 
+0 8
+
+fn=(2792)
+0 6
+cob=(3)
+cfi=(216) ./string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+cfn=(1346) __memcpy_avx_unaligned_erms
+calls=3 307 
+0 8273
+
+fn=(7008)
+0 48
+cob=(3)
+cfi=(873) ./elf/./elf/libc-dl_find_object.c
+cfn=(7012) _dl_find_object
+calls=24 24 
+0 1540
+
+fn=(85312)
+0 2
+cob=(15)
+cfi=(192)
+cfn=(41320)
+calls=1 0 
+0 2
+
+fn=(25726) 0x0000000013335650
+0 114
+cob=(21)
+cfi=(440)
+cfn=(6932)
+calls=57 232 
+0 37563
+
+fn=(73874)
+0 140
+cob=(3)
+cfi=(1595) ./stdlib/../stdlib/ldiv.c
+cfn=(73876) ldiv
+calls=70 24 
+0 350
+
+fn=(7036)
+0 96
+cob=(3)
+cfi=(184) ./string/../sysdeps/x86_64/multiarch/strlen-avx2.S
+cfn=(638) __strlen_avx2
+calls=48 50 
+0 672
+
+fn=(79024)
+0 40
+cob=(3)
+cfi=(1011) ./nptl/./nptl/pthread_cond_signal.c
+cfn=(8706) pthread_cond_signal@@GLIBC_2.3.2
+calls=20 35 
+0 2500
+
+fn=(73660) 0x00000000132d4860
+0 76
+cob=(21)
+cfi=(879)
+cfn=(7748)
+calls=38 76 
+0 7676
+
+fn=(73912)
+0 4
+cob=(3)
+cfi=(1382) ./nptl/./nptl/pthread_mutex_destroy.c
+cfn=(25962) pthread_mutex_destroy@@GLIBC_2.2.5
+calls=2 26 
+0 24
+
+fn=(73928)
+0 2
+cob=(3)
+cfi=(1542) ./nptl/./nptl/pthread_cond_destroy.c
+cfn=(58538) pthread_cond_destroy@@GLIBC_2.3.2
+calls=1 42 
+0 23
+
+fn=(81142)
+0 42
+cob=(3)
+cfi=(1725) ./time/./time/difftime.c
+cfn=(81144) difftime
+calls=21 102 
+0 189
+
+fn=(85285)
+0 26
+cob=(3)
+cfi=(1826) ./io/../sysdeps/unix/sysv/linux/poll.c
+cfn=(85287) poll'2
+calls=13 27 
+0 520
+
+fn=(636) 0x0000000005153490
+0 40
+cob=(3)
+cfi=(184)
+cfn=(638)
+calls=20 50 
+0 352
+
+fn=(2648)
+0 134
+cob=(3)
+cfi=(223) ./string/../sysdeps/x86_64/multiarch/memset-vec-unaligned-erms.S
+cfn=(1454) __memset_avx2_unaligned_erms
+calls=67 181 
+0 3198
+
+fn=(2906)
+0 2
+cob=(3)
+cfi=(184)
+cfn=(638)
+calls=1 50 
+0 14
+
+fn=(3642)
+0 1450
+cob=(3)
+cfi=(402) ./nptl/./nptl/pthread_mutex_lock.c
+cfn=(3456) pthread_mutex_lock@@GLIBC_2.2.5
+calls=725 77 
+0 32541
+
+fn=(8290)
+0 8
+cob=(3)
+cfi=(214) ./io/../sysdeps/unix/sysv/linux/read.c
+cfn=(1338) read
+calls=4 25 
+0 160
+
+fn=(8916)
+0 216
+cob=(3)
+cfi=(1040) ./nptl/./nptl/pthread_cond_wait.c
+cfn=(8918) pthread_cond_timedwait@@GLIBC_2.3.2
+calls=108 641 
+0 35766
+
+fn=(85414)
+0 20
+cob=(3)
+cfi=(1854) ./dlfcn/./dlfcn/dladdr.c
+cfn=(85416) dladdr@@GLIBC_2.34
+calls=10 25 
+0 9310504
+
+fn=(85426)
+0 10
+cob=(3)
+cfi=(1857) ./posix/./posix/fork.c
+cfn=(85428) fork
+calls=5 41 
+0 2395
+
+fn=(78944)
+0 2
+cob=(15)
+cfi=(192)
+cfn=(32372)
+calls=1 0 
+0 26
+
+fn=(79020)
+0 40
+cob=(15)
+cfi=(192)
+cfn=(79022)
+calls=20 0 
+0 2580
+
+fn=(73664) 0x00000000132b9730
+0 76
+cob=(21)
+cfi=(440)
+cfn=(8914)
+calls=38 530 
+0 25574
+
+fn=(2290) 0x0000000005153520
+0 10
+cob=(3)
+cfi=(272) ./string/../sysdeps/x86_64/multiarch/memcmp-avx2-movbe.S
+cfn=(2292) __memcmp_avx2_movbe
+calls=5 71 
+0 104
+
+fn=(5536)
+0 2
+cob=(3)
+cfi=(194)
+cfn=(1390)
+calls=1 3352 
+0 89
+
+fn=(6920)
+0 2
+cob=(3)
+cfi=(865) ./nptl/./nptl/pthread_setspecific.c
+cfn=(6922) pthread_setspecific@@GLIBC_2.34
+calls=1 25 
+0 35
+
+fn=(85450)
+0 20
+cob=(3)
+cfi=(1863) ./debug/./debug/backtracesymsfd.c
+cfn=(85452) backtrace_symbols_fd
+calls=10 36 
+0 9313574
+
+fn=(74812) 0x00000000132da690
+0 38
+cob=(25) /home/lottaquestions/work/MariaDBServer/build-mariadb/storage/rocksdb/ha_rocksdb.so
+cfi=(1090) /usr/include/c++/11/bits/stl_map.h
+cfn=(74814) std::map<int, myrocks::Rdb_manual_compaction_thread::Manual_compaction_request, std::less<int>, std::allocator<std::pair<int const, myrocks::Rdb_manual_compaction_thread::Manual_compaction_request> > >::empty() const
+calls=19 465 
+0 418
+
+fn=(74860) 0x0000000013344600
+0 38
+cob=(3)
+cfi=(875) ./nptl/./nptl/pthread_equal.c
+cfn=(7258) pthread_equal
+calls=19 23 
+0 95
+
+fn=(3164)
+0 20
+cob=(3)
+cfi=(184)
+cfn=(1542) __strnlen_avx2
+calls=10 50 
+0 520
+
+fn=(3644)
+0 1550
+cob=(3)
+cfi=(412) ./nptl/./nptl/pthread_mutex_unlock.c
+cfn=(3494) pthread_mutex_unlock@@GLIBC_2.2.5
+calls=775 367 
+0 29722
+
+fn=(5532)
+0 2
+cob=(15)
+cfi=(192)
+cfn=(5534)
+calls=1 0 
+0 93
+
+fn=(7396)
+0 64
+cob=(3)
+cfi=(898) ./libio/./libio/fileno.c
+cfn=(7398) fileno
+calls=32 32 
+0 224
+
+fn=(7918)
+0 2
+cob=(3)
+cfi=(938) ./time/./time/localtime.c
+cfn=(7920) localtime_r
+calls=1 29 
+0 723
+
+fn=(7926) 0x0000000005153690
+0 2
+cob=(3)
+cfi=(219) ./string/../sysdeps/x86_64/multiarch/strcmp-avx2.S
+cfn=(2546) __strcmp_avx2
+calls=1 83 
+0 21
+
+fn=(8038)
+0 2
+cob=(3)
+cfi=(239) ./string/../sysdeps/x86_64/multiarch/strstr-sse2-unaligned.S
+cfn=(1564) __strstr_sse2_unaligned
+calls=1 21 
+0 47
+
+fn=(8040)
+0 2
+cob=(3)
+cfi=(941) ./posix/../sysdeps/unix/syscall-template.S
+cfn=(8042) getpid
+calls=1 91 
+0 4
+
+fn=(8280)
+0 6
+cob=(3)
+cfi=(207) ./io/../sysdeps/unix/sysv/linux/open64.c
+cfn=(1298) open
+calls=3 30 
+0 180
+
+fn=(74846)
+0 98
+cob=(15)
+cfi=(192)
+cfn=(43870)
+calls=49 0 
+0 1372
+
+fn=(25740) 0x00000000132caa90
+0 114
+cob=(21)
+cfi=(440)
+cfn=(7254)
+calls=57 408 
+0 16625
+
+fn=(85472)
+0 2
+
+fn=(74856) 0x00000000132cf6a0
+0 38
+cob=(25)
+cfi=(1101) /home/lottaquestions/work/MariaDBServer/server/storage/rocksdb/./rdb_threads.h
+cfn=(74858) myrocks::Rdb_background_thread::reset()
+calls=19 144 
+0 855
+
+fn=(3178)
+0 12
+cob=(3)
+cfi=(216)
+cfn=(1346)
+calls=6 307 
+0 108
+
+fn=(7346)
+0 6
+cob=(3)
+cfi=(222) ./csu/./csu/errno-loc.c
+cfn=(1428) __errno_location
+calls=3 25 
+0 12
+
+fn=(8296)
+0 42
+cob=(3)
+cfi=(257) ./io/../sysdeps/unix/sysv/linux/close.c
+cfn=(2054) close
+calls=21 26 
+0 756
+
+fn=(25728) 0x00000000132a6830
+0 228
+cob=(25)
+cfi=(1326) /home/lottaquestions/work/MariaDBServer/server/storage/rocksdb/./././rdb_utils.h
+cfn=(25730) myrocks::rdb_check_mutex_call_result(char const*, bool, int)
+calls=114 244 
+0 1824
+
+fn=(32580) 0x00000000132f1010
+0 38
+cob=(3)
+cfi=(866) ./nptl/./nptl/pthread_self.c
+cfn=(6926) pthread_self
+calls=19 23 
+0 57
+
+fn=(85422)
+0 20
+cob=(3)
+cfi=(1856) ./io/../sysdeps/unix/sysv/linux/pipe.c
+cfn=(85424) pipe
+calls=10 28 
+0 70
+
+fn=(85456)
+0 8
+cob=(3)
+cfi=(1865) ./posix/./posix/waitpid.c
+cfn=(85458) waitpid
+calls=4 37 
+0 184
+
+fn=(85464)
+0 2
+cob=(3)
+cfi=(1867) ./signal/../sysdeps/posix/signal.c
+cfn=(85466) signal
+calls=1 30 
+0 118
+
+fn=(43872)
+0 180
+cob=(3)
+cfi=(910) ./time/../sysdeps/unix/sysv/linux/clock_gettime.c
+cfn=(7572) clock_gettime@@GLIBC_2.17
+calls=90 30 
+0 990
+
+fn=(74816) 0x000000001329e2d0
+0 38
+cob=(25)
+cfi=(1091) /usr/include/c++/11/bits/stl_tree.h
+cfn=(74818) std::_Rb_tree<int, std::pair<int const, myrocks::Rdb_manual_compaction_thread::Manual_compaction_request>, std::_Select1st<std::pair<int const, myrocks::Rdb_manual_compaction_thread::Manual_compaction_request> >, std::less<int>, std::allocator<std::pair<int const, myrocks::Rdb_manual_compaction_thread::Manual_compaction_request> > >::empty() const
+calls=19 1027 
+0 190
+
+fn=(3418)
+0 30
+cob=(3)
+cfi=(219)
+cfn=(2546)
+calls=15 83 
+0 417
+
+fn=(5752)
+0 128
+cob=(3)
+cfi=(194)
+cfn=(1084) malloc
+calls=64 3287 
+0 3061
+
+fn=(5956)
+0 44
+cob=(3)
+cfi=(135) ./time/../sysdeps/unix/sysv/linux/time.c
+cfn=(5958) time_syscall
+calls=22 31 
+0 132
+
+fn=(6908)
+0 2970
+cob=(3)
+cfi=(864) ./nptl/./nptl/pthread_getspecific.c
+cfn=(6910) pthread_getspecific@@GLIBC_2.34
+calls=1485 24 
+0 22683
+
+fn=(7172)
+0 4
+cob=(3)
+cfi=(249) ./nptl/./nptl/pthread_once.c
+cfn=(1820) pthread_once@@GLIBC_2.34
+calls=2 136 
+0 12
+
+fn=(7446)
+0 132
+cob=(3)
+cfi=(194)
+cfn=(1390)
+calls=66 3352 
+0 6394
+
+fn=(74842)
+0 98
+cob=(3)
+cfi=(1620) ./nptl/./nptl/pthread_mutex_trylock.c
+cfn=(74844) pthread_mutex_trylock@@GLIBC_2.34
+calls=49 27 
+0 1911
+
+fn=(83142)
+0 70
+cob=(3)
+cfi=(953) ./io/../sysdeps/unix/sysv/linux/write.c
+cfn=(8074) write
+calls=35 25 
+0 1400
+
+fn=(83516)
+0 2
+cob=(3)
+cfi=(1795) ./signal/../sysdeps/unix/sysv/linux/sigwaitinfo.c
+cfn=(83518) sigwaitinfo
+calls=1 24 
+0 58
+
+fn=(6924)
+0 620
+cob=(3)
+cfi=(866)
+cfn=(6926)
+calls=310 23 
+0 930
+
+fn=(32374)
+0 2
+cob=(3)
+cfi=(1009) ./nptl/./nptl/pthread_cond_broadcast.c
+cfn=(8674) pthread_cond_broadcast@@GLIBC_2.3.2
+calls=1 39 
+0 22
+
+fn=(79008)
+0 40
+cob=(3)
+cfi=(1040)
+cfn=(79010) pthread_cond_clockwait@@GLIBC_2.34
+calls=20 682 
+0 5617
+
+fn=(6952)
+0 4
+cob=(3)
+cfi=(869)
+cfn=(6954) backtrace
+calls=2 65 
+0 43340
+
+fn=(7000)
+0 48
+cob=(14)
+cfi=(190)
+cfn=(7006)
+calls=24 0 
+0 11732
+
+fn=(7256)
+0 418
+cob=(3)
+cfi=(875)
+cfn=(7258)
+calls=209 23 
+0 1045
+
+fn=(7570)
+0 396
+cob=(3)
+cfi=(910)
+cfn=(7572)
+calls=198 30 
+0 2178
+
+fn=(73628)
+0 2
+cob=(3)
+cfi=(256) ./io/../sysdeps/unix/syscall-template.S
+cfn=(7340) readlink
+calls=1 117 
+0 6
+
+fn=(78958)
+0 82
+cob=(15)
+cfi=(192)
+cfn=(78960)
+calls=41 0 
+0 1148
+
+ob=(3)
+fl=(1361) ./stdlib/./stdlib/cxa_thread_atexit_impl.c
+fn=(41324) __call_tls_dtors
+149 4
++1 4
++18 4
+
+fl=(135)
+fn=(5958)
+31 22
++1 88
++1 22
+
+fl=(204) ./libio/./libio/genops.c
+fn=(85436) _IO_list_lock
+1094 10
++2 45
++2 10
+
+fn=(85446) _IO_list_unlock
+1103 5
++2 40
++2 5
+
+fl=(1619) ./nptl/../nptl/pthread_mutex_lock.c
+fn=(74810) __pthread_mutex_cond_lock
+77 129
++3 387
++2 129
++2 258
+-7 258
++11 258
++2 66
++3 88
++1 66
++73 129
++3 129
++5 129
++2 129
++1 387
+-81 214
++11 428
++25 428
++3 321
++19 214
+
+fl=(910)
+fn=(7572)
+30 288
++8 576
++2 576
++28 576
++1 576
+-25 288
++42 288
+
+fl=(1855) ./elf/./elf/dl-addr.c
+fn=(85418) _dl_addr
+126 60
++2 20
+-2 180
++5 60
+cfi=(402)
+cfn=(3456)
+calls=20 -54 
+* 860
++2 40
+cob=(2)
+cfi=(51)
+cfn=(3476)
+calls=20 0 
+* 1276
++2 60
+30 80
++4 40
++5 100
++1 20
++5 20
+-7 20
++2 20
++2 20
+-2 40
++2 40
++3 40
++4 100
+-5 80
++5 1605724
++2 401416
++1 802832
+-1 20
++1 40
++2 918792
++8 120
++2 2325312
++1 3488260
++5 1745028
+-10 1745028
++1 3490056
++2 1744560
++37 40
++1 10
++1 40
++3 40
++6 32
++1 16
+-1 16
++1 48
++26 16
+-26 16
++29 48
+cfi=(412)
+cfn=(3494)
+calls=16 367 
+* 576
+* 12
+cfi=(412)
+cfn=(3494)
+calls=4 367 
+* 144
++3 180
+-79 349116
++2 64
++50 4
++21 4
+-21 8
+-82 24
++1 60
+
+fl=(875)
+fn=(7258)
+23 228
++1 684
++1 228
+
+fl=(938)
+fn=(7920)
+29 1
++1 1
+-1 1
++1 2
+cfi=(913) ./time/./time/tzset.c
+cfn=(7922) __tz_convert
+calls=1 568 
+* 718
+
+fl=(984) ./signal/../sysdeps/unix/sysv/linux/libc_sigaction.c
+fn=(8462) __libc_sigaction
+43 6
++5 2
++2 1
++1 1
++7 1
+-7 4
+-1 1
++3 1
+-2 5
++7 1
+-5 1
+-2 1
++2 1
+-2 1
++2 3
++5 3
+-7 4
++7 6
++5 4
++2 1
++1 4
+-1 1
++2 1
+-1 6
++1 1
++1 1
+-2 2
++2 1
+-2 4
++5 6
+
+fl=(1409) ./nptl/./nptl/lowlevellock.c
+fn=(32992) __lll_lock_wake
+63 129
++1 645
++1 129
+
+fl=(898)
+fn=(7398)
+32 32
++3 160
++7 32
+
+fl=(1795)
+fn=(83518)
+24 1
++1 2
+cfi=(1796) ./signal/../sysdeps/unix/sysv/linux/sigtimedwait.c
+cfn=(83520) sigtimedwait
+calls=1 -1 
+* 55
+
+fl=(234) ./stdio-common/./stdio-common/_itoa.c
+fn=(1528) _itoa_word
+163 40
++3 80
++2 80
++18 40
+-8 866
+
+fl=(1021) ./nptl/./nptl/nptl-stack.c
+fn=(41354) __nptl_deallocate_stack
+111 2
++1 1
+-1 1
++1 1
+-1 2
++1 3
++4 1
+-88 1
+fi=(1850) ./nptl/../include/list.h
++27 3
++1 1
+fe=(1021)
++66 1
+-86 1
++86 1
+-79 4
+fi=(1850)
++1 2
+-1 1
++2 1
++2 1
+fe=(1021)
++57 1
+-1 1
+-52 1
++52 2
++1 2
++24 4
++1 4
+
+fl=(1725)
+fn=(81144)
+102 21
++11 147
++6 21
+
+fl=(939) ./time/./time/offtime.c
+fn=(7928) __offtime
+30 2
++4 1
+-4 7
++4 6
++1 1
+-1 1
++1 1
++2 2
++10 4
++16 1
+-16 1
++20 1
+-20 4
++1 2
++2 8
++2 1
+-2 3
++2 2
+-2 1
++2 2
+-2 1
++2 8
++3 1
+-3 2
++8 1
++3 14
++4 34
+-1 1
++1 1
+-1 1
++1 2
+-1 2
++2 1
+-2 1
++1 1
++1 33
++1 1
+-1 5
+-2 1
+-6 16
++11 1
++1 1
+-1 1
++1 3
+-30 3
++36 1
++1 3
++1 4
++2 1
++2 1
++1 1
+-1 4
++2 7
+-6 10
+
+fl=(1024) ./misc/../sysdeps/unix/sysv/linux/x86_64/clone.S
+fn=(8762) clone
+cfi=(1017) ./nptl/./nptl/pthread_create.c
+cfn=(8892) start_thread
+calls=0 336 
+100 572727
+
+fl=(1020) ./misc/../sysdeps/unix/syscall-template.S
+fn=(41350) madvise
+117 5
++5 1
+
+fl=(1466) ./resolv/./resolv/resolv_context.c
+fn=(41334) __resolv_context_freeres
+242 4
++2 1
+-2 2
++2 1
++1 1
++1 2
++6 6
+
+fl=(1040)
+fn=(74804) __condvar_cancel_waiting
+80 327
+fi=(1362) ./nptl/./nptl/pthread_cond_common.c
++36 109
+fe=(1040)
+-36 654
+fi=(1362)
++36 109
++1 218
++2 436
+fi=(1041) ./nptl/../include/atomic_wide_counter.h
+-89 109
+fe=(1040)
++57 109
++1 218
+fi=(1362)
++73 218
+fe=(1040)
+-65 218
++5 109
+-5 109
++5 218
++28 218
+fi=(1362)
++22 654
++1 109
+-1 218
+fe=(1040)
+-7 654
+
+fn=(8918)
+641 1620
++3 324
++5 432
++2 108
+-1 216
+386 108
+fi=(1041)
+50 216
+fe=(1040)
+404 324
++1 324
++4 216
++10 108
+fi=(1362)
+186 108
+fe=(1040)
+419 108
+fi=(1362)
+186 216
+fe=(1040)
+419 108
+cfi=(412)
+cfn=(8920) __pthread_mutex_unlock_usercnt
+calls=108 48 
+* 4667
+* 108
++1 216
++12 432
++33 216
++19 216
++17 216
+-32 216
+53 540
+616 216
+cfi=(1619)
+cfn=(74810)
+calls=108 77 
+* 3559
+* 108
++2 216
++35 1296
+484 216
++1 324
+fi=(1041)
+30 108
+fe=(1040)
+486 324
++15 108
+-3 108
++2 108
++1 540
+-3 108
++2 108
+-3 108
++4 108
+cfi=(250) ./nptl/./nptl/cleanup_compat.c
+cfn=(1824) _pthread_cleanup_push@@GLIBC_2.34
+calls=108 25 
+* 756
++2 648
+cfi=(1042) ./nptl/./nptl/futex-internal.c
+cfn=(8924) __futex_abstimed_wait_cancelable64
+calls=108 138 
+* 7452
++3 216
+-3 108
++3 108
+cfi=(250)
+cfn=(1842) _pthread_cleanup_pop@@GLIBC_2.34
+calls=108 40 
+* 648
++2 324
+152 648
+516 648
+cfn=(74804)
+calls=108 80 
+* 4968
+-13 108
++15 108
+
+fn=(79010)
+682 280
++3 80
++3 100
+386 20
+fi=(1041)
+50 40
+fe=(1040)
+404 20
+fi=(1041)
+50 20
+fe=(1040)
+405 20
++4 20
+-5 20
++1 20
++4 20
+-5 20
++5 20
++10 20
+fi=(1362)
+186 20
+fe=(1040)
+419 20
+fi=(1362)
+186 40
+fe=(1040)
+419 20
+cfi=(412)
+cfn=(8920)
+calls=20 48 
+* 500
+* 20
++1 40
++12 80
++33 40
++19 20
++17 20
+-17 20
++17 20
+-32 80
++63 60
+fi=(1041)
+30 40
+fe=(1040)
+540 80
+53 105
+616 42
+cfi=(1619)
+cfn=(74810)
+calls=21 77 
+* 588
+* 21
++2 63
++74 252
+484 40
++1 60
+fi=(1041)
+30 20
+fe=(1040)
+486 60
++11 20
++4 20
+-3 20
++3 80
+-4 20
++3 20
++1 20
+-3 20
++2 20
++1 20
+cfi=(250)
+cfn=(1824)
+calls=20 25 
+* 140
++2 120
+cfi=(1042)
+cfn=(8924)
+calls=20 138 
+* 1452
++3 42
+-3 21
++3 21
+cfi=(250)
+cfn=(1842)
+calls=21 40 
+* 126
++2 123
+152 100
+524 20
+-59 40
+152 6
+516 6
+cfn=(74804)
+calls=1 80 
+* 46
+-13 2
++15 1
+
+fl=(1865)
+fn=(85458)
+37 4
++1 8
+cfi=(1866) ./posix/../sysdeps/unix/sysv/linux/wait4.c
+cfn=(85460) wait4
+calls=4 -11 
+* 172
+
+fl=(913)
+fn=(7678) tzset_internal
+368 7
++4 6
++52 5
+
+fn=(7922)
+568 9
++4 1
+-4 4
++4 2
++5 8
+cfn=(7678)
+calls=1 368 
+* 18
++2 3
++1 7
+cfi=(915) ./time/./time/tzfile.c
+cfn=(7924) __tzfile_compute
+calls=1 +2 
+* 419
++12 4
++2 2
++2 2
++7 5
+cfi=(939)
+cfn=(7928)
+calls=1 30 
+* 219
+* 2
++1 2
++6 11
+
+fn=(7716) __tzstring
+120 14
++1 2
+cob=(2)
+cfi=(51)
+cfn=(636)
+calls=2 0 
+* 32
+-32 2
++32 2
+-32 4
++3 9
+-2 15
++2 5
++1 10
+-1 5
++1 10
+cob=(2)
+cfi=(51)
+cfn=(2290)
+calls=5 -93 
+* 114
+* 10
+-4 9
++33 14
+
+fl=(250)
+fn=(1842)
+40 129
++3 258
++4 258
++2 129
+
+fn=(1824)
+25 128
++3 128
++1 128
++1 256
++2 128
++1 128
+
+fl=(870) ./misc/./misc/unwind-link.c
+fn=(6956) __libc_unwind_link_get
+41 16
++3 6
++71 2
++1 18
+
+fl=(1857)
+fn=(85428)
+41 20
++7 5
+-7 50
++7 40
++2 15
+cfi=(1858) ./posix/./posix/register-atfork.c
+cfn=(85430) __run_fork_handlers
+calls=5 +58 
+* 105
++9 10
++67 15
+cfi=(1858)
+cfn=(85430)
+calls=5 -18 
+* 100
++2 10
++5 50
+-72 15
+cfi=(1860) ./nss/./nss/nss_database.c
+cfn=(85434) __nss_database_fork_prepare_parent
+calls=5 498 
+* 65
++3 5
+cfi=(204)
+cfn=(85436)
+calls=5 1094 
+* 65
++6 5
+cfi=(195) ./malloc/./malloc/arena.c
+cfn=(85438) __malloc_fork_lock_parent
+calls=5 178 
+* 825
++3 5
+cfi=(1861) ./posix/../sysdeps/nptl/_Fork.c
+cfn=(85440) _Fork
+calls=5 -46 
+* 80
+* 5
++2 10
++38 10
++6 5
+cfi=(195)
+cfn=(85444) __malloc_fork_unlock_parent
+calls=5 +79 
+* 820
++3 5
+cfi=(204)
+cfn=(85446)
+calls=5 1103 
+* 50
+* 5
+
+fl=(249)
+fn=(1820)
+136 2
++3 2
++1 4
++4 4
+
+fl=(1382)
+fn=(25962)
+26 2
++1 2
++4 6
++2 2
++1 2
+-1 4
++6 2
++2 2
++1 2
+
+fl=(869)
+fn=(6954)
+65 18
++1 2
++3 2
+cfi=(870)
+cfn=(6956)
+calls=2 -28 
+* 42
+-3 8
++9 8
++3 12
+cob=(14)
+cfi=(190)
+cfn=(6984)
+calls=2 -78 
+* 43220
++5 6
++1 2
+-1 2
++1 6
++2 12
+
+fn=(7226)
+35 115
++5 23
+-5 23
++5 46
++3 126
+cob=(14)
+cfi=(190)
+cfn=(7236)
+calls=21 -43 
+* 63
+-1 21
++1 21
++8 21
+-8 21
++8 105
+cob=(14)
+cfi=(190)
+cfn=(7238)
+calls=21 -51 
+* 63
++2 158
++3 21
++2 92
++3 22
+-1 22
++1 67
+-6 1
++6 3
+
+fl=(1864) ./misc/../sysdeps/unix/sysv/linux/writev.c
+fn=(85454) writev
+25 10
++1 30
+-1 40
++1 10
+cfi=(1030) ./nptl/./nptl/cancellation.c
+cfn=(8786) __pthread_enable_asynccancel
+calls=10 +5 
+* 130
+* 110
+cfi=(1030)
+cfn=(8788) __pthread_disable_asynccancel
+calls=10 +30 
+* 40
+* 10
++1 20
+
+fl=(184)
+fn=(1542)
+50 10
++7 10
++2 10
++2 10
++2 10
++1 10
++1 10
++3 10
++2 10
++1 10
++3 10
++1 10
++3 10
++1 10
++4 10
++1 10
++1 1
++5 2
++51 2
++9 2
++1 2
++11 4
++57 9
++7 9
++1 9
++7 9
++3 9
++1 9
++2 7
++1 7
++1 7
++2 7
++1 7
++1 7
++1 7
++2 5
++1 5
++1 5
++1 5
++2 5
++1 5
++1 5
++1 5
++5 5
++1 5
++1 4
++1 4
++1 4
++1 4
++6 4
++10 4
++1 4
+-1 1
++1 1
++6 5
++1 5
++1 5
++1 5
++2 5
++1 5
++1 5
++2 5
++1 5
++1 5
++3 4
++1 4
++1 4
++1 4
++1 4
++2 3
++1 3
++1 3
++1 3
++3 3
++1 3
++3 3
++1 3
++1 3
++1 3
++1 3
++5 6
++8 1
++2 1
++6 1
++3 1
++1 1
+-4 2
++3 2
++1 2
++5 3
++1 3
++1 3
++2 3
++1 3
++2 3
++1 3
++1 3
++2 3
++1 3
++13 1
++1 1
++1 1
++5 2
++31 3
++1 6
+
+fn=(638)
+50 69
++13 69
++1 69
++1 69
++3 69
++2 69
++1 69
++3 69
++1 69
++8 69
++1 69
++1 63
++5 126
++51 6
++13 6
++1 6
++1 6
++6 12
++57 6
++15 6
++6 6
++1 6
++1 6
++2 6
++1 6
++1 6
++1 6
+
+fl=(1866)
+fn=(85460)
+27 8
++3 12
+-3 16
++3 8
+cfi=(1030)
+cfn=(8786)
+calls=4 +1 
+* 52
+* 48
+cfi=(1030)
+cfn=(8788)
+calls=4 +26 
+* 16
+* 4
++79 8
+
+fl=(219)
+fn=(2546)
+83 16
++23 16
++1 16
++2 16
++1 16
++1 16
++1 16
++1 16
++2 16
++1 16
++1 16
++1 16
++1 16
++1 16
++1 16
++1 10
++18 10
++1 10
++1 10
++3 20
++37 6
++24 6
++1 6
++1 6
++3 12
++37 6
++1 6
++1 6
++1 6
++1 6
++1 6
++1 6
++1 6
++1 6
++1 6
++1 6
++1 6
++1 6
++1 6
++1 6
++1 6
++1 6
+
+fl=(866)
+fn=(6926)
+23 329
++2 658
+
+fl=(1796)
+fn=(83520)
+24 6
++7 3
++34 8
+-34 1
+cfi=(1030)
+cfn=(8786)
+calls=1 * 
+* 13
+* 7
++30 2
+-30 8
+cfi=(1030)
+cfn=(8788)
+calls=1 +25 
+* 6
++30 1
+
+fl=(247) ./misc/../sysdeps/unix/sysv/linux/getpagesize.c
+fn=(1760) getpagesize
+27 1
++1 4
++2 1
+
+fl=(194)
+fn=(1096) _int_malloc
+1343 2
+3771 1
+1362 1
+3771 8
+1362 2
+3904 1
++2 1
+-2 1
++2 2
+1362 2
+3811 2
+4397 2
+3838 2
++63 2
+4399 2
+3903 1
+4399 13
+3983 1
++1 1
+-1 2
+-1 2
++2 2
+-2 3
++12 1
+-6 1
++73 4
+-67 3
+4158 1
+-91 1
++91 2
+-91 1
+-74 1
+3181 1
+4067 1
+3181 2
+4025 2
+3183 2
+3997 4
++1 1
++2 2
+-3 4
++1 1
++2 2
++1 6
++2 2
++1 8
++2 8
+-10 2
++12 4
++1 4
++2 4
++11 8
++31 2
++1 2
++4 4
++29 4
++2 4
++1 6
++1 2
+-1 2
++57 2
++2 4
+-2 4
++2 2
++7 2
+-9 6
++9 2
+-7 2
++1 2
++1 2
++6 4
+4413 9
+4166 6
+3994 6
+4183 2
++73 2
++1 1
++1 1
+-1 1
++1 1
++1 2
++1 3
++5 4
++14 2
++8 1
++3 2
+4023 2
+3904 3
+4299 3
++3 2
++2 1
++3 2
+-3 1
++3 2
+cfn=(2762) unlink_chunk.constprop.0
+calls=1 1626 
+* 22
++3 4
+2005 1
+4347 1
+2005 2
+4313 1
+-1 1
++1 2
+
+fn=(2762)
+1626 4
++2 20
++3 8
++1 4
+-1 12
++3 16
++3 4
++1 4
++1 11
++24 8
+
+fn=(1390)
+3352 70
++4 140
+-4 68
++14 68
+-14 136
++12 68
++4 68
+-4 68
++4 136
++17 204
+fi=(195)
+162 204
+61 66
++95 330
++6 132
+fe=(194)
+3391 132
+cfn=(1374) _int_free
+calls=66 4421 
+* 4296
+* 4
+cfn=(1374)
+calls=2 4421 
+* 128
++3 68
++1 274
+3241 4
+
+fn=(13352) malloc_consolidate
+4715 1
++17 1
+-17 4
++28 1
+-28 3
++15 1
++2 1
++13 2
++1 2
+-1 18
++1 18
++62 30
++1 8
+-31 2
++6 1
++1 2
++1 2
++2 2
++1 2
++4 1
++2 1
+-2 2
++3 1
++9 2
+-56 2
++4 3
++1 4
++8 1
+-3 2
++3 1
+-3 1
++4 1
+-4 1
++5 1
+-5 1
++5 2
++2 2
++1 1
++2 1
+-1 1
++2 4
++2 6
+cfn=(2762)
+calls=1 1626 
+* 22
+* 4
++3 2
++4 1
++1 3
++16 1
+-16 1
+cfn=(2762)
+calls=1 1626 
+* 22
+* 3
+
+fn=(1084)
+3287 384
++7 128
+1343 128
++19 256
+3306 256
++3 128
++10 3
++8 8
++2 3
+cfn=(1096)
+calls=1 1343 
+* 290
++3 2
++8 4
++4 5
+fi=(195)
+162 3
+fe=(194)
+3344 2
++3 5
+1362 64
+3304 192
++7 192
+3193 126
++1 126
++2 63
++1 63
+-1 189
++1 63
++1 63
+3347 315
+
+fn=(1374)
+4421 584
++10 73
+-10 219
++10 146
++6 365
++1 146
++4 292
++8 365
+-1 134
++1 134
++29 67
+-20 67
+-6 67
++6 134
++20 268
++14 12
++11 8
++2 6
+2012 6
+4527 2
++1 2
++4 6
++2 6
++26 6
+4702 803
+4569 8
++3 4
++3 16
++7 4
+-4 4
++4 8
++3 8
++5 12
++3 8
++1 8
++1 8
+2012 12
+4601 8
++9 8
++5 6
++4 2
++9 2
+-1 2
++1 6
++1 4
+-1 1
+-1 1
++1 3
++1 2
++2 3
++2 6
++5 3
++1 3
++2 9
++1 3
++30 8
++20 12
++1 16
+4529 2
++22 2
+-22 2
++22 10
++2 8
++1 4
+-6 4
+3181 67
++4 67
+-4 67
++2 268
++1 67
++1 67
+4482 67
+4635 3
++38 3
++3 2
++2 1
+-2 1
+fi=(195)
+61 3
+651 3
+fe=(194)
+4653 1
++1 3
++1 2
+-79 20
++40 1
++1 1
+-1 1
+cfn=(2762)
+calls=1 1626 
+* 25
++1 1
+fi=(195)
+691 1
++1 1
+-1 1
++1 1
+fe=(194)
+4674 2
+cfn=(13352)
+calls=1 +41 
+* 202
+* 1
+fi=(195)
+156 2
+fe=(194)
+4687 3
++1 1
+fi=(195)
+645 1
+61 1
+fe=(194)
+4688 1
+fi=(195)
+61 1
+691 2
+fe=(194)
+
+fl=(1462) ./nptl/./nptl/nptl_deallocate_tsd.c
+fn=(41326) __nptl_deallocate_tsd
+23 1
++5 4
+-5 8
++16 1
++2 131
++4 32
++2 68
++4 128
++3 32
++2 64
++25 4
+-34 2
++51 1
++1 2
+-1 30
++1 60
+-5 93
++14 1
++2 8
+
+fl=(257)
+fn=(2054)
+26 21
++1 63
+-1 42
++1 21
+cfi=(1030)
+cfn=(8786)
+calls=21 +4 
+* 273
+* 189
+cfi=(1030)
+cfn=(8788)
+calls=21 +29 
+* 84
+* 21
++1 42
+
+fl=(1854)
+fn=(85416)
+25 10
+fi=(1837) ./dlfcn/../sysdeps/generic/ldsodefs.h
+1388 10
+fe=(1854)
+27 20
++3 30
+cfi=(1855)
+cfn=(85418)
+calls=10 +96 
+* 9310434
+
+fl=(1468) ./dlfcn/./dlfcn/libc_dlerror_result.c
+fn=(41338) __libc_dlerror_result_free
+29 2
++1 4
++9 2
+
+fl=(1009)
+fn=(8674)
+39 8
++1 1
++2 1
++1 3
++45 9
+
+fl=(412)
+fn=(8920)
+48 128
++3 384
++1 256
+-4 128
++9 256
++5 128
++1 256
+-24 128
++1 256
++3 512
++27 128
++34 256
+-64 384
++34 214
++3 69
+-34 138
+cfi=(1409)
+cfn=(32992)
+calls=69 +20 
+* 483
+* 207
++37 428
++12 428
+
+fn=(3494)
+367 795
+51 2385
++1 1590
+367 795
+57 1590
++8 795
+-3 795
+-23 795
++1 1590
++3 3180
++27 795
+369 1590
+40 2385
++34 1278
++3 60
+-34 120
+cfi=(1409)
+cfn=(32992)
+calls=60 +20 
+* 420
+* 180
++37 2556
++4 60
++3 60
++5 2476
++6 1038
++1 1557
++1 1557
+
+fl=(216)
+fn=(1346)
+307 9
++1 9
++6 9
++1 9
++2 2
++1 2
++1 2
++3 1
++1 1
++1 1
++3 2
++30 7
++1 7
++2 7
++1 7
++2 6
++4 6
++1 6
++1 6
++1 6
++1 6
++1 6
++1 6
++2 6
++2 6
++39 1
++1 1
++1 1
++1 1
++1 1
++18 1
++1 1
+615 1
++7 1
++1 1
++6 1
++3 1
++2 1
++3 1
++1 1
++2 1
++2 8217
++2 1
++2 1
++2 2
++5 1
++1 1
++4 1
++2 1
++3 1
++4 1
++1 1
++3 1
++1 1
+
+fl=(1826)
+fn=(85287)
+27 13
++2 39
+-2 52
++2 13
+cfi=(1030)
+cfn=(8786)
+calls=13 +2 
+* 169
+* 143
+cfi=(1030)
+cfn=(8788)
+calls=13 +27 
+* 52
+* 13
++14 26
+
+fl=(207)
+fn=(1298)
+30 6
++3 3
+-3 24
++3 18
++8 9
++2 21
+-5 3
++3 3
+cfi=(1030)
+cfn=(8786)
+calls=3 -10 
+* 39
+* 36
+cfi=(1030)
+cfn=(8788)
+calls=3 +15 
+* 12
+* 6
+
+fl=(402)
+fn=(3456)
+77 745
++3 2235
++2 745
++2 1490
+-7 1490
++11 1490
++2 318
+-46 625
++1 3125
++3 2500
++46 1875
++73 745
++3 745
++2 745
++3 745
++2 745
++1 2235
+-81 1278
++11 2556
++4 20
++3 40
+-71 20
++1 100
++85 60
++1 40
+-83 80
++85 2476
++3 300
++19 200
++4 519
++1 2076
++2 1038
+
+fl=(982) ./signal/./signal/sigaction.c
+fn=(8458) sigaction
+26 1
++1 3
+fi=(983) ./signal/../sysdeps/unix/sysv/linux/internal-signals.h
++25 1
+fe=(982)
+-25 2
++6 1
+cfi=(984)
+cfn=(8462)
+calls=1 +10 
+* 75
+
+fl=(1011)
+fn=(8706)
+35 160
++1 20
++5 20
++1 60
+fi=(1362)
+186 20
+-70 60
++70 20
+-69 40
++2 80
+fi=(1041)
+-89 20
+fi=(1362)
+241 80
+fe=(1011)
+76 20
+-9 20
++9 40
++8 40
++1 40
+fi=(1362)
++66 120
++1 20
+-1 40
+fi=(252) ./nptl/../sysdeps/nptl/futex-internal.h
++58 160
+fe=(1011)
+96 180
+fi=(1362)
+215 20
+-54 20
++52 20
+fe=(1011)
+68 20
+fi=(1362)
+215 40
+-54 20
++52 20
++2 20
+-1 20
+-1 20
++1 80
++27 100
++15 100
+fi=(252)
+146 60
+fi=(1362)
+257 40
++38 40
+fi=(1041)
+57 20
+fi=(1362)
+295 20
+fi=(1041)
+57 60
+fi=(1362)
+302 40
+60 120
+316 20
+-6 20
+174 20
+316 20
+175 20
+-1 40
++2 40
++1 20
+-1 40
+320 20
++5 40
+-13 40
+fe=(1011)
+
+fl=(1465) ./resolv/./resolv/res-close.c
+fn=(41332) __res_thread_freeres
+131 4
++1 1
+cfi=(1466)
+cfn=(41334)
+calls=1 242 
+* 17
++2 5
++8 4
+
+fl=(222)
+fn=(1428)
+25 3
++1 6
++1 3
+
+fl=(239)
+fn=(1564)
+21 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++2 1
++1 1
++1 1
++1 1
++26 1
++1 1
+
+fl=(256)
+fn=(7340)
+117 5
++5 1
+
+fl=(915)
+fn=(7924)
+582 12
++3 2
++2 1
++3 1
+-3 2
++3 5
++30 3
++44 1
+-7 1
++7 5
++1 2
++43 6
+-1 1
++1 1
+cfi=(913)
+cfn=(7716)
+calls=1 120 
+* 109
++2 1
++20 1
+-22 1
++25 1
+-23 2
++3 3
++1 1
++2 1
+-3 1
++3 1
++2 3
+cfi=(913)
+cfn=(7716)
+calls=1 120 
+* 148
+* 2
++2 5
++7 3
++3 1
++3 1
++1 3
+-1 1
++1 2
++1 1
+-1 1
++1 2
++2 2
++7 2
++3 2
++1 1
+-1 1
++1 4
+cob=(2)
+cfi=(51)
+cfn=(7926)
+calls=1 0 
+* 23
+* 2
++1 1
++1 1
+-1 1
++1 1
++12 1
+-4 1
+-4 5
++1 2
++3 1
++2 2
++19 8
+667 3
++1 3
++2 2
++7 1
+-21 1
++14 2
++3 2
++35 1
+-34 2
++56 1
++3 2
+
+fl=(1042)
+fn=(8924)
+138 768
+-61 256
++3 256
++3 384
++1 256
+-27 513
++46 814
++10 129
++28 901
+-84 256
+cfi=(1030)
+cfn=(8786)
+calls=128 -26 
+* 1664
+* 1548
+cfi=(1030)
+cfn=(8788)
+calls=129 -1 
+* 774
+* 129
++20 256
+
+fl=(195)
+fn=(85444)
+198 10
++6 5
+-5 5
+-1 5
++4 5
+-4 5
++4 5
+-3 5
++6 105
++1 210
+-2 420
++5 20
++1 20
+
+fn=(85438)
+178 5
++1 10
+-1 5
++7 10
+-7 10
++7 10
+-7 5
++11 5
+-11 10
++12 105
++1 210
+-2 420
++5 20
+
+fn=(41340) __malloc_arena_thread_freeres
+999 8
+fi=(194)
+3206 1
++2 1
+-2 1
++2 1
++2 2
++4 3
++4 1
+fe=(195)
+162 1
+fi=(194)
+3220 196
++3 10
++3 5
+3364 5
++2 5
+3226 15
+3368 5
+-4 5
++4 10
++26 5
+3220 15
+-2 192
++13 2
+cfn=(1390)
+calls=1 3352 
+* 173
+* 1
+fe=(195)
+1005 2
++1 1
++2 2
++2 4
++3 3
++1 3
++2 1
++1 1
+-1 1
++3 4
++2 8
+fi=(194)
+3385 10
+fe=(195)
+162 15
+61 4
++95 20
++6 8
+fi=(194)
+3391 8
+cfn=(1374)
+calls=4 4421 
+* 615
+* 2
+cfn=(1374)
+calls=1 4421 
+* 81
+* 5
+3224 5
++17 15
+fe=(195)
+
+fl=(1030)
+fn=(8786)
+31 219
++1 219
++2 657
++1 219
++2 219
++2 438
++3 657
++7 219
+
+fn=(8788)
+56 220
++3 440
++4 260
++1 220
+
+fl=(1595)
+fn=(73876)
+24 70
++3 210
++4 70
+
+fl=(1858)
+fn=(85430)
+108 50
++3 20
++2 10
+fi=(1859) ./posix/../malloc/dynarray-skeleton.c
+243 5
+fe=(1858)
+116 15
++21 40
+fi=(1859)
+243 5
+fe=(1858)
+126 10
+-12 20
++20 10
++1 20
+
+fl=(1867)
+fn=(85470) __bsd_signal.part.0
+29 1
+fi=(981) ./signal/../sysdeps/unix/sysv/linux/sigsetops.h
++73 1
+fe=(1867)
+-73 3
+fi=(981)
++73 1
+fe=(1867)
+-61 1
++4 1
+fi=(981)
++57 1
+fe=(1867)
+-57 1
+fi=(981)
++59 1
+-8 1
+fe=(1867)
+-52 4
++1 1
+cfi=(982)
+cfn=(8458)
+calls=1 -19 
+* 83
++3 3
++1 5
+
+fn=(85466)
+30 1
++4 5
+fi=(983)
++18 1
+fe=(1867)
+-17 3
+cfn=(85470)
+calls=1 -6 
+* 108
+
+fl=(1542)
+fn=(58538)
+42 2
++1 1
++6 7
++1 1
++1 1
+fi=(252)
++95 5
+fe=(1542)
+-95 3
++8 3
+
+fl=(223)
+fn=(1454)
+181 67
++1 201
++5 67
++1 67
++1 65
++1 65
++3 2
++1 2
++1 4
++64 63
++1 63
++23 63
++1 63
++5 63
++3 63
++1 63
++3 63
++1 63
++13 63
++1 63
++2 63
++3 63
++3 63
++3 63
++1 63
++1 63
++1 63
++1 63
++1 63
++1 63
+-6 126
++1 126
++1 126
++1 126
++1 126
++1 126
++1 189
++3 63
++1 63
++1 63
++1 63
++3 126
++28 2
++1 2
++28 2
++1 2
++1 4
+
+fl=(953)
+fn=(8074)
+25 35
++1 105
+-1 140
++1 35
+cfi=(1030)
+cfn=(8786)
+calls=35 +5 
+* 455
+* 385
+cfi=(1030)
+cfn=(8788)
+calls=35 +30 
+* 140
+* 35
++1 70
+
+fl=(272)
+fn=(2292)
+71 5
++7 5
++1 5
++75 3
++10 3
++1 3
++1 3
++3 6
+399 5
++1 5
++5 5
++1 5
++1 5
++1 5
++1 5
++3 5
++1 5
++1 5
++1 5
++3 5
++1 5
++1 2
++1 4
+
+fl=(1463) ./malloc/./malloc/thread-freeres.c
+fn=(41328) __libc_thread_freeres
+34 2
++2 1
+cfi=(1464) ./sunrpc/./sunrpc/rpc_thread.c
+cfn=(41330) __rpc_thread_destroy
+calls=1 -15 
+* 12
++2 1
+cfi=(1465)
+cfn=(41332)
+calls=1 +93 
+* 31
+fi=(1467) ./malloc/../sysdeps/unix/sysv/linux/tls-internal.h
+-4 3
+cob=(2)
+cfi=(51)
+cfn=(1414)
+calls=1 -34 
+* 6
++1 3
+cob=(2)
+cfi=(51)
+cfn=(1414)
+calls=1 -35 
+* 6
+fe=(1463)
++5 1
+cfi=(1468)
+cfn=(41338)
+calls=1 -11 
+* 8
++5 1
+-1 1
+cfi=(195)
+cfn=(41340)
+calls=1 999 
+* 1481
+
+fl=(864)
+fn=(6910)
+24 1485
++5 2970
++1 4455
++24 1485
++1 2970
++4 6348
++5 2970
+
+fl=(1861)
+fn=(85440)
+27 5
+fi=(1862) ./posix/../sysdeps/unix/sysv/linux/arch-fork.h
++25 50
++4 5
+fe=(1861)
+-27 10
++22 10
+
+fl=(1464)
+fn=(41330)
+21 4
++1 2
++2 2
++15 4
+
+fl=(1860)
+fn=(85434)
+498 20
++2 5
+-2 5
++3 10
++1 5
++10 20
+
+fl=(941)
+fn=(8042)
+91 3
++2 1
+
+fl=(1856)
+fn=(85424)
+28 10
++1 50
++1 10
+
+fl=(1470) ./nptl/./nptl/nptl_free_tcb.c
+fn=(41352) __nptl_free_tcb
+25 1
++2 4
+-2 2
++5 3
++11 1
++2 1
+-2 1
+cfi=(1021)
+cfn=(41354)
+calls=1 +70 
+* 43
+
+fl=(214)
+fn=(1338)
+25 4
++1 12
+-1 16
++1 4
+cfi=(1030)
+cfn=(8786)
+calls=4 +5 
+* 52
+* 44
+cfi=(1030)
+cfn=(8788)
+calls=4 +30 
+* 16
+* 4
++1 8
+
+fl=(873)
+fn=(7012)
+24 24
++1 48
+cob=(1)
+cfi=(159)
+cfn=(7014)
+calls=24 360 
+* 1468
+
+fl=(865)
+fn=(6922)
+25 8
++7 1
++4 2
++3 2
++2 1
+-2 5
++4 3
++3 2
++40 1
++1 1
++2 1
+-3 1
++4 7
+
+fl=(1620)
+fn=(74844)
+27 441
++2 49
++4 441
+450 441
+70 147
++4 196
++5 49
++2 49
+-3 49
++3 49
+
+fl=(1017)
+fn=(8892)
+443 1
++7 1
+cfi=(1361)
+cfn=(41324)
+calls=1 149 
+* 12
++3 1
+cfi=(1462)
+cfn=(41326)
+calls=1 23 
+* 670
++3 1
+cfi=(1463)
+cfn=(41328)
+calls=1 34 
+* 1557
++3 3
++31 2
++2 4
+fi=(1469) ./nptl/../sysdeps/unix/sysv/linux/sigsetops.h
+112 1
+fe=(1017)
+506 3
+fi=(1469)
+112 2
+fe=(1017)
+505 1
++1 2
++7 5
++1 1
++1 1
+-1 1
++1 3
++35 3
+fi=(1019) ./nptl/./nptl/allocatestack.c
+190 1
+cfi=(247)
+cfn=(1760)
+calls=1 27 
+* 6
+fe=(1017)
+551 1
+fi=(1019)
+190 1
++2 1
+fe=(1017)
+551 1
+fi=(1019)
+192 4
++1 2
++1 2
+fe=(1017)
+554 3
++17 3
++2 2
+cfi=(1470)
+cfn=(41352)
+calls=1 25 
+* 56
+cob=(21)
+cfi=(438)
+cfn=(83144)
+calls=0 2157 
+442 102
+cob=(15)
+cfi=(192)
+cfn=(24414)
+calls=0 0 
+442 241765
+cob=(21)
+cfi=(1015)
+cfn=(8896)
+calls=0 299 
+442 221992
+442 1
+fi=(1019)
+195 4
+cfi=(1020)
+cfn=(41350)
+calls=1 -78 
+* 6
+* 1
+fi=(1024)
+cfi=(1017)
+cfn=(8893) start_thread'2
+calls=0 336 
+-95 106498
+fe=(1017)
+
+fn=(8893)
+cob=(21)
+cfi=(1592)
+cfn=(74394)
+calls=0 560 
+442 7280
+cob=(25)
+cfi=(1161) /home/lottaquestions/work/MariaDBServer/server/storage/rocksdb/rdb_threads.cc
+cfn=(73648) myrocks::Rdb_thread::thread_func(void*)
+calls=0 29 
+442 99218
+fi=(1024)
+cfn=(8893)
+calls=0 336 
+100 59223
+fe=(1017)
+
+fl=(1863)
+fn=(85452)
+36 110
++4 150
++9 50
++3 10
++1 10
+cob=(2)
+cfi=(51)
+cfn=(636)
+calls=10 -53 
+* 232
++3 10
+-3 10
++3 20
++4 24
++1 8
+-1 8
++7 8
+-7 8
++8 8
+cob=(2)
+cfi=(51)
+cfn=(636)
+calls=8 -68 
+* 128
++11 32
+-11 8
++1 8
++10 8
++8 8
+-1 8
++1 8
+-8 18
++8 2
+-1 2
++1 2
+-8 4
++3 10
+-1 10
++1 20
++10 60
+-3 10
++3 10
+cfi=(234)
+cfn=(1528)
+calls=10 +71 
+* 391
+* 10
++3 10
++3 20
+-6 10
++3 10
+-3 10
++6 10
+-3 10
++3 20
++1 10
++1 10
++4 10
++4 10
+-4 10
++4 10
+-4 10
++4 20
+-68 10
++64 10
++4 10
++5 10
+-8 10
++3 10
+cfi=(234)
+cfn=(1528)
+calls=10 +55 
+* 715
++2 10
++7 20
+-7 10
+-2 10
++5 10
+-3 10
++7 10
+-4 10
++1 10
++3 10
+cfi=(1864)
+cfn=(85454)
+calls=10 -92 
+* 400
+-77 20
++8 50
+cfi=(1855)
+cfn=(85418)
+calls=10 +78 
+* 9310444
+* 20
++71 110
+-63 8
++21 2
+-17 2
++17 4
+-17 2
++17 4
+-15 2
+-1 2
++16 6
+
+ob=(25)
+fl=(1091)
+fn=(74818)
+1027 76
++1 114
+
+fl=(1326)
+fn=(25730)
+244 912
++1 570
+fi=(1378) /home/lottaquestions/work/MariaDBServer/server/storage/rocksdb/././rdb_utils.h
++11 342
+fe=(1326)
+
+fl=(1101)
+fn=(74858)
+144 114
++1 133
+cob=(2)
+cfi=(51)
+cfn=(32580)
+calls=19 0 
+* 95
+* 57
+cob=(2)
+cfi=(51)
+cfn=(74860)
+calls=19 0 
+* 133
+* 171
++1 38
++1 38
++1 76
+
+fl=(1161)
+fn=(73648)
+cfi=(1080) /home/lottaquestions/work/MariaDBServer/server/storage/rocksdb/ha_rocksdb.cc
+cfn=(73666) myrocks::Rdb_background_thread::run()
+calls=0 13594 
+34 39995
+cfi=(1080)
+cfn=(73658) myrocks::Rdb_manual_compaction_thread::run()
+calls=0 13692 
+34 59223
+
+fl=(1080)
+fn=(73666)
+13605 133
+cfi=(1323) /home/lottaquestions/work/MariaDBServer/server/include/mysql/psi/mysql_thread.h
+cfn=(25724) inline_mysql_mutex_lock
+calls=19 743 
+* 13034
+* 95
+cob=(2)
+cfi=(51)
+cfn=(25728)
+calls=19 0 
+* 342
++2 190
+cfi=(1323)
+cfn=(73662) inline_mysql_cond_timedwait
+calls=19 1083 
+* 13357
+* 19
++3 209
++1 57
++1 57
++1 57
+cob=(2)
+cfi=(51)
+cfn=(74856)
+calls=19 0 
+* 893
++1 133
+cfi=(1323)
+cfn=(25738) inline_mysql_mutex_unlock
+calls=19 781 
+* 6156
+* 95
+cob=(2)
+cfi=(51)
+cfn=(25728)
+calls=19 0 
+* 342
++2 38
++8 209
++2 38
++6 19
+cob=(2)
+cfi=(51)
+cfn=(73660)
+calls=19 0 
+* 3876
+* 399
++6 190
++8 57
+
+fn=(73658)
+13696 76
++4 19
+cob=(2)
+cfi=(51)
+cfn=(73660)
+calls=19 0 
+* 3876
+* 399
++3 190
+cfi=(1323)
+cfn=(73662)
+calls=19 1083 
+* 13357
+* 19
++1 76
++4 209
++1 133
+cfi=(1323)
+cfn=(25738)
+calls=19 781 
+* 6156
+* 95
+cob=(2)
+cfi=(51)
+cfn=(25728)
+calls=19 0 
+* 342
++2 133
+cfi=(1323)
+cfn=(25724)
+calls=19 743 
+* 13034
+* 95
+cob=(2)
+cfi=(51)
+cfn=(25728)
+calls=19 0 
+* 342
++2 76
+cob=(2)
+cfi=(51)
+cfn=(74812)
+calls=19 0 
+* 456
+* 38
++1 133
+cfi=(1323)
+cfn=(25738)
+calls=19 781 
+* 5909
+* 95
+cob=(2)
+cfi=(51)
+cfn=(25728)
+calls=19 0 
+* 342
++1 133
+cfi=(1323)
+cfn=(25724)
+calls=19 743 
+* 13034
+* 95
+cob=(2)
+cfi=(51)
+cfn=(25728)
+calls=19 0 
+* 342
+* 19
+
+fl=(1090)
+fn=(74814)
+465 95
++1 57
+cob=(2)
+cfi=(51)
+cfn=(74816)
+calls=19 0 
+* 228
+* 38
+
+fl=(1323)
+fn=(25738)
+781 342
++4 570
++5 342
+cob=(2)
+cfi=(51)
+cfn=(25740)
+calls=57 0 
+* 16739
+* 57
++5 57
++1 114
+
+fn=(73662)
+1083 304
++2 380
++3 266
+cob=(2)
+cfi=(51)
+cfn=(73664)
+calls=38 0 
+* 25650
+* 38
++1 76
+
+fn=(25724)
+743 342
++2 570
++5 342
+cob=(2)
+cfi=(51)
+cfn=(25726)
+calls=57 0 
+* 37677
+* 57
++4 114
+
+totals: 19309245
